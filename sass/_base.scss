@@ -1,0 +1,43 @@
+// base
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+// TYPOGRAPHY
+h1,
+h2,
+h3 {
+  font-family: $font-main;
+  color: color(grey-1);
+  text-align: center;
+}
+
+p {
+  font-family: $font-secondary;
+  color: color(grey-1);
+  text-align: justify;
+}
+
+.dark-text {
+  font-family: $font-secondary;
+  color: color(dark-main);
+  text-align: justify;
+}
+
+// LINK RESET
+
+a {
+  text-decoration: none;
+  &:visited {
+    color: color(grey-1);
+  }
+}

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NKDTEYNGBP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-NKDTEYNGBP");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/Sieger Logo.svg"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/549378180a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Sergie</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="switch" class="switch">
+        <img class="switch-logo" src="assets/Sieger Logo.svg" alt="logo" />
+        <p id="switchText"></p>
+      </div>
+      <nav id="navbar" class="navbar" style="position: fixed">
+        <div class="logo__container">
+          <img id="logo" class="logo" src="assets/Sieger Logo.svg" alt="logo" />
+        </div>
+        <div class="navbar__options">
+          <div id="homeButton" class="navbar__options__item active-item">
+            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+              <use xlink:href="assets/symbol-defs.svg#icon-home"></use>
+            </svg>
+            <h2 class="navbar__options__item__label">HOME</h2>
+          </div>
+          <div id="skillsButton" class="navbar__options__item">
+            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+              <use
+                xlink:href="assets/symbol-defs.svg#icon-playlist_add_check"
+              ></use>
+            </svg>
+            <h2 class="navbar__options__item__label">SKILLS</h2>
+          </div>
+          <div id="portfolioButton" class="navbar__options__item">
+            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+              <use
+                xlink:href="assets/symbol-defs.svg#icon-business_center"
+              ></use>
+            </svg>
+            <h2 class="navbar__options__item__label">PORTFOLIO</h2>
+          </div>
+          <div id="articlesButton" class="navbar__options__item">
+            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+              <use xlink:href="assets/symbol-defs.svg#icon-menu_book"></use>
+            </svg>
+            <h2 class="navbar__options__item__label">ARTICLES</h2>
+          </div>
+          <div id="contactButton" class="navbar__options__item">
+            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+              <use xlink:href="assets/symbol-defs.svg#icon-contact_page"></use>
+            </svg>
+            <h2 class="navbar__options__item__label">CONTACT</h2>
+          </div>
+        </div>
+
+        <div id="navbarSocial" class="navbar__social">
+          <div class="navbar__social__item">
+            <a href="mailto:sergiearruda@gmail.com" target="_blank">
+              <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-email"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="navbar__social__item">
+            <a
+              href="https://www.linkedin.com/in/sergie-gerrits/"
+              target="_blank"
+            >
+              <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="navbar__social__item">
+            <a href="https://github.com/Sergie-AGA" target="_blank">
+              <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-github"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="main-area">
+        <section id="homeSection" class="active-section section">
+          <div class="home">
+            <div class="home__headline">
+              <h1 id="homeHeading" class="home__heading">
+                <div class="yeet-block">
+                  <span class="yeet">S</span><span class="yeet">E</span
+                  ><span class="yeet">R</span><span class="yeet">G</span
+                  ><span class="yeet">I</span><span class="yeet">E</span>
+                  <span class="space"> </span>
+                </div>
+                <div class="yeet-block">
+                  <span class="yeet">G</span><span class="yeet">E</span
+                  ><span class="yeet">R</span><span class="yeet">R</span
+                  ><span class="yeet">I</span><span class="yeet">T</span
+                  ><span class="yeet">S</span><span class="space"> </span>
+                </div>
+                <div class="yeet-block">
+                  <span class="yeet">A</span><span class="yeet">R</span
+                  ><span class="yeet">R</span><span class="yeet">U</span
+                  ><span class="yeet">D</span><span class="yeet">A</span>
+                </div>
+              </h1>
+              <hr />
+              <h2 id="homeSubHeading" class="home__subheading">
+                <span class="multiShade">W</span
+                ><span class="multiShade">e</span
+                ><span class="multiShade">b</span>
+                <span class="multiShade">D</span
+                ><span class="multiShade">e</span
+                ><span class="multiShade">v</span
+                ><span class="multiShade">e</span
+                ><span class="multiShade">l</span
+                ><span class="multiShade">o</span
+                ><span class="multiShade">p</span
+                ><span class="multiShade">e</span
+                ><span class="multiShade">r</span>
+              </h2>
+            </div>
+            <div class="home__textarea">
+              <p id="homeText" class="home__text">
+                Hi, I am Sergie Andrei Gerrits Arruda, a web developer with a
+                previous background in business studies.
+              </p>
+
+              <div class="buttongroup">
+                <div class="button button--small" id="altPortfolioButton">
+                  See Portfolio
+                </div>
+                <div class="button button--small" id="altContactButton">
+                  Contact me
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="not-supported">
+            It seems your browser does not support some of the features used
+            here and they may not function properly. For a better experience, it
+            is recommended to update your browser
+          </p>
+        </section>
+
+        <section id="skillsSection" class="section invisible">
+          <h2 class="section__heading vanishable">My Skills</h2>
+          <div class="skills">
+            <div class="skills__nav">
+              <div
+                id="aboutButton"
+                class="skills__button skills__button--main active-skill extended-skill"
+              >
+                <svg viewBox="0 0 100 100" class="skills__button__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-info"></use>
+                </svg>
+                <h4 class="skills__button__text">About</h4>
+              </div>
+              <div
+                id="programmingButton"
+                class="skills__button skills__button--main extended-skill"
+              >
+                <svg viewBox="0 0 100 100" class="skills__button__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-code"></use>
+                </svg>
+                <h4 class="skills__button__text">Programming</h4>
+              </div>
+              <div
+                id="designButton"
+                class="skills__button skills__button--main extended-skill"
+              >
+                <svg viewBox="0 0 100 100" class="skills__button__icon">
+                  <use
+                    xlink:href="assets/symbol-defs.svg#icon-design_services"
+                  ></use>
+                </svg>
+                <h4 class="skills__button__text">Design</h4>
+              </div>
+
+              <div id="dataButton" class="skills__button hidden-skill">
+                <svg viewBox="0 0 100 100" class="skills__button__icon">
+                  <use
+                    xlink:href="assets/symbol-defs.svg#icon-insert_chart"
+                  ></use>
+                </svg>
+                <h4 class="skills__button__text">Data Analysis</h4>
+              </div>
+              <div id="businessButton" class="skills__button hidden-skill">
+                <svg viewBox="0 0 100 100" class="skills__button__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-work"></use>
+                </svg>
+                <h4 class="skills__button__text">Business</h4>
+              </div>
+              <div id="languageButton" class="skills__button hidden-skill">
+                <svg viewBox="0 0 100 100" class="skills__button__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-language"></use>
+                </svg>
+                <h4 class="skills__button__text">Languages</h4>
+              </div>
+              <div id="achievementButton" class="skills__button hidden-skill">
+                <svg viewBox="0 0 100 100" class="skills__button__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-award"></use>
+                </svg>
+                <h4 class="skills__button__text">Achievements</h4>
+              </div>
+              <div id="othersButton" class="skills__more">
+                <svg viewBox="0 0 100 100" class="skills__more__icon">
+                  <use
+                    id="othersIcon"
+                    xlink:href="assets/symbol-defs.svg#icon-add_circle"
+                  ></use>
+                </svg>
+                <p class="skills__more__text">
+                  Other <br />
+                  skills
+                </p>
+              </div>
+            </div>
+
+            <div class="skills__view">
+              <div id="aboutSkill" class="skills__view__about">
+                <div class="skills__view__column2">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-person"></use>
+                  </svg>
+                  <p class="skills__view__text">
+                    Having a passion for technology, I became a self-taught web
+                    developer, currently focused on the front-end. You will
+                    usually find me diving deep into programming and
+                    business-related content, spending most of my hours learning
+                    new things.
+                  </p>
+                  <p class="skills__view__text">
+                    I first started to learn programming in 2018, but could not
+                    focus on it due to my Master's Degree. However, during this
+                    time I studied (by myself, choosing related subjects at
+                    University and also in some work experiences) and practiced
+                    topics such as SEO, SQL, Web Development and design, even
+                    applying some of these in the Junior Enterprise where I have
+                    worked. I then decided to focus on web development and make
+                    this the core of my future professional development. This is
+                    the one thing I am most committed to, where I place my
+                    unwavering dedication.
+                  </p>
+                  <p class="skills__view__text">
+                    What I may currently lack in experience, I make up for with
+                    a record of achievements and learning, all of which are the
+                    testament to my character and depict how I expect to add
+                    unique value in this field. The skills which made me thrive
+                    before are cross-disciplinary and will show themselves in a
+                    programmer role. Hopefully, my current portfolio can attest
+                    this further and prove I am all in.
+                  </p>
+                </div>
+              </div>
+              <div
+                id="programmingSkill"
+                class="skills__view__programming invisible"
+              >
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-css3"></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Front-end styling</h5>
+                  <ul>
+                    <li class="skills__view__item">HTML5</li>
+                    <li class="skills__view__item">
+                      CSS3 with all modern features, including animations,
+                      flexbox, grid, responsivity
+                    </li>
+                    <li class="skills__view__item">Bootstrap 4.5</li>
+                    <li class="skills__view__item">SASS</li>
+                    <li class="skills__view__item">BEM CSS</li>
+                    <li class="skills__view__item">7-1 CSS Architecture</li>
+                  </ul>
+                </div>
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-javascript"
+                    ></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Programming</h5>
+                  <ul>
+                    <li class="skills__view__item">Javascript</li>
+                    <li class="skills__view__item">
+                      Object-oriented programming
+                    </li>
+                    <li class="skills__view__item">DOM Manipulation</li>
+                    <li class="skills__view__item">EcmaScript6+</li>
+                    <li class="skills__view__item">Using API's</li>
+                    <li class="skills__view__item">Data validation</li>
+                    <li class="skills__view__item">Client-side storage</li>
+                    <li class="skills__view__item">JSON</li>
+                    <li class="skills__view__item">Node JS</li>
+                    <li class="skills__view__item">Express JS</li>
+                    <li class="skills__view__item">NPM / Yarn</li>
+                  </ul>
+                </div>
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-git"></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Others</h5>
+                  <ul>
+                    <li class="skills__view__item">Git</li>
+                    <li class="skills__view__item">Github</li>
+                    <li class="skills__view__item">Basic terminal commands</li>
+                    <li class="skills__view__item">Jira</li>
+                    <li class="skills__view__item">Deployment in Heroku</li>
+                    <li class="skills__view__item">MySQL</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="designSkill" class="skills__view__design invisible">
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-figma"></use>
+                  </svg>
+                  <h5 class="skills__view__heading">
+                    Wireframing & prototyping
+                  </h5>
+                  <ul>
+                    <li class="skills__view__item">UX/UI</li>
+                    <li class="skills__view__item">Figma</li>
+                    <li class="skills__view__item">Whimsical</li>
+                  </ul>
+                </div>
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-adobephotoshop"
+                    ></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Image edition</h5>
+                  <ul>
+                    <li class="skills__view__item">Adobe Photoshop</li>
+                    <li class="skills__view__item">Canvas</li>
+                    <li class="skills__view__item">
+                      Royalty-free icons and images platforms
+                    </li>
+                  </ul>
+                </div>
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-adobepremiere"
+                    ></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Video edition</h5>
+                  <ul>
+                    <li class="skills__view__item">Adobe Premiere Pro</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="dataSkill" class="skills__view__data invisible">
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-spreadsheet"
+                    ></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Spreadsheet</h5>
+                  <ul>
+                    <li class="skills__view__item">Microsoft Excel</li>
+                    <li class="skills__view__item">
+                      Advanced spreadsheet functions
+                    </li>
+                    <li class="skills__view__item">Dynamic tables</li>
+                    <li class="skills__view__item">
+                      Some Visual Basic for Applications
+                    </li>
+                    <li class="skills__view__item">Google sheets</li>
+                  </ul>
+                </div>
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-data_usage"
+                    ></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Statistics</h5>
+                  <ul>
+                    <li class="skills__view__item">IBM SPSS</li>
+                    <li class="skills__view__item">Correlation analysis</li>
+                    <li class="skills__view__item">
+                      Linear and logistic regression analyses
+                    </li>
+                  </ul>
+                </div>
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-database"
+                    ></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Database</h5>
+                  <ul>
+                    <li class="skills__view__item">ER Diagrams</li>
+                    <li class="skills__view__item">Microsoft Access</li>
+                    <li class="skills__view__item">MySQL</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="businessSkill" class="skills__view__business invisible">
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-users"></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Collaboration tools</h5>
+                  <ul>
+                    <li class="skills__view__item">Slack</li>
+                    <li class="skills__view__item">Jira</li>
+                    <li class="skills__view__item">Whimsical</li>
+                    <li class="skills__view__item">Notion</li>
+                  </ul>
+                </div>
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-article"></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Documental</h5>
+                  <ul>
+                    <li class="skills__view__item">Microsoft Word</li>
+                    <li class="skills__view__item">Microsoft Outlook</li>
+                  </ul>
+                </div>
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-presentation"
+                    ></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Presentation</h5>
+                  <ul>
+                    <li class="skills__view__item">Microsoft Power Point</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="languageSkill" class="skills__view__languages invisible">
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-language"
+                    ></use>
+                  </svg>
+                  <h5 class="skills__view__heading">
+                    Languages and Certifications
+                  </h5>
+                  <ul>
+                    <li class="skills__view__item">
+                      English - Bilingual (TOEFL IBT 111 score 2018)
+                    </li>
+                    <li class="skills__view__item">Portuguese - Native</li>
+                    <li class="skills__view__item">
+                      Spanish - Advanced (DELE 2015 B2 certification)
+                    </li>
+                    <li class="skills__view__item">
+                      German - Intermediate (OnDAF 2016 B2 certification +
+                      hochschulwinterkurs B2 score)
+                    </li>
+                    <li class="skills__view__item">
+                      French - Intermediate (French B1 course completed)
+                    </li>
+                    <li class="skills__view__item">
+                      Italian - Beginner (A2 course completed)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                id="achievementSkill"
+                class="skills__view__achievements invisible"
+              >
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-bank"></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Scholarships</h5>
+                  <ul>
+                    <li class="skills__view__item">
+                      Universität Duisburg-Essen, Germany. Full Winter
+                      scholarship on German history, society and language -
+                      Hochschulwinterkurs 2017, awarded by the government of
+                      Germany, DAAD
+                    </li>
+                    <li class="skills__view__item">
+                      Beijing University, China. Full summer course scholarship
+                      on Chinese society - Top China 2015 programme by Santander
+                      Universities
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="skills__view__column skills__view__column--large">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-line-chart"
+                    ></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Accomplishments</h5>
+                  <ul>
+                    <li class="skills__view__item">
+                      Master's dissertation on Data Literacy with a final score
+                      graded Excellent - 2020
+                    </li>
+                    <li class="skills__view__item">
+                      Master's Degree in Management completed with final average
+                      score graded Excellent - University of Coimbra, Portugal.
+                      2018-2020
+                    </li>
+                    <li class="skills__view__item">
+                      Bachelor's Degree in Law completed with final score of 91%
+                      - Federal University of Pará, Brazil. 2013-2018
+                    </li>
+                    <li class="skills__view__item">
+                      Chosen as part of the board of directors of a students
+                      organization with over 80 members, spearheading several of
+                      its projects - LAJUPA - 2017-2018
+                    </li>
+                    <li class="skills__view__item">
+                      Elected class representative - 2014-2018
+                    </li>
+                    <li class="skills__view__item">
+                      Chosen part of the board of directors of the
+                      representative association of the law students in my
+                      University - 2014-2015
+                    </li>
+                    <li class="skills__view__item">
+                      During my internship inside the secretary of a Court of
+                      Justice, I suggested and implemented a design/management
+                      practice that sped up 3-6 times the speed which lawsuit
+                      documents in the shelves were located - 2015
+                    </li>
+                    <li class="skills__view__item">
+                      Organized 14 academic events
+                    </li>
+                    <li class="skills__view__item">
+                      Coordinated over 10 study groups over 4 years
+                    </li>
+                    <li class="skills__view__item">
+                      Over 10 presentations speaking at conferences or
+                      presenting academic articles
+                    </li>
+                  </ul>
+                </div>
+                <div class="skills__view__column">
+                  <svg viewBox="0 0 100 100" class="skills__view__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-award1"></use>
+                  </svg>
+                  <h5 class="skills__view__heading">Awards</h5>
+                  <ul>
+                    <li class="skills__view__item">
+                      Revelation Award - Junior Enterprise of the Students of
+                      the Faculty of Economics of the University of Coimbra -
+                      2019
+                    </li>
+                    <li class="skills__view__item">
+                      Academic Merit and Excellency Award - Law Students
+                      Academic Centre - 2016
+                    </li>
+                    <li class="skills__view__item">
+                      Chosen among best final group presentations at the Top
+                      China programm - 2015
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolioSection" class="section invisible">
+          <h2 class="section__heading">Portfolio</h2>
+          <div id="portfolioArea" class="portfolio-area">
+            <!-- <div class="card card--purple">
+              <div class="card__side card__side--front">
+                <div class="card__image">
+                  <img src="assets/portfolio/manage-global.png" alt="" />
+                </div>
+                <div class="card__description">
+                  Project that aggregates different API's and shows with
+                  examples what can be done with them (under continuous
+                  development)
+                </div>
+
+                <div class="card__title">API Sea</div>
+              </div>
+              <div class="card__side card__side--back">
+                <div class="card__techs">
+                  <div class="card__techs__item">
+                    <h4 class="card__techs__item__label">Visual</h4>
+                    <p class="card__techs__item__text">
+                      CSS3 | Bootstrap 4.5 | animations
+                    </p>
+                  </div>
+                  <div class="card__techs__item">
+                    <h4 class="card__techs__item__label">Programming</h4>
+                    <p class="card__techs__item__text">Javascript | ES6</p>
+                  </div>
+                  <div class="card__techs__item">
+                    <h4 class="card__techs__item__label">Extra assets</h4>
+                    <p class="card__techs__item__text">
+                      Custom Photoshopped images | Figma
+                    </p>
+                  </div>
+                </div>
+                <div class="card__buttons">
+                  <div class="card__buttons__links">
+                    <a href="">
+                      <svg
+                        viewBox="0 0 100 100"
+                        class="card__buttons__links__icon"
+                      >
+                        <use
+                          xlink:href="assets/symbol-defs.svg#icon-laptop_mac"
+                        ></use>
+                      </svg>
+                    </a>
+                    <p class="card__buttons__links__text">Visit</p>
+                  </a>
+                  </div>
+                  <div class="card__buttons__links">
+                    <a href="">
+                      <svg
+                        viewBox="0 0 100 100"
+                        class="card__buttons__links__icon"
+                      >
+                        <use
+                          xlink:href="assets/symbol-defs.svg#icon-github"
+                        ></use>
+                      </svg>
+                    
+                    <p class="card__buttons__links__text">Source Code</p>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </section>
+
+        <section id="articlesSection" class="section invisible">
+          <h2 class="">Coming soon...</h2>
+          <p class="">The creative process takes time</p>
+          <svg viewBox="0 0 100 100" id="dismiss" class="close-icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-x-altx-alt"></use>
+          </svg>
+          <div id="libraryImage" class="library-image"></div>
+        </section>
+
+        <section id="contactSection" class="section invisible">
+          <div class="contact-info">
+            <h2 class="section__heading2">Contact me</h2>
+            <p class="section__text2">
+              E-mail: <br />
+              sergiearruda@gmail.com
+            </p>
+            <div id="contactIcons" class="contact-icons invisible2">
+              <div class="navbar__social__item">
+                <a href="mailto:sergiearruda@gmail.com" target="_blank">
+                  <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-email"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="navbar__social__item">
+                <a
+                  href="https://www.linkedin.com/in/sergie-gerrits/"
+                  target="_blank"
+                >
+                  <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+                    <use
+                      xlink:href="assets/symbol-defs.svg#icon-linkedin"
+                    ></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="navbar__social__item">
+                <a href="https://github.com/Sergie-AGA" target="_blank">
+                  <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+                    <use xlink:href="assets/symbol-defs.svg#icon-github"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            id="touchArea"
+            class="iphone-container"
+            onmouseover="unfloat()"
+            onmouseout="float()"
+          >
+            <img
+              id="iphoneFloating"
+              src="assets/IPhone_X.png"
+              alt="Iphone image"
+              class="iphone"
+            />
+            <div id="iphoneDisplay" class="iphone-display">
+              <p class="dark-text">
+                Open to job offers, business inquiries and collaborations
+              </p>
+            </div>
+            <div id="shadowFloating" class="iphone-shadow"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

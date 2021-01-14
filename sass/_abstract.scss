@@ -1,0 +1,79 @@
+// IMPORTS
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+
+// VARIABLES
+$colors: (
+  main: #00d2ff,
+  main-light: lighten(#00d2ff, 15%),
+  main-dark: darken(#00d2ff, 15%),
+  dark-main: rgb(10, 10, 10),
+  dark-secondary: rgb(70, 70, 70),
+  grey-1: #ddd,
+  grey-2: darken(#ddd, 15%),
+  grey-3: darken(#ddd, 25%),
+  grey-4: transparentize(darken(#ddd, 65%), 0.4),
+  white: white,
+  greyed-out: #4f5b68,
+  gradient: linear-gradient(to bottom, #e1e1e1, #0f0c0c),
+  success: #39ce77,
+  error: #fa9488,
+  gradient-red:
+    linear-gradient(135deg, rgba(255, 20, 20, 1) 0%, rgba(255, 150, 11, 1) 100%),
+  gradient-green:
+    linear-gradient(135deg, rgba(0, 184, 89, 1) 0%, rgb(23, 248, 23) 100%),
+  gradient-darkblue:
+    linear-gradient(135deg, rgba(49, 27, 255, 1) 0%, rgba(1, 232, 255, 1) 100%),
+  gradient-lightblue:
+    linear-gradient(
+      135deg,
+      rgba(27, 146, 255, 1) 0%,
+      rgba(11, 208, 255, 1) 100%
+    ),
+  gradient-yellow:
+    linear-gradient(
+      135deg,
+      rgba(212, 175, 55, 1) 0%,
+      rgba(207, 181, 59, 1) 100%
+    ),
+  gradient-orange:
+    linear-gradient(135deg, rgba(255, 154, 37, 1) 0%, rgb(211, 197, 1) 100%),
+  gradient-purple:
+    linear-gradient(135deg, rgba(255, 37, 191, 1) 0%, rgba(59, 0, 255, 1) 100%),
+  gradient-black:
+    linear-gradient(135deg, rgba(0, 20, 23, 1) 0%, rgb(90, 90, 90) 100%),
+);
+
+$font-main: "Playfair Display", serif;
+$font-main2: "Fira Sans", sans-serif;
+$font-secondary: "Titillium Web", sans-serif;
+
+$tablet: 1024px;
+$mobile: 768px;
+$vertical: 550px;
+
+// FUNCTIONS
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// MIXIN
+@mixin centralized {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin dark-box {
+  padding: 15px;
+  background-color: color(grey-3);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}

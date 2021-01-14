@@ -1,0 +1,221 @@
+// GRID AREA
+#portfolioSection {
+  width: calc(100vw-4rem);
+  height: 100vh;
+  position: relative;
+  @media screen and (max-width: $tablet) {
+    overflow-y: auto;
+  }
+  @media screen and (max-width: $mobile) {
+    padding-bottom: 3rem;
+  }
+}
+
+.portfolio-area {
+  position: absolute;
+  top: 3rem;
+  left: 5%;
+  width: 90%;
+  height: auto;
+  padding: 20px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 20px;
+  @media screen and (max-width: $tablet) {
+    grid-gap: 10px;
+    padding-bottom: 5rem;
+    height: auto;
+  }
+}
+
+// cards
+.card {
+  -webkit-perspective: 150rem;
+  -moz-perspective: 150rem;
+  perspective: 150rem;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  margin: auto;
+  &__side {
+    transition: all 0.8s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    &--front {
+      background-color: color(grey-1);
+      z-index: 1;
+    }
+    &--back {
+      transform: rotateY(180deg);
+    }
+  }
+  &__image {
+    height: 45%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 65%;
+    }
+  }
+  &--red &__image,
+  &--red &__title,
+  &--red &__side--back {
+    background-image: color(gradient-red);
+  }
+  &--green &__image,
+  &--green &__title,
+  &--green &__side--back {
+    background-image: color(gradient-green);
+  }
+  &--darkblue &__image,
+  &--darkblue &__title,
+  &--darkblue &__side--back {
+    background-image: color(gradient-darkblue);
+  }
+  &--lightblue &__image,
+  &--lightblue &__title,
+  &--lightblue &__side--back {
+    background-image: color(gradient-lightblue);
+  }
+  &--yellow &__image,
+  &--yellow &__title,
+  &--yellow &__side--back {
+    background-image: color(gradient-yellow);
+  }
+  &--orange &__image,
+  &--orange &__title,
+  &--orange &__side--back {
+    background-image: color(gradient-orange);
+  }
+  &--purple &__image,
+  &--purple &__title,
+  &--purple &__side--back {
+    background-image: color(gradient-purple);
+  }
+  &--black &__image,
+  &--black &__title,
+  &--black &__side--back {
+    background-image: color(gradient-black);
+  }
+
+  &__title {
+    padding: 5px;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: color(grey-1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.8rem;
+  }
+  &__description {
+    position: absolute;
+    top: 45%;
+    text-align: justify;
+    padding: 10px;
+    font-family: $font-secondary;
+    font-size: 1rem;
+    font-weight: 400;
+    color: color(dark-main);
+    height: 10rem;
+    overflow-wrap: break-word;
+  }
+  &__techs {
+    position: absolute;
+    padding: 0 20px;
+    color: color(grey-1);
+    width: 100%;
+    font-weight: 600;
+    &__item {
+      text-align: center;
+      border-bottom: solid 1px color(grey-1);
+      padding: 10px 0 10px;
+      &__label {
+        font-family: $font-main;
+        font-size: 1.2rem;
+      }
+      &__text {
+        text-align: center;
+        font-family: $font-secondary;
+        font-size: 1rem;
+      }
+    }
+  }
+  &__buttons {
+    padding: 15px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6rem;
+    font-family: $font-secondary;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    &__links {
+      height: 4rem;
+      width: 8rem;
+      border-radius: 30px;
+      padding: 5px;
+      margin-bottom: 3px;
+      transition: 0.4s;
+      background-color: color(grey-1);
+      &:hover {
+        background-color: color(grey-3);
+        fill: color(dark-main);
+      }
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+      &__icon1 {
+        font-size: 2.4rem;
+        color: color(dark-main);
+      }
+      &__icon2 {
+        font-size: 2.1rem;
+        color: color(dark-main);
+        margin-bottom: 0.4rem;
+      }
+      &__text {
+        text-align: center;
+        font-family: $font-secondary;
+        font-size: 1rem;
+        line-height: 0.6rem;
+        color: color(dark-main);
+      }
+    }
+  }
+}
+
+// &:hover &__side--front {
+//   -webkit-transform: rotateY(-180deg);
+//   -ms-transform: rotateY(-180deg);
+//   transform: rotateY(-180deg);
+// }
+// &:hover &__side--back {
+//   -webkit-transform: rotateY(0);
+//   -ms-transform: rotateY(0);
+//   transform: rotateY(0);
+// }
+
+.card:last-of-type {
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 3rem;
+  }
+}
