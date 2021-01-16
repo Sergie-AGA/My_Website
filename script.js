@@ -440,8 +440,8 @@ const project5 = new Project(
   "Custom Sticky Notes",
   "Mini app that lets you create sticky notes with customizable fields. Changes are saved to local storage",
   "assets/portfolio/custom-sticky-notes.png",
-  "https://sergie-aga.github.io/Mini_Apps/app-list/custom-sticky-notes/index.html",
-  "https://github.com/Sergie-AGA/Mini_Apps/tree/master/app-list/custom-sticky-notes",
+  "https://sergie-aga.github.io/vanilla-apps/custom-sticky-notes/index.html",
+  "https://github.com/Sergie-AGA/vanilla-apps",
   [
     {
       label: "Visual",
@@ -469,39 +469,39 @@ const project5 = new Project(
   ],
   true,
   true,
-  "green"
+  "yellow"
 );
 
-const project5 = new Project(
+const project6 = new Project(
   "Mini Apps",
-  "Mini app that lets you create sticky notes with customizable fields. Changes are saved to local storage",
-  "assets/portfolio/custom-sticky-notes.png",
-  "https://github.com/Sergie-AGA/Mini_Apps",
+  "A React JS-based aggregator of small applications aimed at exploring different web development functionalities to inspire ideas",
+  "assets/portfolio/mini-apps.png",
   "https://mini-apps-by-sieger.netlify.app/",
+  "https://github.com/Sergie-AGA/Mini_Apps",
   [
     {
       label: "Visual",
-      text: "CSS3 | SASS | Animations",
+      text: "React JS + Hooks | CSS3 | SASS",
     },
     {
       label: "Programming",
-      text: "Javascript | OOP | ES6+",
+      text: "Javascript with React JS | OOP | ES6+",
     },
     {
       label: "Extra Assets",
-      text: "Local Storage | BEM CSS",
+      text: "Netlify | BEM CSS",
     },
   ],
   [
     "HTML",
     "CSS",
+    "React JS",
+    "React Hooks",
     "SASS",
     "Animations",
     "Javascript",
     "OOP",
     "ES6+",
-    "Royalty-free",
-    "Client-side storage",
   ],
   true,
   true,
