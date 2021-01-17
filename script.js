@@ -145,6 +145,12 @@ dismiss.addEventListener("click", () => {
     articlesSection.classList.remove("dismiss");
   }, 5000);
 });
+// CLOSE SUPPORT TEXT
+const closeSupported = document.getElementById("closeSupported");
+const supportText = document.getElementById("supportText");
+closeSupported.addEventListener("click", () => {
+  supportText.style.display = "none";
+});
 
 // DESTROYABLE TEXT
 const multiShade = Array.from(document.getElementsByClassName("multiShade"));

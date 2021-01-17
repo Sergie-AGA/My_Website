@@ -436,6 +436,13 @@ a {
   padding: 5px;
   background-color: #464646; }
 
+#closeSupported {
+  border-radius: 50%;
+  color: #ddd;
+  cursor: pointer; }
+  #closeSupported:hover {
+    text-decoration: underline; }
+
 .yeet-block {
   display: flex; }
 
