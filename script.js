@@ -264,7 +264,8 @@ class Project {
     tags,
     code,
     live,
-    color
+    color,
+    featured
   ) {
     this.title = title;
     this.description = description;
@@ -276,6 +277,7 @@ class Project {
     this.code = code;
     this.live = live;
     this.color = color;
+    this.featured = featured;
     Project.addInstance(this);
   }
   static addInstance(item) {
@@ -324,12 +326,13 @@ const project1 = new Project(
   ],
   true,
   true,
-  "darkblue"
+  "darkblue",
+  false
 );
 
 const project2 = new Project(
   "Manage Global",
-  "Mockup of a fictional business brochure for an app-based company that provides business solutions",
+  "Mockup of a fictional business brochure of an app-based company that provides business solutions, using Bootstrap and jQuery",
   "assets/portfolio/manage-global.png",
   "https://sergie-aga.github.io/Page_ideas/ideas/manage_global/index.html",
   "https://github.com/Sergie-AGA/Page_ideas/tree/main/ideas/manage_global",
@@ -340,7 +343,7 @@ const project2 = new Project(
     },
     {
       label: "Programming",
-      text: "Javascript | ES6+ | RegEx",
+      text: "Javascript | jQuery | ES6+ | RegEx",
     },
     {
       label: "Extra Assets",
@@ -354,6 +357,7 @@ const project2 = new Project(
     "Animations",
     "Javascript",
     "ES6+",
+    "jQuery",
     "Royalty-free",
     "Photoshop",
     "RegEx",
@@ -361,7 +365,8 @@ const project2 = new Project(
   ],
   true,
   true,
-  "purple"
+  "purple",
+  false
 );
 
 const project3 = new Project(
@@ -399,7 +404,8 @@ const project3 = new Project(
   ],
   false,
   false,
-  "black"
+  "black",
+  false
 );
 
 const project4 = new Project(
@@ -440,7 +446,8 @@ const project4 = new Project(
   ],
   true,
   true,
-  "lightblue"
+  "lightblue",
+  true
 );
 
 const project5 = new Project(
@@ -476,7 +483,8 @@ const project5 = new Project(
   ],
   true,
   true,
-  "yellow"
+  "yellow",
+  true
 );
 
 const project6 = new Project(
@@ -512,7 +520,8 @@ const project6 = new Project(
   ],
   true,
   true,
-  "green"
+  "green",
+  false
 );
 
 const project7 = new Project(
@@ -535,7 +544,8 @@ const project7 = new Project(
   ["HTML", "CSS", "WordPress", "CMS"],
   false,
   true,
-  "red"
+  "red",
+  true
 );
 
 const project8 = new Project(
@@ -576,7 +586,8 @@ const project8 = new Project(
   ],
   false,
   true,
-  "orange"
+  "orange",
+  true
 );
 
 window.addEventListener("load", () => {
