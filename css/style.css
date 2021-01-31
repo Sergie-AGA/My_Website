@@ -455,7 +455,7 @@ a {
     .space {
       padding: 8px; } }
 
-#articlesSection {
+#resultsSection {
   padding: 15px;
   background-color: #9d9d9d;
   border-radius: 10px;
@@ -465,7 +465,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center; }
-  #articlesSection .library-image {
+  #resultsSection .library-image {
     position: absolute;
     top: 0;
     left: 0;

@@ -9,8 +9,8 @@ const skillsSection = document.getElementById("skillsSection");
 const portfolioButton = document.getElementById("portfolioButton");
 const altPortfolioButton = document.getElementById("altPortfolioButton");
 const portfolioSection = document.getElementById("portfolioSection");
-const articlesButton = document.getElementById("articlesButton");
-const articlesSection = document.getElementById("articlesSection");
+const resultsButton = document.getElementById("resultsButton");
+const resultsSection = document.getElementById("resultsSection");
 const contactButton = document.getElementById("contactButton");
 const altContactButton = document.getElementById("altContactButton");
 const contactSection = document.getElementById("contactSection");
@@ -23,7 +23,7 @@ const sections = [
   { button: homeButton, section: homeSection },
   { button: skillsButton, section: skillsSection },
   { button: portfolioButton, section: portfolioSection },
-  { button: articlesButton, section: articlesSection },
+  { button: resultsButton, section: resultsSection },
   { button: contactButton, section: contactSection },
 ];
 
@@ -126,7 +126,7 @@ altContactButton.addEventListener("click", () => {
 });
 
 dismiss.addEventListener("click", () => {
-  articlesSection.classList.add("dismiss");
+  resultsSection.classList.add("dismiss");
 
   setTimeout(() => {
     sectionSwitch.classList.add("section-switch");
@@ -142,7 +142,7 @@ dismiss.addEventListener("click", () => {
     }, 1200);
   }, 3600);
   setTimeout(() => {
-    articlesSection.classList.remove("dismiss");
+    resultsSection.classList.remove("dismiss");
   }, 5000);
 });
 
@@ -846,7 +846,7 @@ let codes = [
   "&:hover {transform: scale(1.03);    box-shadow: 1px 1px 8px 3px; background-color: color(dark-secondary) ;}",
   'touchArea. addEventListener ("touchstart", () =>',
   ' switchText. innerHTML = "Nothing to see here"; rotateLogo(); deactivate();',
-  'dismiss. addEventListener ("click", () => { articlesSection. classList. add"dismiss") setTimeout(() =>',
+  'dismiss. addEventListener ("click", () => { resultsSection. classList. add"dismiss") setTimeout(() =>',
   "let hueR = Math.floor (Math.random() * 255);",
   'function deactivate() {sections. forEach (section => {section.button. classList.add ("unclickable")',
   'const easterEgg = "Why are you even reading this?"',
