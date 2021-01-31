@@ -145,6 +145,7 @@ dismiss.addEventListener("click", () => {
     articlesSection.classList.remove("dismiss");
   }, 5000);
 });
+
 // CLOSE SUPPORT TEXT
 const closeSupported = document.getElementById("closeSupported");
 const supportText = document.getElementById("supportText");
@@ -512,6 +513,70 @@ const project6 = new Project(
   true,
   true,
   "green"
+);
+
+const project7 = new Project(
+  "WordPress Website - Pita",
+  "A multilingual WordPress website for a client's business. It relies on major modern plugins, handling edition, SEO, custom styling, security, cache and more",
+  "assets/portfolio/mini-apps.png",
+  "https://bernardompita.com",
+  "https://github.com/Sergie-AGA/",
+  [
+    {
+      label: "Appearance",
+      text: "Astra Theme + Widgets | Microthemer CSS3 | Gutenberg + Addons",
+    },
+    {
+      label: "Major plugins and features",
+      text:
+        "WP Cerber Security | TranslatePress | W3 Total Cache | Rank Math SEO | Cookie and privacy handling | UpDraftPlus | Others ",
+    },
+  ],
+  ["HTML", "CSS", "WordPress", "CMS"],
+  false,
+  true,
+  "red"
+);
+
+const project8 = new Project(
+  "Marketing Interactive tools",
+  "Set of interactive marketing tools with multilingual support developed in React JS. They are accessible upon entering a code obtainable via newsletter subscription in the Mailchimp API",
+  "assets/portfolio/pita-marketing-tools.png",
+  "https://mini-apps-by-sieger.netlify.app/",
+  "https://github.com/Sergie-AGA/",
+  [
+    {
+      label: "Visual",
+      text: "React JS + Hooks | CSS3 | SASS",
+    },
+    {
+      label: "Programming",
+      text: "React JS | Express JS | Node JS | NPM/Yarn",
+    },
+    {
+      label: "Extra Assets",
+      text: "Netlify | BEM CSS | API's",
+    },
+  ],
+  [
+    "HTML",
+    "CSS",
+    "React JS",
+    "React Hooks",
+    "SASS",
+    "Animations",
+    "Javascript",
+    "OOP",
+    "ES6+",
+    "Node JS",
+    "Express JS",
+    "API",
+    "NPM / Yarn",
+    "JSON",
+  ],
+  false,
+  true,
+  "orange"
 );
 
 window.addEventListener("load", () => {
