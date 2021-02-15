@@ -291,45 +291,45 @@ class Project {
   }
 }
 
-const project1 = new Project(
-  "Page Ideas",
-  "An aggregator of pages with different designs to inspire production (under continuous development)",
-  "assets/portfolio/Page-Ideas.png",
-  "https://sergie-aga.github.io/Page_ideas/",
-  "https://github.com/Sergie-AGA/Page_ideas",
-  [
-    {
-      label: "Visual",
-      text: "CSS3 | SASS | Animations",
-    },
-    {
-      label: "Programming",
-      text: "Javascript | OOP | ES6+",
-    },
-    {
-      label: "Extra Assets",
-      text: "Figma | BEM CSS",
-    },
-  ],
-  [
-    "HTML",
-    "CSS",
-    "SASS",
-    "Animations",
-    "Javascript",
-    "ES6+",
-    "Figma",
-    "Royalty-free",
-  ],
-  true,
-  true,
-  "darkblue",
-  false
-);
+// const project1 = new Project(
+//   "Page Ideas",
+//   "An aggregator of pages with different designs to inspire production (under continuous development)",
+//   "assets/portfolio/Page-Ideas.png",
+//   "https://sergie-aga.github.io/Page_ideas/",
+//   "https://github.com/Sergie-AGA/Page_ideas",
+//   [
+//     {
+//       label: "Visual",
+//       text: "CSS3 | SASS | Animations",
+//     },
+//     {
+//       label: "Programming",
+//       text: "Javascript | OOP | ES6+",
+//     },
+//     {
+//       label: "Extra Assets",
+//       text: "Figma | BEM CSS",
+//     },
+//   ],
+//   [
+//     "HTML",
+//     "CSS",
+//     "SASS",
+//     "Animations",
+//     "Javascript",
+//     "ES6+",
+//     "Figma",
+//     "Royalty-free",
+//   ],
+//   true,
+//   true,
+//   "darkblue",
+//   false
+// );
 
 const project2 = new Project(
   "Manage Global",
-  "Mockup of a fictional business brochure of an app-based company that provides business solutions, using Bootstrap and jQuery",
+  "Mockup of a fictional business brochure of an app-based company that provides business solutions. It uses Bootstrap and jQuery",
   "assets/portfolio/manage-global.png",
   "https://sergie-aga.github.io/Page_ideas/ideas/manage_global/index.html",
   "https://github.com/Sergie-AGA/Page_ideas/tree/main/ideas/manage_global",
@@ -340,7 +340,7 @@ const project2 = new Project(
     },
     {
       label: "Programming",
-      text: "Javascript | jQuery | ES6+ | RegEx",
+      text: "jQuery | ES6+ | RegEx",
     },
     {
       label: "Extra Assets",
@@ -352,7 +352,6 @@ const project2 = new Project(
     "CSS",
     "Bootstrap 4.5",
     "Animations",
-    "Javascript",
     "ES6+",
     "jQuery",
     "Royalty-free",
@@ -368,7 +367,7 @@ const project2 = new Project(
 
 const project3 = new Project(
   "Personal Portfolio",
-  "This very site you are looking at now. A personal site and portfolio to showcase",
+  "This very site you are looking at now. A personal site and portfolio to showcase my projects. It is all coded in Vanilla JS with SASS, using Babel to maximize browser compatibility",
   "assets/portfolio/portfolio-sergie.png",
   "#",
   "#",
@@ -383,7 +382,7 @@ const project3 = new Project(
     },
     {
       label: "Extra Assets",
-      text: "Photoshop | BEM CSS",
+      text: "Babel | Photoshop | BEM CSS",
     },
   ],
   [
@@ -480,7 +479,7 @@ const project5 = new Project(
 
 const project6 = new Project(
   "Mini Apps",
-  "A React JS-based aggregator of small applications aimed at exploring different web development functionalities to inspire ideas",
+  "A React JS-based aggregator of small applications aimed at exploring different web development functionalities to inspire ideas (under continuous development)",
   "assets/portfolio/mini-apps.png",
   "https://mini-apps-by-sieger.netlify.app/",
   "https://github.com/Sergie-AGA/Mini_Apps",
@@ -516,20 +515,20 @@ const project6 = new Project(
 );
 
 const project7 = new Project(
-  "WordPress Website - Pita",
+  "Marketing Website",
   "A multilingual WordPress website for a client's business, expanding on his previous site. It uses major modern plugins for handling edition, SEO, custom styling, security, cache and more",
-  "assets/portfolio/mini-apps.png",
+  "assets/portfolio/pita-website.jpg",
   "https://bernardompita.com",
   "https://github.com/Sergie-AGA/",
   [
     {
       label: "Appearance",
-      text: "Astra Theme + Widgets | Microthemer CSS3 | Gutenberg + Addons",
+      text: "Astra Theme + Widgets | CSS3 + Javascript | Gutenberg + Addons",
     },
     {
-      label: "Major plugins and features",
+      label: "Major features",
       text:
-        "WP Cerber Security | TranslatePress | W3 Total Cache | Rank Math SEO | Cookie and privacy handling | UpDraftPlus | Others ",
+        "Security plugin | Multilingual | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
     },
   ],
   ["HTML", "CSS", "WordPress"],
@@ -575,7 +574,7 @@ const project8 = new Project(
   ],
   false,
   true,
-  "orange",
+  "darkblue",
   true
 );
 

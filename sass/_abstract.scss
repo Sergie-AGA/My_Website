@@ -24,8 +24,7 @@ $colors: (
   gradient: linear-gradient(to bottom, #e1e1e1, #0f0c0c),
   success: #39ce77,
   error: #fa9488,
-  gradient-red:
-    linear-gradient(135deg, rgba(255, 20, 20, 1) 0%, rgba(255, 150, 11, 1) 100%),
+  gradient-red: linear-gradient(135deg, #cb2d3e 0%, #ef473a 100%),
   gradient-green:
     linear-gradient(135deg, rgba(0, 145, 71, 1) 0%, rgb(25, 199, 25) 100%),
   gradient-darkblue:
@@ -42,8 +41,7 @@ $colors: (
       rgba(212, 175, 55, 1) 0%,
       rgba(207, 181, 59, 1) 100%
     ),
-  gradient-orange:
-    linear-gradient(135deg, rgba(255, 154, 37, 1) 0%, rgb(211, 197, 1) 100%),
+  gradient-orange: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%),
   gradient-purple:
     linear-gradient(135deg, rgba(255, 37, 191, 1) 0%, rgba(59, 0, 255, 1) 100%),
   gradient-black:
