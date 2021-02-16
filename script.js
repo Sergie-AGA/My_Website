@@ -327,256 +327,256 @@ class Project {
 //   false
 // );
 
-const project2 = new Project(
-  "Manage Global",
-  "Mockup of a fictional business brochure of an app-based company that provides business solutions. It uses Bootstrap and jQuery",
-  "assets/portfolio/manage-global.png",
-  "https://sergie-aga.github.io/Page_ideas/ideas/manage_global/index.html",
-  "https://github.com/Sergie-AGA/Page_ideas/tree/main/ideas/manage_global",
-  [
-    {
-      label: "Visual",
-      text: "CSS3 | Bootstrap 4.5 | Animations",
-    },
-    {
-      label: "Programming",
-      text: "jQuery | ES6+ | RegEx",
-    },
-    {
-      label: "Extra Assets",
-      text: "Photoshop | External libs",
-    },
-  ],
-  [
-    "HTML",
-    "CSS",
-    "Bootstrap 4.5",
-    "Animations",
-    "ES6+",
-    "jQuery",
-    "Royalty-free",
-    "Photoshop",
-    "RegEx",
-    "3rd party libs",
-  ],
-  true,
-  true,
-  "purple",
-  false
-);
+// const project2 = new Project(
+//   "Manage Global",
+//   "Mockup of a fictional business brochure of an app-based company that provides business solutions. It uses Bootstrap and jQuery",
+//   "assets/portfolio/manage-global.png",
+//   "https://sergie-aga.github.io/vanilla-apps/manage_global/index.html",
+//   "https://github.com/Sergie-AGA/vanilla-apps/tree/main/manage_global",
+//   [
+//     {
+//       label: "Visual",
+//       text: "CSS3 | Bootstrap 4.5 | Animations",
+//     },
+//     {
+//       label: "Programming",
+//       text: "jQuery | ES6+ | RegEx",
+//     },
+//     {
+//       label: "Extra Assets",
+//       text: "Photoshop | External libs",
+//     },
+//   ],
+//   [
+//     "HTML",
+//     "CSS",
+//     "Bootstrap 4.5",
+//     "Animations",
+//     "ES6+",
+//     "jQuery",
+//     "Royalty-free",
+//     "Photoshop",
+//     "RegEx",
+//     "3rd party libs",
+//   ],
+//   true,
+//   true,
+//   "purple",
+//   false
+// );
 
-const project3 = new Project(
-  "Personal Portfolio",
-  "This very site you are looking at now. A personal site and portfolio to showcase my projects. It is all coded in Vanilla JS with SASS, using Babel to maximize browser compatibility",
-  "assets/portfolio/portfolio-sergie.png",
-  "#",
-  "#",
-  [
-    {
-      label: "Visual",
-      text: "CSS3 | SASS | Animations",
-    },
-    {
-      label: "Programming",
-      text: "Javascript | OOP | ES6+",
-    },
-    {
-      label: "Extra Assets",
-      text: "Babel | Photoshop | BEM CSS",
-    },
-  ],
-  [
-    "HTML",
-    "CSS",
-    "SASS",
-    "Animations",
-    "Javascript",
-    "ES6+",
-    "Royalty-free",
-    "Photoshop",
-  ],
-  false,
-  false,
-  "black",
-  false
-);
+// const project3 = new Project(
+//   "Personal Portfolio",
+//   "This very site you are looking at now. A personal site and portfolio to showcase my projects. It is all coded in Vanilla JS with SASS, using Babel to maximize browser compatibility",
+//   "assets/portfolio/portfolio-sergie.png",
+//   "#",
+//   "#",
+//   [
+//     {
+//       label: "Visual",
+//       text: "CSS3 | SASS | Animations",
+//     },
+//     {
+//       label: "Programming",
+//       text: "Javascript | OOP | ES6+",
+//     },
+//     {
+//       label: "Extra Assets",
+//       text: "Babel | Photoshop | BEM CSS",
+//     },
+//   ],
+//   [
+//     "HTML",
+//     "CSS",
+//     "SASS",
+//     "Animations",
+//     "Javascript",
+//     "ES6+",
+//     "Royalty-free",
+//     "Photoshop",
+//   ],
+//   false,
+//   false,
+//   "black",
+//   false
+// );
 
-const project4 = new Project(
-  "API Sea",
-  "Project that aggregates different API's and shows with examples what can be done with them (under continuous development)",
-  "assets/portfolio/api-sea.png",
-  "https://api-sea-by-sieger.herokuapp.com/",
-  "https://github.com/Sergie-AGA/API-Sea-Github-version",
-  [
-    {
-      label: "Visual",
-      text: "CSS3 | SASS | Animations",
-    },
-    {
-      label: "Programming Client-Side",
-      text: "Javascript | OOP | ES6+ ",
-    },
-    {
-      label: "Programming Server-side",
-      text: "Node JS | Express JS | API's | NPM/Yarn",
-    },
-  ],
-  [
-    "HTML",
-    "CSS",
-    "SASS",
-    "Animations",
-    "Javascript",
-    "ES6+",
-    "Royalty-free",
-    "Node JS",
-    "Express JS",
-    "API",
-    "NPM / Yarn",
-    "Heroku",
-  ],
-  true,
-  true,
-  "lightblue",
-  true
-);
+// const project4 = new Project(
+//   "API Sea",
+//   "Project that aggregates different API's and shows with examples what can be done with them (under continuous development)",
+//   "assets/portfolio/api-sea.png",
+//   "https://api-sea-by-sieger.herokuapp.com/",
+//   "https://github.com/Sergie-AGA/API-Sea-Github-version",
+//   [
+//     {
+//       label: "Visual",
+//       text: "CSS3 | SASS | Animations",
+//     },
+//     {
+//       label: "Programming Client-Side",
+//       text: "Javascript | OOP | ES6+ ",
+//     },
+//     {
+//       label: "Programming Server-side",
+//       text: "Node JS | Express JS | API's | NPM/Yarn",
+//     },
+//   ],
+//   [
+//     "HTML",
+//     "CSS",
+//     "SASS",
+//     "Animations",
+//     "Javascript",
+//     "ES6+",
+//     "Royalty-free",
+//     "Node JS",
+//     "Express JS",
+//     "API",
+//     "NPM / Yarn",
+//     "Heroku",
+//   ],
+//   true,
+//   true,
+//   "lightblue",
+//   true
+// );
 
-const project5 = new Project(
-  "Custom Sticky Notes",
-  "Mini app that lets you create sticky notes with customizable fields. Changes are saved to local storage",
-  "assets/portfolio/custom-sticky-notes.png",
-  "https://sergie-aga.github.io/vanilla-apps/custom-sticky-notes/index.html",
-  "https://github.com/Sergie-AGA/vanilla-apps",
-  [
-    {
-      label: "Visual",
-      text: "CSS3 | SASS | Animations",
-    },
-    {
-      label: "Programming",
-      text: "Javascript | OOP | ES6+",
-    },
-    {
-      label: "Extra Assets",
-      text: "Local Storage | BEM CSS",
-    },
-  ],
-  [
-    "HTML",
-    "CSS",
-    "SASS",
-    "Animations",
-    "Javascript",
-    "OOP",
-    "ES6+",
-    "Royalty-free",
-  ],
-  true,
-  true,
-  "yellow",
-  true
-);
+// const project5 = new Project(
+//   "Custom Sticky Notes",
+//   "Mini app that lets you create sticky notes with customizable fields. Changes are saved to local storage",
+//   "assets/portfolio/custom-sticky-notes.png",
+//   "https://sergie-aga.github.io/vanilla-apps/custom-sticky-notes/index.html",
+//   "https://github.com/Sergie-AGA/vanilla-apps",
+//   [
+//     {
+//       label: "Visual",
+//       text: "CSS3 | SASS | Animations",
+//     },
+//     {
+//       label: "Programming",
+//       text: "Javascript | OOP | ES6+",
+//     },
+//     {
+//       label: "Extra Assets",
+//       text: "Local Storage | BEM CSS",
+//     },
+//   ],
+//   [
+//     "HTML",
+//     "CSS",
+//     "SASS",
+//     "Animations",
+//     "Javascript",
+//     "OOP",
+//     "ES6+",
+//     "Royalty-free",
+//   ],
+//   true,
+//   true,
+//   "yellow",
+//   true
+// );
 
-const project6 = new Project(
-  "Mini Apps",
-  "A React JS-based aggregator of small applications aimed at exploring different web development functionalities to inspire ideas (under continuous development)",
-  "assets/portfolio/mini-apps.png",
-  "https://mini-apps-by-sieger.netlify.app/",
-  "https://github.com/Sergie-AGA/Mini_Apps",
-  [
-    {
-      label: "Visual",
-      text: "React JS + Hooks | CSS3 | SASS",
-    },
-    {
-      label: "Programming",
-      text: "Javascript with React JS | OOP | ES6+",
-    },
-    {
-      label: "Extra Assets",
-      text: "Netlify | BEM CSS",
-    },
-  ],
-  [
-    "HTML",
-    "CSS",
-    "React JS",
-    "React Hooks",
-    "SASS",
-    "Animations",
-    "Javascript",
-    "OOP",
-    "ES6+",
-  ],
-  true,
-  true,
-  "green",
-  false
-);
+// const project6 = new Project(
+//   "Mini Apps",
+//   "A React JS-based aggregator of small applications aimed at exploring different web development functionalities to inspire ideas (under continuous development)",
+//   "assets/portfolio/mini-apps.png",
+//   "https://mini-apps-by-sieger.netlify.app/",
+//   "https://github.com/Sergie-AGA/Mini_Apps",
+//   [
+//     {
+//       label: "Visual",
+//       text: "React JS + Hooks | CSS3 | SASS",
+//     },
+//     {
+//       label: "Programming",
+//       text: "Javascript with React JS | OOP | ES6+",
+//     },
+//     {
+//       label: "Extra Assets",
+//       text: "Netlify | BEM CSS",
+//     },
+//   ],
+//   [
+//     "HTML",
+//     "CSS",
+//     "React JS",
+//     "React Hooks",
+//     "SASS",
+//     "Animations",
+//     "Javascript",
+//     "OOP",
+//     "ES6+",
+//   ],
+//   true,
+//   true,
+//   "green",
+//   false
+// );
 
-const project7 = new Project(
-  "Marketing Website",
-  "A multilingual WordPress website for a client's business, expanding on his previous site. It uses major modern plugins for handling edition, SEO, custom styling, security, cache and more",
-  "assets/portfolio/pita-website.jpg",
-  "https://bernardompita.com",
-  "https://github.com/Sergie-AGA/",
-  [
-    {
-      label: "Appearance",
-      text: "Astra Theme + Widgets | CSS3 + Javascript | Gutenberg + Addons",
-    },
-    {
-      label: "Major features",
-      text:
-        "Security plugin | Multilingual | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
-    },
-  ],
-  ["HTML", "CSS", "WordPress"],
-  false,
-  true,
-  "red",
-  true
-);
+// const project7 = new Project(
+//   "Marketing Website",
+//   "A multilingual WordPress website for a client's business, expanding on his previous site. It uses major modern plugins for handling edition, SEO, custom styling, security, cache and more",
+//   "assets/portfolio/pita-website.jpg",
+//   "https://bernardompita.com",
+//   "https://github.com/Sergie-AGA/",
+//   [
+//     {
+//       label: "Appearance",
+//       text: "Astra Theme + Widgets | CSS3 + Javascript | Gutenberg + Addons",
+//     },
+//     {
+//       label: "Major features",
+//       text:
+//         "Security plugin | Multilingual | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
+//     },
+//   ],
+//   ["HTML", "CSS", "WordPress"],
+//   false,
+//   true,
+//   "red",
+//   true
+// );
 
-const project8 = new Project(
-  "Marketing Interactive tools",
-  "Set of interactive marketing tools with multilingual support developed in React JS, based on the client's tools. Accessible with a code obtainable via newsletter subscription in the Mailchimp API",
-  "assets/portfolio/pita-marketing-tools.png",
-  "https://mini-apps-by-sieger.netlify.app/",
-  "https://github.com/Sergie-AGA/",
-  [
-    {
-      label: "Visual",
-      text: "React JS + Hooks | CSS3 | SASS",
-    },
-    {
-      label: "Programming",
-      text: "React JS | Express JS | Node JS | NPM/Yarn",
-    },
-    {
-      label: "Extra Assets",
-      text: "Netlify | BEM CSS | API's",
-    },
-  ],
-  [
-    "HTML",
-    "CSS",
-    "React JS",
-    "React Hooks",
-    "SASS",
-    "Animations",
-    "Javascript",
-    "ES6+",
-    "Node JS",
-    "Express JS",
-    "API",
-    "NPM / Yarn",
-  ],
-  false,
-  true,
-  "darkblue",
-  true
-);
+// const project8 = new Project(
+//   "Marketing Interactive tools",
+//   "Set of interactive marketing tools with multilingual support developed in React JS, based on the client's tools. Accessible with a code obtainable via newsletter subscription in the Mailchimp API",
+//   "assets/portfolio/pita-marketing-tools.png",
+//   "https://mini-apps-by-sieger.netlify.app/",
+//   "https://github.com/Sergie-AGA/",
+//   [
+//     {
+//       label: "Visual",
+//       text: "React JS + Hooks | CSS3 | SASS",
+//     },
+//     {
+//       label: "Programming",
+//       text: "React JS | Express JS | Node JS | NPM/Yarn",
+//     },
+//     {
+//       label: "Extra Assets",
+//       text: "Netlify | BEM CSS | API's",
+//     },
+//   ],
+//   [
+//     "HTML",
+//     "CSS",
+//     "React JS",
+//     "React Hooks",
+//     "SASS",
+//     "Animations",
+//     "Javascript",
+//     "ES6+",
+//     "Node JS",
+//     "Express JS",
+//     "API",
+//     "NPM / Yarn",
+//   ],
+//   false,
+//   true,
+//   "darkblue",
+//   true
+// );
 
 window.addEventListener("load", () => {
   portfolio.forEach((project) => {

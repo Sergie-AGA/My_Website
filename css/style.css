@@ -993,6 +993,73 @@ a {
   .card:last-of-type {
     margin-bottom: 3rem; } }
 
+.filter__button {
+  cursor: pointer; }
+
+.filter__window {
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  right: 0;
+  background-color: #b7b7b7;
+  height: 100%;
+  max-height: 600px;
+  border-radius: 20px 0 0 20px;
+  overflow: scroll;
+  padding-bottom: 50px; }
+
+.filter__section {
+  position: relative;
+  padding: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .filter__section:nth-of-type(1) {
+    background-image: url("../assets/portfolio/plans-1867745_640.jpg"); }
+  .filter__section:nth-of-type(2) {
+    background-image: url("../assets/portfolio/code-1076536_640.jpg"); }
+  .filter__section:nth-of-type(3) {
+    background-image: url("../assets/portfolio/pexels-panumas-nikhomkhai-1148820.jpg"); }
+  .filter__section:nth-of-type(4) {
+    background-image: url("../assets/portfolio/pexels-tranmautritam-326501.jpg"); }
+  .filter__section:nth-of-type(5) {
+    background-image: url("../assets/portfolio/christian-wiediger-WkfDrhxDMC8-unsplash (1).jpg"); }
+  .filter__section:hover > .filter__layer {
+    background-color: rgba(0, 0, 0, 0.3); }
+
+.filter__layer {
+  transition: 0.4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.filter__header {
+  position: relative;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  color: white;
+  padding-left: 10px;
+  z-index: 10; }
+
+.filter__element {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 0.5rem;
+  padding: 10px;
+  padding: 3px;
+  color: #9d9d9d;
+  background-color: #464646; }
+  .filter__element:hover {
+    color: #ddd; }
+  .filter__element--active {
+    z-index: 10; }
+
 #contactSection {
   overflow: auto; }
 
