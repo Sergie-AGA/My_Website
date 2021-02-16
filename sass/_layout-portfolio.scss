@@ -7,7 +7,7 @@
     overflow-y: auto;
   }
   @media screen and (max-width: $mobile) {
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -224,18 +224,46 @@
 .filter {
   &__button {
     cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    font-size: 1.5rem;
+    padding: 2px 5px;
+    @media screen and (max-width: $tablet) {
+      top: 1rem;
+    }
   }
   &__window {
     width: 100%;
     max-width: 600px;
     position: absolute;
     right: 0;
-    background-color: color(grey-2);
+    top: 7rem;
     height: 100%;
     max-height: 600px;
     border-radius: 20px 0 0 20px;
-    overflow: scroll;
-    padding-bottom: 50px;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    transform: translateX(200%);
+    transition: 0.6s;
+    @media screen and (max-width: $tablet) {
+      padding-bottom: 4rem;
+      top: 5rem;
+    }
+    @media screen and (max-width: $tablet) {
+      padding-bottom: 3rem;
+    }
+    @media screen and (max-width: 620px) {
+      border-radius: 0;
+    }
+    margin-bottom: 6rem;
+    & > * {
+      flex-grow: 1;
+    }
+    &--active {
+      transform: translateX(0);
+    }
   }
   &__section {
     position: relative;
@@ -281,22 +309,24 @@
     z-index: 10;
   }
   &__element {
+    transition: 0.3s;
     position: relative;
     display: inline-block;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 5px;
     margin: 0.5rem;
-    padding: 10px;
-    padding: 3px;
+    margin-bottom: 1rem;
+    padding: 5px;
     color: color(grey-3);
     background-color: color(dark-secondary);
     &:hover {
       color: color(grey-1);
     }
+    &:active {
+      transform: scale(0.95);
+    }
     &--active {
       z-index: 10;
     }
-  }
-  &__close {
   }
 }

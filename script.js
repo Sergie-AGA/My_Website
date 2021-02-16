@@ -775,6 +775,22 @@ window.addEventListener("load", () => {
 //     })
 // })
 
+// FILTERING
+let filterButton = document.getElementById("filterButton");
+let filterWindow = document.getElementById("filterWindow");
+let filterCount = 0;
+
+filterButton.addEventListener("click", () => {
+  filterWindow.classList.toggle("filter__window--active");
+  if (filterCount === 0) {
+    filterButton.innerHTML = "Close";
+    filterCount++;
+  } else {
+    filterButton.innerHTML = "Filters";
+    filterCount--;
+  }
+});
+
 // FLOATING IPHONE
 const iphoneFloating = document.getElementById("iphoneFloating");
 const shadowFloating = document.getElementById("shadowFloating");

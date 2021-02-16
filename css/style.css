@@ -202,7 +202,7 @@ a {
 
 .button {
   display: block;
-  background-color: #00d2ff;
+  background-color: #25a3b9;
   color: #0a0a0a;
   border-radius: 5px;
   cursor: pointer;
@@ -219,7 +219,7 @@ a {
     .button {
       font-size: 0.8rem; } }
   .button:hover {
-    background-color: #0093b3;
+    background-color: #186b79;
     color: #ddd; }
   .button:active {
     transform: scale(0.95);
@@ -827,7 +827,7 @@ a {
       overflow-y: auto; } }
   @media screen and (max-width: 768px) {
     #portfolioSection {
-      padding-bottom: 3rem; } }
+      padding-bottom: 5rem; } }
 
 .portfolio-area {
   position: absolute;
@@ -994,19 +994,45 @@ a {
     margin-bottom: 3rem; } }
 
 .filter__button {
-  cursor: pointer; }
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  font-size: 1.5rem;
+  padding: 2px 5px; }
+  @media screen and (max-width: 1024px) {
+    .filter__button {
+      top: 1rem; } }
 
 .filter__window {
   width: 100%;
   max-width: 600px;
   position: absolute;
   right: 0;
-  background-color: #b7b7b7;
+  top: 7rem;
   height: 100%;
   max-height: 600px;
   border-radius: 20px 0 0 20px;
-  overflow: scroll;
-  padding-bottom: 50px; }
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  transform: translateX(200%);
+  transition: 0.6s;
+  margin-bottom: 6rem; }
+  @media screen and (max-width: 1024px) {
+    .filter__window {
+      padding-bottom: 4rem;
+      top: 5rem; } }
+  @media screen and (max-width: 1024px) {
+    .filter__window {
+      padding-bottom: 3rem; } }
+  @media screen and (max-width: 620px) {
+    .filter__window {
+      border-radius: 0; } }
+  .filter__window > * {
+    flex-grow: 1; }
+  .filter__window--active {
+    transform: translateX(0); }
 
 .filter__section {
   position: relative;
@@ -1046,17 +1072,20 @@ a {
   z-index: 10; }
 
 .filter__element {
+  transition: 0.3s;
   position: relative;
   display: inline-block;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: 0.5rem;
-  padding: 10px;
-  padding: 3px;
+  margin-bottom: 1rem;
+  padding: 5px;
   color: #9d9d9d;
   background-color: #464646; }
   .filter__element:hover {
     color: #ddd; }
+  .filter__element:active {
+    transform: scale(0.95); }
   .filter__element--active {
     z-index: 10; }
 
