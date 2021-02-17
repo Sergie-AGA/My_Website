@@ -203,7 +203,7 @@ a {
 .button {
   display: block;
   background-color: #25a3b9;
-  color: #0a0a0a;
+  color: white;
   border-radius: 5px;
   cursor: pointer;
   user-select: none;
@@ -1018,6 +1018,8 @@ a {
   flex-direction: column;
   transform: translateX(200%);
   transition: 0.6s;
+  z-index: 10;
+  border: 1px solid #ddd;
   margin-bottom: 6rem; }
   @media screen and (max-width: 1024px) {
     .filter__window {
@@ -1087,6 +1089,8 @@ a {
   .filter__element:active {
     transform: scale(0.95); }
   .filter__element--active {
+    color: black;
+    background-color: #ddd;
     z-index: 10; }
 
 #contactSection {
