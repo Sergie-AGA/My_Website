@@ -580,6 +580,8 @@ let portfolio = projectsArray;
 
 function generateCards() {
   portfolioArea.innerHTML = "";
+  portfolio.sort((a, b) => (a.featured > b.featured ? -1 : 1));
+
   portfolio.forEach((project) => {
     let card = document.createElement("div");
     card.classList.add("card", `card--${project.color}`);
@@ -604,9 +606,20 @@ function generateCards() {
     let cardTitleText = document.createTextNode(project.title);
     cardTitle.appendChild(cardTitleText);
 
+    let cardFeatured = "";
+    if (project.featured) {
+      cardFeatured = document.createElement("div");
+      cardFeatured.classList.add("card__featured");
+      let featuredLayer = document.createElement("div");
+      featuredLayer.classList.add("card__featured__layer");
+      cardFeatured.appendChild(featuredLayer);
+      featuredLayer.innerText = "FEATURED";
+    }
+
     cardFront.appendChild(cardImage);
     cardFront.appendChild(cardDescription);
     cardFront.appendChild(cardTitle);
+    if (cardFeatured !== "") cardFront.appendChild(cardFeatured);
 
     let cardBack = document.createElement("div");
     cardBack.classList.add("card__side", "card__side--back");
