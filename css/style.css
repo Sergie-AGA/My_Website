@@ -214,7 +214,8 @@ a {
   border-right: solid 2px rgba(157, 157, 157, 0.3);
   border-bottom: solid 2px rgba(157, 157, 157, 0.3);
   border-left: solid 2px rgba(221, 221, 221, 0.7);
-  transition: 0.3s; }
+  transition: 0.3s;
+  z-index: 10; }
   @media screen and (max-width: 768px) {
     .button {
       font-size: 0.8rem; } }
@@ -831,7 +832,7 @@ a {
 
 .portfolio-area {
   position: absolute;
-  top: 3rem;
+  top: 4rem;
   left: 5%;
   width: 90%;
   height: auto;
@@ -1023,11 +1024,7 @@ a {
   margin-bottom: 6rem; }
   @media screen and (max-width: 1024px) {
     .filter__window {
-      padding-bottom: 4rem;
       top: 5rem; } }
-  @media screen and (max-width: 1024px) {
-    .filter__window {
-      padding-bottom: 3rem; } }
   @media screen and (max-width: 620px) {
     .filter__window {
       border-radius: 0; } }
@@ -1092,6 +1089,11 @@ a {
     color: black;
     background-color: #ddd;
     z-index: 10; }
+    .filter__element--active:hover {
+      color: #9d9d9d; }
+
+.filtering-by {
+  font-size: 1rem; }
 
 #contactSection {
   overflow: auto; }

@@ -389,6 +389,7 @@ const project3 = new Project(
     "SASS",
     "Animations",
     "Javascript",
+    "Vanilla JS",
     "ES6+",
     "Royalty-free",
     "Photoshop",
@@ -424,6 +425,7 @@ const project4 = new Project(
     "SASS",
     "Animations",
     "Javascript",
+    "Vanilla JS",
     "ES6+",
     "Royalty-free resources",
     "Node JS",
@@ -463,6 +465,7 @@ const project5 = new Project(
     "SASS",
     "Animations",
     "Javascript",
+    "Vanilla JS",
     "OOP",
     "ES6+",
     "Royalty-free resources",
@@ -526,7 +529,7 @@ const project7 = new Project(
         "Security plugin | Multilingual | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
     },
   ],
-  ["CSS", "Javascript", "WordPress"],
+  ["CSS", "Javascript", "Vanilla JS", "WordPress"],
   false,
   true,
   "red",
@@ -542,7 +545,7 @@ const project8 = new Project(
   [
     {
       label: "Visual",
-      text: "React JS + Hooks | CSS3 | SASS",
+      text: "React JS + Hooks | CSS3 | SASS | RegEx",
     },
     {
       label: "Programming",
@@ -565,6 +568,7 @@ const project8 = new Project(
     "API's",
     "NPM / Yarn",
     "Netlify",
+    "RegEx",
   ],
   false,
   true,
@@ -776,6 +780,7 @@ window.addEventListener("load", generateCards());
 // FILTERING
 let filterButton = document.getElementById("filterButton");
 let filterWindow = document.getElementById("filterWindow");
+let portfolioTitle = document.getElementById("portfolioTitle");
 let filterCount = 0;
 
 filterButton.addEventListener("click", () => {
@@ -804,14 +809,36 @@ document.querySelectorAll(".filter__element").forEach((element) => {
   });
 });
 
+let filteringByText = "";
+
 function filteringCards(criteria) {
   portfolio = projectsArray.filter((element) => {
     return criteria.every((v) => element.tags.includes(v));
   });
   if (filterArgument.length === 0) {
     portfolio = projectsArray;
+    portfolioTitle.innerText = "Portfolio";
+  } else {
+    if (filterArgument.length > 3) {
+      filteringByText = `${filterArgument[0]}, ${filterArgument[1]}, and ${
+        filterArgument.length - 2
+      }+`;
+    } else {
+      filteringByText = `${filterArgument[0]}${
+        filterArgument[2]
+          ? ", " + filterArgument[1] + " and " + filterArgument[2]
+          : filterArgument[1]
+          ? " and " + filterArgument[1]
+          : ""
+      }`;
+    }
+    portfolioTitle.innerHTML = `Portfolio <div class="filtering-by">(filtering by: ${filteringByText}) </div>`;
   }
   generateCards();
+  if (!portfolioArea.hasChildNodes()) {
+    portfolioArea.innerHTML =
+      "<br> <br> No projects found matching all of the applied filters";
+  }
 }
 
 // FLOATING IPHONE

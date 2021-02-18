@@ -204,6 +204,7 @@
   border-bottom: solid 2px transparentize(color(grey-3), 0.7);
   border-left: solid 2px transparentize(color(grey-1), 0.3);
   transition: 0.3s;
+  z-index: 10;
   @media screen and (max-width: $mobile) {
     font-size: 0.8rem;
   }
