@@ -309,6 +309,9 @@
     }
     &:nth-of-type(5) {
       background-image: url("../assets/portfolio/christian-wiediger-WkfDrhxDMC8-unsplash\ \(1\).jpg");
+      @media screen and (max-height: 750px) {
+        padding-bottom: 3rem;
+      }
     }
     &:hover > .filter__layer {
       background-color: rgba($color: #000000, $alpha: 0.3);
@@ -371,7 +374,7 @@
     text-align: center;
     fill: white;
     position: absolute;
-    top: 0.3rem;
+    top: 0.1rem;
     left: 6rem;
     cursor: pointer;
     @media screen and (max-width: $tablet) {

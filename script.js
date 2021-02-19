@@ -937,7 +937,7 @@ function generateBackground() {
   let spawn = Math.floor(Math.random() * 1000) + 500;
   let sizeOrigin = Math.floor(Math.random() * 130) + 35;
   let posXOrigin = Math.floor(Math.random() * 100);
-  let posYOrigin = Math.floor(Math.random() * 80) + 10;
+  let posYOrigin = Math.floor(Math.random() * 70) + 10;
   let posDestination = Math.floor(Math.random() * 50);
   let rotation = Math.random() * 720 - 360;
   let duration = Math.floor(Math.random() * 4) + 3;
@@ -997,4 +997,3 @@ function showTooltip() {
 }
 
 portInfoButton.addEventListener("click", () => showTooltip());
-
