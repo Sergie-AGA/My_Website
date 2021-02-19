@@ -74,7 +74,7 @@ a {
   height: 100vh;
   width: 4rem;
   transition: 0.3s;
-  z-index: 10; }
+  z-index: 20; }
   @media screen and (max-width: 1024px) {
     .navbar {
       position: fixed;
@@ -269,7 +269,7 @@ a {
   height: 100vh;
   position: absolute;
   overflow: hidden;
-  z-index: 4;
+  z-index: 15;
   transform: translateX(-100%); }
   .switch #switchText {
     background-color: #b7b7b7;
@@ -1118,6 +1118,53 @@ a {
 
 .filtering-by {
   font-size: 1rem; }
+
+.info__button {
+  transition: 0.3s;
+  width: 2rem;
+  text-align: center;
+  fill: white;
+  position: absolute;
+  top: 0.3rem;
+  left: 6rem;
+  cursor: pointer; }
+  @media screen and (max-width: 1024px) {
+    .info__button {
+      top: 1.2rem;
+      left: 1rem; } }
+  .info__button:hover {
+    fill: #b7b7b7; }
+  .info__button:active {
+    transform: scale(0.95); }
+  .info__button--active {
+    fill: #9d9d9d; }
+    .info__button--active:hover {
+      fill: #b7b7b7; }
+
+.info__text {
+  display: none;
+  position: relative;
+  z-index: 3;
+  background-color: #ddd;
+  padding: 6px;
+  font-size: 0.8rem;
+  width: 15rem;
+  border-radius: 10px;
+  text-align: justify;
+  top: -3.5rem;
+  left: 8.5rem; }
+  @media screen and (max-width: 1024px) {
+    .info__text {
+      left: 3.5rem; } }
+  .info__text--active {
+    display: block !important; }
+
+.info__link {
+  font-weight: bold;
+  color: black !important; }
+  .info__link:hover {
+    color: #9d9d9d !important;
+    text-decoration: underline; }
 
 #contactSection {
   overflow: auto; }

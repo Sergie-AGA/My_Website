@@ -365,7 +365,7 @@ const project2 = new Project(
 
 const project3 = new Project(
   "Personal Portfolio",
-  "This very site you are looking at now. A personal site and portfolio to showcase my projects. It is all coded in Vanilla JS with SASS, using Babel to maximize browser compatibility",
+  "This very site you are looking at now. A personal site and portfolio to showcase my projects. It is all coded in Vanilla JS with SASS.",
   "assets/portfolio/portfolio-sergie.png",
   "#",
   "#",
@@ -380,7 +380,7 @@ const project3 = new Project(
     },
     {
       label: "Extra Assets",
-      text: "Babel | Photoshop | BEM CSS",
+      text: "Photoshop | BEM CSS",
     },
   ],
   [
@@ -850,7 +850,7 @@ function filteringCards(criteria) {
   generateCards();
   if (!portfolioArea.hasChildNodes()) {
     portfolioArea.innerHTML =
-      "<br> <br> No projects found matching all of the applied filters";
+      '<br> <br> <p style="position:absolute; top:2rem; left:1rem">No projects found matching all of the applied filters</p>';
   }
 }
 
@@ -987,14 +987,14 @@ function generateBackground() {
   }, spawn);
 }
 
-// // IMAGE SCROLL COMING LATER
-// const homeImage = document.getElementById('homeImage');
+// Show portfolio tooltip
+const portInfoButton = document.getElementById("portInfoButton");
+const portInfoText = document.getElementById("portInfoText");
 
-// window.addEventListener('mousemove', e => {
-//     let valueX = e.X;
-//     let valueY = e.Y;
-//     // homeImage.css({
-//     //     'transform': 'translate3d('+valueX+'px, '+valueY+'px,0)'
-//     // })
-//     console.log(e);
-// })
+function showTooltip() {
+  portInfoButton.classList.toggle("info__button--active");
+  portInfoText.classList.toggle("info__text--active");
+}
+
+portInfoButton.addEventListener("click", () => showTooltip());
+

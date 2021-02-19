@@ -278,7 +278,6 @@
     @media screen and (max-width: 1400px) {
       top: 5rem;
     }
-
     @media screen and (max-width: 620px) {
       border-radius: 0;
     }
@@ -363,4 +362,60 @@
 
 .filtering-by {
   font-size: 1rem;
+}
+
+.info {
+  &__button {
+    transition: 0.3s;
+    width: 2rem;
+    text-align: center;
+    fill: white;
+    position: absolute;
+    top: 0.3rem;
+    left: 6rem;
+    cursor: pointer;
+    @media screen and (max-width: $tablet) {
+      top: 1.2rem;
+      left: 1rem;
+    }
+    &:hover {
+      fill: color(grey-2);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+    &--active {
+      fill: color(grey-3);
+      &:hover {
+        fill: color(grey-2);
+      }
+    }
+  }
+  &__text {
+    display: none;
+    position: relative;
+    z-index: 3;
+    background-color: color(grey-1);
+    padding: 6px;
+    font-size: 0.8rem;
+    width: 15rem;
+    border-radius: 10px;
+    text-align: justify;
+    top: -3.5rem;
+    left: 8.5rem;
+    @media screen and (max-width: $tablet) {
+      left: 3.5rem;
+    }
+    &--active {
+      display: block !important;
+    }
+  }
+  &__link {
+    font-weight: bold;
+    color: black !important;
+    &:hover {
+      color: color(grey-3) !important;
+      text-decoration: underline;
+    }
+  }
 }
