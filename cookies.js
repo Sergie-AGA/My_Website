@@ -16,22 +16,24 @@ cookieHeader.style.cssText =
 
 let cookieText = document.createElement("p");
 cookieText.innerHTML = `This site uses cookies and similar technologies to understand how the site is used and improve the user's experience. For more information, please refer to this site's <span id="policyLink" style="color:#25a3b9">cookie & privacy policy</span>.`;
-cookieText.style.cssText = "color: black;";
+cookieText.style.cssText = "color: black; font-family: 'Fira Sans', sans-serif";
 
 //Buttons
 let cookieButtonArea = document.createElement("div");
 cookieButtonArea.style.cssText;
 
-let cookieManageButton = document.createElement("div");
-cookieManageButton.innerHTML = "Manage preferences";
-cookieManageButton.style.cssText;
-
 let cookieAcceptButton = document.createElement("div");
 cookieAcceptButton.innerHTML = "Accept cookies";
-cookieAcceptButton.style.cssText;
+cookieAcceptButton.style.cssText =
+  "display:inline-block; cursor:pointer; padding: 10px; background-color: #25a3b9; color: white;font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s; font-family: 'Fira Sans', sans-serif";
 
-cookieButtonArea.appendChild(cookieManageButton);
+let cookieManageButton = document.createElement("div");
+cookieManageButton.innerHTML = "Manage preferences";
+cookieManageButton.style.cssText =
+  "display:inline-block; cursor:pointer; padding: 10px; font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px;transition:0.3s; font-family: 'Fira Sans', sans-serif";
+
 cookieButtonArea.appendChild(cookieAcceptButton);
+cookieButtonArea.appendChild(cookieManageButton);
 
 //Appending
 cookieContainer.appendChild(cookieHeader);
@@ -52,3 +54,171 @@ policyLink.addEventListener(
   "mouseleave",
   () => (policyLink.style.textDecoration = "none")
 );
+
+// Buttons functionalities
+// Accept
+function dismissCookieElements() {
+  cookieBar.style.display = "none";
+  cookieMenu.style.display = "none";
+  cookieLayer.style.display = "none";
+}
+
+function runCookies() {
+  let head = document.getElementsByTagName("head")[0];
+  let script = document.createElement("script");
+  script.setAttribute("async", "");
+
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-NKDTEYNGBP";
+  head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-NKDTEYNGBP");
+}
+
+cookieAcceptButton.addEventListener("mouseenter", () => {
+  cookieAcceptButton.style.backgroundColor = "#186B79";
+});
+cookieAcceptButton.addEventListener("mouseleave", () => {
+  cookieAcceptButton.style.backgroundColor = "#25a3b9";
+});
+cookieAcceptButton.addEventListener("click", () => {
+  dismissCookieElements();
+  runCookies();
+});
+
+// Manage
+cookieManageButton.addEventListener("mouseenter", () => {
+  cookieManageButton.style.textDecoration = "underline";
+});
+cookieManageButton.addEventListener("mouseleave", () => {
+  cookieManageButton.style.textDecoration = "none";
+});
+
+function showCookieModal() {
+  cookieBar.style.display = "none";
+  cookieMenu.style.display = "flex";
+  cookieLayer.style.display = "block";
+}
+
+cookieManageButton.addEventListener("click", () => {
+  showCookieModal();
+});
+
+// Modal
+let cookieMenu = document.createElement("div");
+cookieMenu.style.cssText =
+  "position:fixed;top: 50%;left:50%;transform:translate(-50%,-50%); width: 90%;max-width: 800px; background-color: #ddd; border-radius: 20px; display: none; z-index: 10; flex-direction: column";
+
+let cookieLayer = document.createElement("div");
+cookieLayer.style.cssText =
+  "position: fixed; top: 0;width: 100%; height: 100%; background-color: rgba(0,0,0,0.6);display: none; transition: 0.4s; justify-content: center;";
+
+// Necessary Cookies
+let cookie1 = document.createElement("div");
+
+// Analytics cookies
+let cookie2 = document.createElement("div");
+cookie2.style.cssText = "padding: 20px; border-bottom: 1px solid black;";
+let gAnalytics = true;
+
+let cookie2Header = document.createElement("div");
+cookie2Header.style.cssText =
+  "display: flex; justify-content: space-between; margin: 10px 0";
+
+let cookie2Title = document.createElement("h2");
+cookie2Title.innerHTML = "Analytics cookies";
+cookie2Title.style.cssText =
+  "color: black; text-align: justify; font-family: 'Fira Sans', sans-serif";
+
+let analyticsSwitcher = document.createElement("div");
+let switcherRound = document.createElement("div");
+let analyticsMessage = document.createElement("p");
+
+analyticsSwitcher.style.cssText =
+  "border-radius: 15px; width: 3rem; height: 1.5rem; background-color: #25a3b9; position: relative; cursor: pointer";
+switcherRound.style.cssText =
+  "border-radius: 50%; width: 1.5rem; height: 1.5rem; background-color: white; position: absolute; right: 0; transition: 0.5s; border: 0.5px solid #25a3b9";
+analyticsMessage.innerHTML = "ON";
+analyticsMessage.style.cssText =
+  "color: #25a3b9; position: relative; left: -3rem";
+
+function toggleAnalytics() {
+  if (gAnalytics) {
+    switcherRound.style.transform = "translateX(-1.5rem)";
+    switcherRound.style.borderColor = "#777";
+    analyticsSwitcher.style.backgroundColor = "#777";
+    analyticsMessage.style.color = "#777";
+    analyticsMessage.innerHTML = "OFF";
+    gAnalytics = false;
+  } else {
+    switcherRound.style.transform = "translateX(0)";
+    switcherRound.style.borderColor = "#25a3b9";
+    analyticsSwitcher.style.backgroundColor = "#25a3b9";
+    analyticsMessage.style.color = "#25a3b9";
+    analyticsMessage.innerHTML = "ON";
+    gAnalytics = true;
+  }
+}
+
+analyticsSwitcher.addEventListener("click", () => toggleAnalytics());
+
+analyticsSwitcher.appendChild(switcherRound);
+analyticsSwitcher.appendChild(analyticsMessage);
+
+cookie2Header.appendChild(cookie2Title);
+cookie2Header.appendChild(analyticsSwitcher);
+
+let cookie2Text = document.createElement("p");
+cookie2Text.innerHTML =
+  "These cookies are related to the Google Analytics tool, designed to allow us to understand how many visitors visit this site and how they use it. The process follows <a href='https://policies.google.com/privacy?hl=en-US'>Google analytics' policies.</a>";
+cookie2Text.style.cssText =
+  "color: black; font-family: 'Fira Sans', sans-serif";
+
+cookie2.appendChild(cookie2Header);
+cookie2.appendChild(cookie2Text);
+
+// Accepting buttons
+let cookie3 = document.createElement("div");
+cookie3.style.cssText =
+  "padding: 20px; position: relative; width: 100%; display: flex; justify-content: space-between; align-content: center";
+
+let saveChanges = document.createElement("div");
+saveChanges.innerHTML = "Save";
+saveChanges.style.cssText =
+  "display:inline-block; cursor:pointer; padding: 10px; background-color: #25a3b9; color: white;font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s;font-family: 'Fira Sans', sans-serif";
+saveChanges.addEventListener("mouseenter", () => {
+  saveChanges.style.backgroundColor = "#186B79";
+});
+saveChanges.addEventListener("mouseleave", () => {
+  saveChanges.style.backgroundColor = "#25a3b9";
+});
+saveChanges.addEventListener("click", () => {
+  if (gAnalytics) runCookies();
+  dismissCookieElements();
+});
+
+let policyLink2 = document.createElement("div");
+policyLink2.innerHTML = "cookie & privacy policy";
+policyLink2.style.cssText =
+  "color:#25a3b9; cursor: pointer; display: flex; flex-direction: column; justify-content: center; font-family: 'Fira Sans', sans-serif";
+policyLink2.addEventListener("mouseenter", () => {
+  policyLink2.style.textDecoration = "underline";
+});
+policyLink2.addEventListener("mouseleave", () => {
+  policyLink2.style.textDecoration = "none";
+});
+
+cookie3.appendChild(policyLink2);
+cookie3.appendChild(saveChanges);
+
+cookieMenu.appendChild(cookie1);
+cookieMenu.appendChild(cookie2);
+cookieMenu.appendChild(cookie3);
+
+document.body.appendChild(cookieMenu);
+document.body.appendChild(cookieLayer);
