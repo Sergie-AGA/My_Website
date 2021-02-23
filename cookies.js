@@ -121,6 +121,35 @@ cookieLayer.style.cssText =
 // Necessary Cookies
 let cookie1 = document.createElement("div");
 
+cookie1.style.cssText = "padding: 20px; border-bottom: 1px solid black;";
+
+let cookie1Header = document.createElement("div");
+cookie1Header.style.cssText =
+  "display: flex; justify-content: space-between; margin: 10px 0";
+
+let cookie1Title = document.createElement("h2");
+cookie1Title.innerHTML = "Essential cookies";
+cookie1Title.style.cssText =
+  "color: black; text-align: justify; font-family: 'Fira Sans', sans-serif";
+
+let essentialMessage = document.createElement("p");
+
+essentialMessage.innerHTML = "Always ON";
+essentialMessage.style.cssText =
+  "color: #25a3b9; position: relative; left: -3rem";
+
+cookie1Header.appendChild(cookie1Title);
+cookie1Header.appendChild(essentialMessage);
+
+let cookie1Text = document.createElement("p");
+cookie1Text.innerHTML =
+  "These cookies are essentials pieces of data to make the site's functionalities operate properly";
+cookie1Text.style.cssText =
+  "color: black; font-family: 'Fira Sans', sans-serif";
+
+cookie1.appendChild(cookie1Header);
+cookie1.appendChild(cookie1Text);
+
 // Analytics cookies
 let cookie2 = document.createElement("div");
 cookie2.style.cssText = "padding: 20px; border-bottom: 1px solid black;";
