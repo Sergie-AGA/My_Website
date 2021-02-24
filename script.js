@@ -18,6 +18,10 @@ const dismiss = document.getElementById("dismiss");
 const container = document.getElementById("container");
 const navbarSocial = document.getElementById("navbarSocial");
 const contactIcons = document.getElementById("contactIcons");
+const privacyButton = document.getElementById("privacyButton");
+const privacySection = document.getElementById("privacySection");
+const easterEggButton = document.getElementById("easterEggButton");
+const easterEggSection = document.getElementById("easterEggSection");
 
 const sections = [
   { button: homeButton, section: homeSection },
@@ -25,6 +29,8 @@ const sections = [
   { button: portfolioButton, section: portfolioSection },
   { button: resultsButton, section: resultsSection },
   { button: contactButton, section: contactSection },
+  { button: privacyButton, section: privacySection },
+  // { button: easterEggButton, section: easterEggSection },
 ];
 
 const switchMessages = [
@@ -124,6 +130,22 @@ altContactButton.addEventListener("click", () => {
   }, 1200);
   contactMode();
 });
+
+function altPrivacyButtons() {
+  sectionSwitch.classList.add("section-switch");
+  let randomMessage =
+    switchMessages[Math.floor(Math.random() * switchMessages.length)];
+  switchText.innerHTML = randomMessage;
+  rotateLogo();
+  deactivate();
+  setTimeout(() => {
+    privacySection.classList.remove("invisible");
+  }, 500);
+  setTimeout(() => {
+    sectionSwitch.classList.remove("section-switch");
+  }, 1200);
+  contactMode();
+}
 
 dismiss.addEventListener("click", () => {
   resultsSection.classList.add("dismiss");

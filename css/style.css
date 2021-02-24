@@ -541,6 +541,30 @@ a {
   justify-content: center;
   min-width: 15rem; }
 
+.privacy-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+  padding: 0.3px;
+  font-family: "Titillium Web", sans-serif; }
+  .privacy-link:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer; }
+  @media screen and (max-width: 1024px) {
+    .privacy-link {
+      bottom: 4.5rem; } }
+  @media screen and (max-width: 768px) {
+    .privacy-link {
+      bottom: 3.5rem; } }
+
+.external-link {
+  color: #25a3b9 !important;
+  cursor: pointer; }
+  .external-link:hover {
+    text-decoration: underline; }
+
 #skillsSection {
   width: calc(100vw-4rem);
   height: 100vh;

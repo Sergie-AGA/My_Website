@@ -15,7 +15,7 @@ cookieHeader.style.cssText =
   "color: black; text-align: justify; font-size: 1.5rem;";
 
 let cookieText = document.createElement("p");
-cookieText.innerHTML = `This site uses cookies and similar technologies to understand how the site is used and improve the user's experience. For more information, please refer to this site's <span id="policyLink" style="color:#25a3b9">cookie & privacy policy</span>.`;
+cookieText.innerHTML = `This site uses cookies and similar technologies to understand how the site is used and improve the user's experience. By clicking "accept cookies", you agree to our policies on how data is handled. For more information, please refer to this site's <span id="policyLink" style="color:#25a3b9" >cookie & privacy policy</span>.`;
 cookieText.style.cssText = "color: black; font-family: 'Fira Sans', sans-serif";
 
 //Buttons
@@ -41,6 +41,17 @@ cookieContainer.appendChild(cookieText);
 cookieContainer.appendChild(cookieButtonArea);
 
 document.body.appendChild(cookieBar);
+
+let john = true;
+function runPrivacyNotice() {
+  if (john) {
+    cookieBar.style.display = "block";
+  } else {
+    cookieBar.style.display = "none";
+  }
+}
+
+runPrivacyNotice();
 
 //Handle policy
 let policyLink = document.getElementById("policyLink");
@@ -143,7 +154,7 @@ cookie1Header.appendChild(essentialMessage);
 
 let cookie1Text = document.createElement("p");
 cookie1Text.innerHTML =
-  "These cookies are essentials pieces of data to make the site's functionalities operate properly";
+  "These cookies are essential pieces of data to make the site's functionalities operate properly";
 cookie1Text.style.cssText =
   "color: black; font-family: 'Fira Sans', sans-serif";
 
@@ -204,7 +215,7 @@ cookie2Header.appendChild(analyticsSwitcher);
 
 let cookie2Text = document.createElement("p");
 cookie2Text.innerHTML =
-  "These cookies are related to the Google Analytics tool, designed to allow us to understand how many visitors visit this site and how they use it. The process follows <a href='https://policies.google.com/privacy?hl=en-US'>Google analytics' policies.</a>";
+  "These cookies are related to the Google Analytics tool, designed to allow us to understand how many visitors visit this site and how they use it. The process follows <a href='https://policies.google.com/privacy?hl=en-US' style='color:#25a3b9' target='_blank' class='external-link'>Google's policies.</a>";
 cookie2Text.style.cssText =
   "color: black; font-family: 'Fira Sans', sans-serif";
 
@@ -241,6 +252,7 @@ policyLink2.addEventListener("mouseenter", () => {
 policyLink2.addEventListener("mouseleave", () => {
   policyLink2.style.textDecoration = "none";
 });
+policyLink2.setAttribute("id", "policyLink2");
 
 cookie3.appendChild(policyLink2);
 cookie3.appendChild(saveChanges);
@@ -251,3 +263,12 @@ cookieMenu.appendChild(cookie3);
 
 document.body.appendChild(cookieMenu);
 document.body.appendChild(cookieLayer);
+
+// Section switch for the below code is in the other JS file
+policyLink.addEventListener("click", () => altPrivacyButtons());
+policyLink2.addEventListener("click", () => {
+  altPrivacyButtons();
+  runPrivacyNotice();
+  cookieMenu.style.display = "none";
+  cookieLayer.style.display = "none";
+});

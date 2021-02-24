@@ -367,3 +367,43 @@
   justify-content: center;
   min-width: 15rem;
 }
+
+.privacy-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+  padding: 0.3px;
+  font-family: $font-secondary;
+  &:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+  }
+  @media screen and (max-width: $tablet) {
+    bottom: 4.5rem;
+  }
+  @media screen and (max-width: $mobile) {
+    bottom: 3.5rem;
+  }
+}
+
+// Privacy page
+.external-link {
+  color: #25a3b9 !important;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.privacy {
+  &__title {
+  }
+  &__header {
+  }
+  &__text {
+  }
+  &__button {
+  }
+}
