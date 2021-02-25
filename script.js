@@ -959,7 +959,7 @@ function generateBackground() {
   let spawn = Math.floor(Math.random() * 1000) + 500;
   let sizeOrigin = Math.floor(Math.random() * 130) + 35;
   let posXOrigin = Math.floor(Math.random() * 100);
-  let posYOrigin = Math.floor(Math.random() * 70) + 10;
+  let posYOrigin = Math.floor(Math.random() * 80) + 10;
   let posDestination = Math.floor(Math.random() * 50);
   let rotation = Math.random() * 720 - 360;
   let duration = Math.floor(Math.random() * 4) + 3;
@@ -977,7 +977,7 @@ function generateBackground() {
   backgroundSquare.style.borderColor = `rgb(${hueR},${hueG},${hueB})`;
   backgroundSquare.style.boxShadow = `0 0 4px 2px rgb(${hueR},${hueG},${hueB})`;
   backgroundSquare.style.opacity = "0";
-  backgroundSquare.style.position = "absolute";
+  backgroundSquare.style.position = "fixed";
   backgroundSquare.style.top = `${posYOrigin}%`;
   backgroundSquare.style.left = `${posXOrigin}%`;
   backgroundSquare.style.zIndex = `-1`;

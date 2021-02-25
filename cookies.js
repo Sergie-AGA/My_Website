@@ -2,7 +2,7 @@
 // Base notification bar
 let cookieBar = document.createElement("div");
 cookieBar.style.cssText =
-  "background-color:#ddd; width:100%; position: fixed; top: 0; padding: 6px;";
+  "background-color:white; width:100%; position: fixed; top: 0; padding: 6px;";
 
 let cookieContainer = document.createElement("div");
 cookieContainer.style.cssText = "max-width:1200px;margin:auto;";
@@ -30,7 +30,7 @@ cookieAcceptButton.style.cssText =
 let cookieManageButton = document.createElement("div");
 cookieManageButton.innerHTML = "Manage preferences";
 cookieManageButton.style.cssText =
-  "display:inline-block; cursor:pointer; padding: 10px; font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px;transition:0.3s; font-family: 'Fira Sans', sans-serif";
+  "display:inline-block; cursor:pointer; padding: 10px; font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s; font-family: 'Fira Sans', sans-serif";
 
 cookieButtonArea.appendChild(cookieAcceptButton);
 cookieButtonArea.appendChild(cookieManageButton);
@@ -74,23 +74,6 @@ function dismissCookieElements() {
   cookieLayer.style.display = "none";
 }
 
-function runCookies() {
-  let head = document.getElementsByTagName("head")[0];
-  let script = document.createElement("script");
-  script.setAttribute("async", "");
-
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-NKDTEYNGBP";
-  head.appendChild(script);
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "G-NKDTEYNGBP");
-}
-
 cookieAcceptButton.addEventListener("mouseenter", () => {
   cookieAcceptButton.style.backgroundColor = "#186B79";
 });
@@ -99,8 +82,53 @@ cookieAcceptButton.addEventListener("mouseleave", () => {
 });
 cookieAcceptButton.addEventListener("click", () => {
   dismissCookieElements();
-  runCookies();
+  setPreference();
 });
+
+function setPreference() {
+  let expiryDate = new Date();
+  expiryDate.setMonth(expiryDate.getMonth() + 24);
+
+  gaPreference = gAnalytics;
+  document.cookie = `preferenceSet=true; expires=${expiryDate}`;
+  document.cookie = `gaSet=${gaPreference}; expires=${expiryDate}`;
+
+  // Handle Google Analytics
+  if (gAnalytics) {
+    ////////////////// verify if exists, if not run this code
+    let GAScript = document.getElementById("GAScript");
+
+    if (GAScript) {
+      GAScript.remove();
+    }
+
+    let head = document.getElementsByTagName("head")[0];
+    let script = document.createElement("script");
+    script.setAttribute("async", "");
+    script.setAttribute("id", "GAScript");
+
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-NKDTEYNGBP";
+    head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-NKDTEYNGBP");
+  } else {
+    let GAScript = document.getElementById("GAScript");
+    if (GAScript) {
+      GAScript.remove();
+    }
+    document.cookie =
+      "_ga_NKDTEYNGBP= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "_ga= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+  }
+}
+
+// Read cookie and destroy
 
 // Manage
 cookieManageButton.addEventListener("mouseenter", () => {
@@ -165,6 +193,7 @@ cookie1.appendChild(cookie1Text);
 let cookie2 = document.createElement("div");
 cookie2.style.cssText = "padding: 20px; border-bottom: 1px solid black;";
 let gAnalytics = true;
+let gaPreference = gAnalytics;
 
 let cookie2Header = document.createElement("div");
 cookie2Header.style.cssText =
@@ -238,8 +267,8 @@ saveChanges.addEventListener("mouseleave", () => {
   saveChanges.style.backgroundColor = "#25a3b9";
 });
 saveChanges.addEventListener("click", () => {
-  if (gAnalytics) runCookies();
   dismissCookieElements();
+  setPreference();
 });
 
 let policyLink2 = document.createElement("div");
@@ -272,3 +301,10 @@ policyLink2.addEventListener("click", () => {
   cookieMenu.style.display = "none";
   cookieLayer.style.display = "none";
 });
+
+let manageButton = document.getElementById("managePreferences");
+if (manageButton) {
+  manageButton.addEventListener("click", () => {
+    showCookieModal();
+  });
+}

@@ -565,6 +565,34 @@ a {
   .external-link:hover {
     text-decoration: underline; }
 
+#privacySection {
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+  left: 50%;
+  top: 8rem;
+  transform: translateX(-50%); }
+  @media screen and (max-width: 1024px) {
+    #privacySection {
+      padding-bottom: 5rem;
+      top: 12rem; } }
+
+.privacy__title {
+  margin: 1rem; }
+
+.privacy__header {
+  margin: 1rem 0;
+  text-align: justify;
+  font-size: 1.5rem; }
+
+.privacy__text {
+  margin-bottom: 0.5rem; }
+
+.privacy__button {
+  width: 13rem;
+  text-align: center;
+  margin: 0; }
+
 #skillsSection {
   width: calc(100vw-4rem);
   height: 100vh;
