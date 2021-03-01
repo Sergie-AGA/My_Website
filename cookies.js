@@ -21,20 +21,20 @@ let english = {
 };
 let portuguese = {
   barTitle: "Como cookies são utilizados neste site",
-  barDesc: `Este site utiliza cookies e tecnologias similares para entender como o site é utilizado e melhorar a experiência do usuário. Ao clicar em "Aceitar cookies", você concorda com nossa política sobre como os dados são gerenciados. Para mais informações, favor referir a `,
-  barPolicy: "Política de cookies & privacidade",
+  barDesc: `Este site utiliza cookies e tecnologias similares para entender como o site é utilizado e melhorar a experiência do usuário. Ao clicar em "Aceitar cookies", você concorda com nossa política sobre como os dados são gerenciados. Para mais informações, favor consultar a `,
+  barPolicy: "Política de cookies & privacidade.",
   barAccept: "Aceitar cookies",
   barManage: "Gerir preferências",
   c1Title: "Cookies essenciais",
   c1Desc:
-    "Estes cookies são pedaços de dados essenciais para fazer as funcionalidades do site operarem adequadamente",
+    "Estes cookies são pedaços de dados essenciais para fazer as funcionalidades do site operarem adequadamente.",
   c1Status: "Sempre ligados",
   c2Title: "Cookies analíticos",
   c2Desc:
     "Estes cookies estão relacionados a ferramenta Google Analytics, criada para nos permitir quantos visitantes acessam este site e como os usam. O processo segue as ",
   c2Link: "Políticas do Google.",
-  c2StatusOn: "LIGADOS",
-  c2StatusOff: "DESLIGADOS",
+  c2StatusOn: "SIM",
+  c2StatusOff: "NÃO",
   policy: "Política de cookies & privacidade",
   save: "Salvar",
 };
@@ -235,16 +235,14 @@ cookie1Title.style.cssText =
 
 let essentialMessage = document.createElement("p");
 
-essentialMessage.innerHTML = "Always ON";
-essentialMessage.style.cssText =
-  "color: #25a3b9; position: relative; left: -3rem";
+essentialMessage.innerHTML = lang.c1Status;
+essentialMessage.style.cssText = "color: #25a3b9; right: -0.65rem";
 
 cookie1Header.appendChild(cookie1Title);
 cookie1Header.appendChild(essentialMessage);
 
 let cookie1Text = document.createElement("p");
-cookie1Text.innerHTML =
-  "These cookies are essential pieces of data to make the site's functionalities operate properly";
+cookie1Text.innerHTML = lang.c1Desc;
 cookie1Text.style.cssText =
   "color: black; font-family: 'Fira Sans', sans-serif";
 
@@ -262,7 +260,7 @@ cookie2Header.style.cssText =
   "display: flex; justify-content: space-between; margin: 10px 0";
 
 let cookie2Title = document.createElement("h2");
-cookie2Title.innerHTML = "Analytics cookies";
+cookie2Title.innerHTML = lang.c2Title;
 cookie2Title.style.cssText =
   "color: black; text-align: justify; font-family: 'Fira Sans', sans-serif";
 
@@ -274,9 +272,8 @@ analyticsSwitcher.style.cssText =
   "border-radius: 15px; width: 3rem; height: 1.5rem; background-color: #25a3b9; position: relative; cursor: pointer";
 switcherRound.style.cssText =
   "border-radius: 50%; width: 1.5rem; height: 1.5rem; background-color: white; position: absolute; right: 0; transition: 0.5s; border: 0.5px solid #25a3b9";
-analyticsMessage.innerHTML = "ON";
-analyticsMessage.style.cssText =
-  "color: #25a3b9; position: relative; left: -3rem";
+analyticsMessage.innerHTML = lang.c2StatusOn;
+analyticsMessage.style.cssText = `color: #25a3b9; position: relative; top: -1.5rem; right: -0.65rem;`;
 
 function toggleAnalytics() {
   if (gAnalytics) {
@@ -284,14 +281,14 @@ function toggleAnalytics() {
     switcherRound.style.borderColor = "#777";
     analyticsSwitcher.style.backgroundColor = "#777";
     analyticsMessage.style.color = "#777";
-    analyticsMessage.innerHTML = "OFF";
+    analyticsMessage.innerHTML = lang.c2StatusOff;
     gAnalytics = false;
   } else {
     switcherRound.style.transform = "translateX(0)";
     switcherRound.style.borderColor = "#25a3b9";
     analyticsSwitcher.style.backgroundColor = "#25a3b9";
     analyticsMessage.style.color = "#25a3b9";
-    analyticsMessage.innerHTML = "ON";
+    analyticsMessage.innerHTML = lang.c2StatusOn;
     gAnalytics = true;
   }
 }
@@ -305,8 +302,7 @@ cookie2Header.appendChild(cookie2Title);
 cookie2Header.appendChild(analyticsSwitcher);
 
 let cookie2Text = document.createElement("p");
-cookie2Text.innerHTML =
-  "These cookies are related to the Google Analytics tool, designed to allow us to understand how many visitors visit this site and how they use it. The process follows <a href='https://policies.google.com/privacy?hl=en-US' style='color:#25a3b9' target='_blank' class='external-link'>Google's policies.</a>";
+cookie2Text.innerHTML = lang.c2Desc;
 cookie2Text.style.cssText =
   "color: black; font-family: 'Fira Sans', sans-serif";
 
@@ -315,8 +311,9 @@ cookie2Link.setAttribute("href", "https://policies.google.com/privacy");
 cookie2Link.setAttribute("target", "_blank");
 cookie2Link.setAttribute("class", "external-link");
 cookie2Link.style.cssText = "color: #25a3b9";
+cookie2Link.innerHTML = lang.c2Link;
 
-cookie2Title.appendChild(cookie2Link);
+cookie2Text.appendChild(cookie2Link);
 cookie2.appendChild(cookie2Header);
 cookie2.appendChild(cookie2Text);
 
@@ -326,7 +323,7 @@ cookie3.style.cssText =
   "padding: 20px; position: relative; width: 100%; display: flex; justify-content: space-between; align-content: center";
 
 let saveChanges = document.createElement("div");
-saveChanges.innerHTML = "Save";
+saveChanges.innerHTML = lang.save;
 saveChanges.style.cssText =
   "display:inline-block; cursor:pointer; padding: 10px; background-color: #25a3b9; color: white;font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s;font-family: 'Fira Sans', sans-serif";
 saveChanges.addEventListener("mouseenter", () => {
@@ -341,7 +338,7 @@ saveChanges.addEventListener("click", () => {
 });
 
 let policyLink2 = document.createElement("div");
-policyLink2.innerHTML = "cookie & privacy policy";
+policyLink2.innerHTML = lang.policy;
 policyLink2.style.cssText =
   "color:#25a3b9; cursor: pointer; display: flex; flex-direction: column; justify-content: center; font-family: 'Fira Sans', sans-serif";
 policyLink2.addEventListener("mouseenter", () => {
