@@ -42,16 +42,12 @@ cookieContainer.appendChild(cookieButtonArea);
 
 document.body.appendChild(cookieBar);
 
-let john = true;
-function runPrivacyNotice() {
-  if (john) {
-    cookieBar.style.display = "block";
-  } else {
-    cookieBar.style.display = "none";
-  }
+let isPreferenceSet = document.cookie.match(
+  "(^|;) ?" + "preferenceSet" + "=([^;]*)(;|$)"
+);
+if (isPreferenceSet) {
+  cookieBar.style.display = "none";
 }
-
-runPrivacyNotice();
 
 //Handle policy
 let policyLink = document.getElementById("policyLink");
@@ -95,7 +91,6 @@ function setPreference() {
 
   // Handle Google Analytics
   if (gAnalytics) {
-    ////////////////// verify if exists, if not run this code
     let GAScript = document.getElementById("GAScript");
 
     if (GAScript) {
@@ -110,13 +105,16 @@ function setPreference() {
     script.src = "https://www.googletagmanager.com/gtag/js?id=G-NKDTEYNGBP";
     head.appendChild(script);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    let ga = document.cookie.match("(^|;) ?" + "_ga" + "=([^;]*)(;|$)");
+    if (!ga) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-NKDTEYNGBP");
+      gtag("config", "G-NKDTEYNGBP");
+    }
   } else {
     destroyAnalyticsCookies();
   }
