@@ -399,17 +399,25 @@
 #privacySection {
   width: 80%;
   max-width: 1200px;
+  height: 100vh;
   position: relative;
   left: 50%;
-  top: 8rem;
   transform: translateX(-50%);
+  overflow-y: auto;
   @media screen and (max-width: $tablet) {
-    padding-bottom: 5rem;
-    top: 12rem;
+    width: 100%;
   }
 }
 
 .privacy {
+  &__container {
+    position: relative;
+    top: 8rem;
+    @media screen and (max-width: $tablet) {
+      top: 4rem;
+      padding: 10px 10px 5rem;
+    }
+  }
   &__title {
     margin: 1rem;
   }

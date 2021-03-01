@@ -568,14 +568,22 @@ a {
 #privacySection {
   width: 80%;
   max-width: 1200px;
+  height: 100vh;
   position: relative;
   left: 50%;
-  top: 8rem;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  overflow-y: auto; }
   @media screen and (max-width: 1024px) {
     #privacySection {
-      padding-bottom: 5rem;
-      top: 12rem; } }
+      width: 100%; } }
+
+.privacy__container {
+  position: relative;
+  top: 8rem; }
+  @media screen and (max-width: 1024px) {
+    .privacy__container {
+      top: 4rem;
+      padding: 10px 10px 5rem; } }
 
 .privacy__title {
   margin: 1rem; }

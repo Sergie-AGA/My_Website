@@ -1,4 +1,57 @@
 // Cookie policy
+// Language data
+let english = {
+  barTitle: "How cookies are used in this site",
+  barDesc: `This site uses cookies and similar technologies to understand how the site is used and improve the user's experience. By clicking "accept cookies", you agree to our policies on how data is handled. For more information, please refer to this site's `,
+  barPolicy: "cookie & privacy policy",
+  barAccept: "Accept cookies",
+  barManage: "Manage preferences",
+  c1Title: "Essential cookies",
+  c1Desc:
+    "These cookies are essential pieces of data to make the site's functionalities operate properly",
+  c1Status: "Always ON",
+  c2Title: "Analytics cookies",
+  c2Desc:
+    "These cookies are related to the Google Analytics tool, designed to allow us to understand how many visitors visit this site and how they use it. The process follows ",
+  c2Link: "Google's policies.",
+  c2StatusOn: "ON",
+  c2StatusOff: "OFF",
+  policy: "cookie & privacy policy",
+  save: "Save",
+};
+let portuguese = {
+  barTitle: "Como cookies são utilizados neste site",
+  barDesc: `Este site utiliza cookies e tecnologias similares para entender como o site é utilizado e melhorar a experiência do usuário. Ao clicar em "Aceitar cookies", você concorda com nossa política sobre como os dados são gerenciados. Para mais informações, favor referir a `,
+  barPolicy: "Política de cookies & privacidade",
+  barAccept: "Aceitar cookies",
+  barManage: "Gerir preferências",
+  c1Title: "Cookies essenciais",
+  c1Desc:
+    "Estes cookies são pedaços de dados essenciais para fazer as funcionalidades do site operarem adequadamente",
+  c1Status: "Sempre ligados",
+  c2Title: "Cookies analíticos",
+  c2Desc:
+    "Estes cookies estão relacionados a ferramenta Google Analytics, criada para nos permitir quantos visitantes acessam este site e como os usam. O processo segue as ",
+  c2Link: "Políticas do Google.",
+  c2StatusOn: "LIGADOS",
+  c2StatusOff: "DESLIGADOS",
+  policy: "Política de cookies & privacidade",
+  save: "Salvar",
+};
+
+let lang = english;
+let languageIndex = 0;
+
+function switchLanguage() {
+  if (languageIndex === 0) {
+    lang = portuguese;
+    languageIndex++;
+  } else {
+    lang = english;
+    languageIndex = 0;
+  }
+}
+
 // Base notification bar
 let cookieBar = document.createElement("div");
 cookieBar.style.cssText =
@@ -10,25 +63,31 @@ cookieContainer.style.cssText = "max-width:1200px;margin:auto;";
 cookieBar.appendChild(cookieContainer);
 
 let cookieHeader = document.createElement("h2");
-cookieHeader.innerHTML = "How cookies are used in this site";
+cookieHeader.innerHTML = lang.barTitle;
 cookieHeader.style.cssText =
   "color: black; text-align: justify; font-size: 1.5rem;";
 
 let cookieText = document.createElement("p");
-cookieText.innerHTML = `This site uses cookies and similar technologies to understand how the site is used and improve the user's experience. By clicking "accept cookies", you agree to our policies on how data is handled. For more information, please refer to this site's <span id="policyLink" style="color:#25a3b9" >cookie & privacy policy</span>.`;
+cookieText.innerHTML = lang.barDesc;
 cookieText.style.cssText = "color: black; font-family: 'Fira Sans', sans-serif";
+let cookieLink = document.createElement("span");
+cookieLink.setAttribute("id", "policyLink");
+cookieLink.style.cssText = "color:#25a3b9";
+cookieLink.innerHTML = lang.barPolicy;
+
+cookieText.appendChild(cookieLink);
 
 //Buttons
 let cookieButtonArea = document.createElement("div");
 cookieButtonArea.style.cssText;
 
 let cookieAcceptButton = document.createElement("div");
-cookieAcceptButton.innerHTML = "Accept cookies";
+cookieAcceptButton.innerHTML = lang.barAccept;
 cookieAcceptButton.style.cssText =
   "display:inline-block; cursor:pointer; padding: 10px; background-color: #25a3b9; color: white;font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s; font-family: 'Fira Sans', sans-serif";
 
 let cookieManageButton = document.createElement("div");
-cookieManageButton.innerHTML = "Manage preferences";
+cookieManageButton.innerHTML = lang.barManage;
 cookieManageButton.style.cssText =
   "display:inline-block; cursor:pointer; padding: 10px; font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s; font-family: 'Fira Sans', sans-serif";
 
@@ -170,7 +229,7 @@ cookie1Header.style.cssText =
   "display: flex; justify-content: space-between; margin: 10px 0";
 
 let cookie1Title = document.createElement("h2");
-cookie1Title.innerHTML = "Essential cookies";
+cookie1Title.innerHTML = lang.c1Title;
 cookie1Title.style.cssText =
   "color: black; text-align: justify; font-family: 'Fira Sans', sans-serif";
 
@@ -251,6 +310,13 @@ cookie2Text.innerHTML =
 cookie2Text.style.cssText =
   "color: black; font-family: 'Fira Sans', sans-serif";
 
+let cookie2Link = document.createElement("a");
+cookie2Link.setAttribute("href", "https://policies.google.com/privacy");
+cookie2Link.setAttribute("target", "_blank");
+cookie2Link.setAttribute("class", "external-link");
+cookie2Link.style.cssText = "color: #25a3b9";
+
+cookie2Title.appendChild(cookie2Link);
 cookie2.appendChild(cookie2Header);
 cookie2.appendChild(cookie2Text);
 
