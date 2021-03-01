@@ -118,17 +118,22 @@ function setPreference() {
 
     gtag("config", "G-NKDTEYNGBP");
   } else {
-    let GAScript = document.getElementById("GAScript");
-    if (GAScript) {
-      GAScript.remove();
-    }
-    document.cookie =
-      "_ga_NKDTEYNGBP= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
-    document.cookie = "_ga= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+    destroyAnalyticsCookies();
   }
 }
 
-// Read cookie and destroy
+function destroyAnalyticsCookies() {
+  let GAScript = document.getElementById("GAScript");
+  if (GAScript) {
+    GAScript.remove();
+  }
+  document.cookie = "_ga_NKDTEYNGBP= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie = "_ga= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie = "__utma= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie = "__utmb= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie = "__utmc= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie = "__utmz= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+}
 
 // Manage
 cookieManageButton.addEventListener("mouseenter", () => {
@@ -307,4 +312,11 @@ if (manageButton) {
   manageButton.addEventListener("click", () => {
     showCookieModal();
   });
+}
+
+// Read cookie and destroy if no consent on reload (cleans some remaining Google cookies) and sets gAnalytics variable
+let v = document.cookie.match("(^|;) ?" + "gaSet" + "=([^;]*)(;|$)");
+if (v && v[2] === "false") {
+  destroyAnalyticsCookies();
+  toggleAnalytics();
 }
