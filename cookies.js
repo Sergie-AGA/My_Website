@@ -47,23 +47,41 @@ flagUk.setAttribute(
   "src",
   "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg"
 );
-flagUk.style.cssText = "width: 2.5rem; height: auto";
+flagUk.style.cssText = "width: 2rem; height: auto";
 
-let flagBr;
-flagUk.setAttribute(
+let flagBr = document.createElement("img");
+flagBr.setAttribute(
   "src",
   "https://cdn.pixabay.com/photo/2014/04/02/11/12/brazil-305531_960_720.png"
 );
-flagUk.style.cssText = "width: 2.5rem; height: auto";
+flagBr.style.cssText = "width: 2rem; height: auto";
 
-let langButton = document.createElement("div");
-langButton.style.cssText = "";
+let langButton = document.createElement("span");
+langButton.style.cssText =
+  "margin-left: 1rem; cursor: pointer; position: relative";
 
-let flagButton = flagUk;
+let flagButton = document.createElement("img");
+flagButton.setAttribute(
+  "src",
+  "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg"
+);
+flagButton.style.cssText = "width: 2rem; height: auto";
 
-let langSwitch;
+let langSwitchArrow = document.createElement("span");
+langSwitchArrow.innerHTML = "&#129171;";
+langSwitchArrow.style.cssText =
+  "font-size: 2.5rem; position: relative; top: 1.2rem; left: 0.4rem;";
+
+let langOptions = document.createElement("div");
+langOptions.style.cssText =
+  "position: absolute; top: 2rem; left: -1rem; box-shadow: 0 0 4px 3px rgba(0,0,0,0.2); display: flex; justify-content: center; width: 4rem; height: auto; background-color: #ddd; border-radius: 8px;";
+
+langOptions.appendChild(flagUk);
+langOptions.appendChild(flagBr);
+
 langButton.appendChild(flagButton);
-langButton.appendChild(langSwitch);
+langButton.appendChild(langSwitchArrow);
+langButton.appendChild(langOptions);
 
 function switchLanguage() {
   if (languageIndex === 0) {
@@ -80,13 +98,21 @@ function switchLanguage() {
 let langButton2 = langButton;
 
 // Language Button functionality
+let isLangOpen = false;
 langButton.addEventListener("mouseenter", () => {
-  langButton.style.backgroundColor = "#186B79";
+  langSwitchArrow.style.color = "#25a3b9";
 });
 langButton.addEventListener("mouseleave", () => {
-  langButton.style.backgroundColor = "#25a3b9";
+  langSwitchArrow.style.color = "black";
 });
-langButton.addEventListener("click", () => {});
+langButton.addEventListener("click", () => {
+  if (!isLangOpen) {
+    langOptions.style.display = "flex";
+  } else {
+    langOptions.style.display = "none";
+  }
+  isLangOpen = !isLangOpen;
+});
 
 // Base notification bar
 let cookieBar = document.createElement("div");
