@@ -58,23 +58,27 @@ flagBr.style.cssText = "width: 2rem; height: auto";
 
 let langButton = document.createElement("span");
 langButton.style.cssText =
-  "margin-left: 1rem; cursor: pointer; position: relative";
+  "margin-left: 1rem; cursor: pointer; position: relative; height: auto";
 
 let flagButton = document.createElement("img");
 flagButton.setAttribute(
   "src",
   "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg"
 );
-flagButton.style.cssText = "width: 2rem; height: auto";
+flagButton.style.cssText =
+  "width: 2rem; height: auto; position: relative; top: -0.3rem";
 
 let langSwitchArrow = document.createElement("span");
 langSwitchArrow.innerHTML = "&#129171;";
 langSwitchArrow.style.cssText =
-  "font-size: 2.5rem; position: relative; top: 1.2rem; left: 0.4rem;";
+  "font-size: 2.5rem; position: relative; top: 0.8rem; left: 0.4rem;";
 
 let langOptions = document.createElement("div");
 langOptions.style.cssText =
-  "position: absolute; top: 2rem; left: -1rem; box-shadow: 0 0 4px 3px rgba(0,0,0,0.2); display: flex; justify-content: center; width: 4rem; height: auto; background-color: #ddd; border-radius: 8px;";
+  "position: absolute; top: 3rem; left: -1rem; box-shadow: 0 0 4px 3px rgba(0,0,0,0.2); display: none; justify-content: center; width: 4rem; height: auto; background-color: #ddd; border-radius: 8px; overflow: hidden";
+
+flagBr.addEventListener("click", () => langPortuguese());
+flagUk.addEventListener("click", () => langEnglish());
 
 langOptions.appendChild(flagUk);
 langOptions.appendChild(flagBr);
@@ -83,16 +87,46 @@ langButton.appendChild(flagButton);
 langButton.appendChild(langSwitchArrow);
 langButton.appendChild(langOptions);
 
-function switchLanguage() {
-  if (languageIndex === 0) {
-    lang = portuguese;
-    languageIndex++;
-    flagButton = flagBr;
+function loadDynamicText() {
+  cookieHeader.innerHTML = lang.barTitle;
+  cookieText.innerHTML = lang.barDesc;
+  cookieText.appendChild(cookieLink);
+  cookieLink.innerHTML = lang.barPolicy;
+  cookieAcceptButton.innerHTML = lang.barAccept;
+  cookieManageButton.innerHTML = lang.barManage;
+  cookie1Title.innerHTML = lang.c1Title;
+  essentialMessage.innerHTML = lang.c1Status;
+  cookie1Text.innerHTML = lang.c1Desc;
+  cookie2Title.innerHTML = lang.c2Title;
+  if (gAnalytics) {
+    analyticsMessage.innerHTML = lang.c2StatusOn;
   } else {
-    lang = english;
-    languageIndex = 0;
-    flagButton = flagUk;
+    analyticsMessage.innerHTML = lang.c2StatusOff;
   }
+  cookie2Text.innerHTML = lang.c2Desc;
+  cookie2Link.innerHTML = lang.c2Link;
+  saveChanges.innerHTML = lang.save;
+  policyLink2.innerHTML = lang.policy;
+}
+
+function langPortuguese() {
+  lang = portuguese;
+  languageIndex++;
+  flagButton.setAttribute(
+    "src",
+    "https://cdn.pixabay.com/photo/2014/04/02/11/12/brazil-305531_960_720.png"
+  );
+  loadDynamicText();
+}
+
+function langEnglish() {
+  lang = english;
+  languageIndex = 0;
+  flagButton.setAttribute(
+    "src",
+    "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg"
+  );
+  loadDynamicText();
 }
 
 let langButton2 = langButton;
@@ -124,11 +158,15 @@ cookieContainer.style.cssText = "max-width:1200px;margin:auto;";
 
 cookieBar.appendChild(cookieContainer);
 
+let cookieHeaderArea = document.createElement("div");
+cookieHeaderArea.style.cssText = "display: flex; align-items: center";
+
 let cookieHeader = document.createElement("h2");
 cookieHeader.innerHTML = lang.barTitle;
 cookieHeader.style.cssText =
   "color: black; text-align: justify; font-size: 1.5rem;";
-cookieHeader.appendChild(langButton);
+cookieHeaderArea.appendChild(cookieHeader);
+cookieHeaderArea.appendChild(langButton);
 
 let cookieText = document.createElement("p");
 cookieText.innerHTML = lang.barDesc;
@@ -158,7 +196,7 @@ cookieButtonArea.appendChild(cookieAcceptButton);
 cookieButtonArea.appendChild(cookieManageButton);
 
 //Appending
-cookieContainer.appendChild(cookieHeader);
+cookieContainer.appendChild(cookieHeaderArea);
 cookieContainer.appendChild(cookieText);
 cookieContainer.appendChild(cookieButtonArea);
 
