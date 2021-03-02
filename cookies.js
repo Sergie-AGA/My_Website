@@ -42,15 +42,51 @@ let portuguese = {
 let lang = english;
 let languageIndex = 0;
 
+let flagUk = document.createElement("img");
+flagUk.setAttribute(
+  "src",
+  "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg"
+);
+flagUk.style.cssText = "width: 2.5rem; height: auto";
+
+let flagBr;
+flagUk.setAttribute(
+  "src",
+  "https://cdn.pixabay.com/photo/2014/04/02/11/12/brazil-305531_960_720.png"
+);
+flagUk.style.cssText = "width: 2.5rem; height: auto";
+
+let langButton = document.createElement("div");
+langButton.style.cssText = "";
+
+let flagButton = flagUk;
+
+let langSwitch;
+langButton.appendChild(flagButton);
+langButton.appendChild(langSwitch);
+
 function switchLanguage() {
   if (languageIndex === 0) {
     lang = portuguese;
     languageIndex++;
+    flagButton = flagBr;
   } else {
     lang = english;
     languageIndex = 0;
+    flagButton = flagUk;
   }
 }
+
+let langButton2 = langButton;
+
+// Language Button functionality
+langButton.addEventListener("mouseenter", () => {
+  langButton.style.backgroundColor = "#186B79";
+});
+langButton.addEventListener("mouseleave", () => {
+  langButton.style.backgroundColor = "#25a3b9";
+});
+langButton.addEventListener("click", () => {});
 
 // Base notification bar
 let cookieBar = document.createElement("div");
@@ -66,6 +102,7 @@ let cookieHeader = document.createElement("h2");
 cookieHeader.innerHTML = lang.barTitle;
 cookieHeader.style.cssText =
   "color: black; text-align: justify; font-size: 1.5rem;";
+cookieHeader.appendChild(langButton);
 
 let cookieText = document.createElement("p");
 cookieText.innerHTML = lang.barDesc;
@@ -79,7 +116,7 @@ cookieText.appendChild(cookieLink);
 
 //Buttons
 let cookieButtonArea = document.createElement("div");
-cookieButtonArea.style.cssText;
+cookieButtonArea.style.cssText = "display: flex; align-content: center";
 
 let cookieAcceptButton = document.createElement("div");
 cookieAcceptButton.innerHTML = lang.barAccept;
