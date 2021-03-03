@@ -16,7 +16,7 @@ let english = {
   c2Link: "Google's policies.",
   c2StatusOn: "ON",
   c2StatusOff: "OFF",
-  policy: "cookie & privacy policy",
+  policy: "Cookie & privacy policy",
   save: "Save",
 };
 let portuguese = {
@@ -104,6 +104,7 @@ function loadDynamicText() {
     analyticsMessage.innerHTML = lang.c2StatusOff;
   }
   cookie2Text.innerHTML = lang.c2Desc;
+  cookie2Text.appendChild(cookie2Link);
   cookie2Link.innerHTML = lang.c2Link;
   saveChanges.innerHTML = lang.save;
   policyLink2.innerHTML = lang.policy;
@@ -113,6 +114,10 @@ function langPortuguese() {
   lang = portuguese;
   languageIndex++;
   flagButton.setAttribute(
+    "src",
+    "https://cdn.pixabay.com/photo/2014/04/02/11/12/brazil-305531_960_720.png"
+  );
+  flagButton2.setAttribute(
     "src",
     "https://cdn.pixabay.com/photo/2014/04/02/11/12/brazil-305531_960_720.png"
   );
@@ -126,13 +131,18 @@ function langEnglish() {
     "src",
     "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg"
   );
+  flagButton2.setAttribute(
+    "src",
+    "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg"
+  );
   loadDynamicText();
 }
 
-let langButton2 = langButton;
+let langButton2 = langButton.cloneNode(true);
 
 // Language Button functionality
 let isLangOpen = false;
+
 langButton.addEventListener("mouseenter", () => {
   langSwitchArrow.style.color = "#25a3b9";
 });
@@ -327,7 +337,7 @@ cookie1.style.cssText = "padding: 20px; border-bottom: 1px solid black;";
 
 let cookie1Header = document.createElement("div");
 cookie1Header.style.cssText =
-  "display: flex; justify-content: space-between; margin: 10px 0";
+  "display: flex; justify-content: space-between; margin: 10px 0; position: relative";
 
 let cookie1Title = document.createElement("h2");
 cookie1Title.innerHTML = lang.c1Title;
@@ -337,9 +347,13 @@ cookie1Title.style.cssText =
 let essentialMessage = document.createElement("p");
 
 essentialMessage.innerHTML = lang.c1Status;
-essentialMessage.style.cssText = "color: #25a3b9; right: -0.65rem";
+essentialMessage.style.cssText = "color: #25a3b9;";
+
+langButton2.style.cssText =
+  "cursor: pointer; position: absolute; height: auto; top: -2.3rem";
 
 cookie1Header.appendChild(cookie1Title);
+cookie1Header.appendChild(langButton2);
 cookie1Header.appendChild(essentialMessage);
 
 let cookie1Text = document.createElement("p");
@@ -349,6 +363,32 @@ cookie1Text.style.cssText =
 
 cookie1.appendChild(cookie1Header);
 cookie1.appendChild(cookie1Text);
+
+// Language Button2 functionality
+let isLangOpen2 = false;
+let flagButton2 = langButton2.getElementsByTagName("img")[0];
+let langSwitchArrow2 = langButton2.getElementsByTagName("span")[0];
+let langOptions2 = langButton2.getElementsByTagName("div")[0];
+let flagBr2 = langOptions2.getElementsByTagName("img")[1];
+let flagUk2 = langOptions2.getElementsByTagName("img")[0];
+
+flagBr2.addEventListener("click", () => langPortuguese());
+flagUk2.addEventListener("click", () => langEnglish());
+
+langButton2.addEventListener("mouseenter", () => {
+  langSwitchArrow2.style.color = "#25a3b9";
+});
+langButton2.addEventListener("mouseleave", () => {
+  langSwitchArrow2.style.color = "black";
+});
+langButton2.addEventListener("click", () => {
+  if (!isLangOpen2) {
+    langOptions2.style.display = "flex";
+  } else {
+    langOptions2.style.display = "none";
+  }
+  isLangOpen2 = !isLangOpen2;
+});
 
 // Analytics cookies
 let cookie2 = document.createElement("div");
