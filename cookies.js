@@ -39,6 +39,9 @@ let portuguese = {
   save: "Salvar",
 };
 
+let colorMain = "#25a3b9";
+let colorDark = "#186B79";
+
 let lang = english;
 let languageIndex = 0;
 
@@ -58,7 +61,7 @@ flagBr.style.cssText = "width: 2rem; height: auto";
 
 let langButton = document.createElement("span");
 langButton.style.cssText =
-  "margin-left: 1rem; cursor: pointer; position: relative; height: auto";
+  "margin-left: 1rem; cursor: pointer; position: relative; height: auto; display: inline-block";
 
 let flagButton = document.createElement("img");
 flagButton.setAttribute(
@@ -144,7 +147,7 @@ let langButton2 = langButton.cloneNode(true);
 let isLangOpen = false;
 
 langButton.addEventListener("mouseenter", () => {
-  langSwitchArrow.style.color = "#25a3b9";
+  langSwitchArrow.style.color = colorMain;
 });
 langButton.addEventListener("mouseleave", () => {
   langSwitchArrow.style.color = "black";
@@ -169,12 +172,12 @@ cookieContainer.style.cssText = "max-width:1200px;margin:auto;";
 cookieBar.appendChild(cookieContainer);
 
 let cookieHeaderArea = document.createElement("div");
-cookieHeaderArea.style.cssText = "display: flex; align-items: center";
+cookieHeaderArea.style.cssText = "display: inline-block; ";
 
 let cookieHeader = document.createElement("h2");
 cookieHeader.innerHTML = lang.barTitle;
 cookieHeader.style.cssText =
-  "color: black; text-align: justify; font-size: 1.5rem;";
+  "color: black; text-align: justify; font-size: 1.5rem; display: inline-block";
 cookieHeaderArea.appendChild(cookieHeader);
 cookieHeaderArea.appendChild(langButton);
 
@@ -183,7 +186,7 @@ cookieText.innerHTML = lang.barDesc;
 cookieText.style.cssText = "color: black; font-family: 'Fira Sans', sans-serif";
 let cookieLink = document.createElement("span");
 cookieLink.setAttribute("id", "policyLink");
-cookieLink.style.cssText = "color:#25a3b9";
+cookieLink.style.cssText = `color: ${colorMain}`;
 cookieLink.innerHTML = lang.barPolicy;
 
 cookieText.appendChild(cookieLink);
@@ -194,8 +197,7 @@ cookieButtonArea.style.cssText = "display: flex; align-content: center";
 
 let cookieAcceptButton = document.createElement("div");
 cookieAcceptButton.innerHTML = lang.barAccept;
-cookieAcceptButton.style.cssText =
-  "display:inline-block; cursor:pointer; padding: 10px; background-color: #25a3b9; color: white;font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s; font-family: 'Fira Sans', sans-serif";
+cookieAcceptButton.style.cssText = `display:inline-block; cursor:pointer; padding: 10px; background-color: ${colorMain}; color: white;font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s; font-family: 'Fira Sans', sans-serif`;
 
 let cookieManageButton = document.createElement("div");
 cookieManageButton.innerHTML = lang.barManage;
@@ -241,10 +243,10 @@ function dismissCookieElements() {
 }
 
 cookieAcceptButton.addEventListener("mouseenter", () => {
-  cookieAcceptButton.style.backgroundColor = "#186B79";
+  cookieAcceptButton.style.backgroundColor = colorDark;
 });
 cookieAcceptButton.addEventListener("mouseleave", () => {
-  cookieAcceptButton.style.backgroundColor = "#25a3b9";
+  cookieAcceptButton.style.backgroundColor = colorMain;
 });
 cookieAcceptButton.addEventListener("click", () => {
   dismissCookieElements();
@@ -324,7 +326,7 @@ cookieManageButton.addEventListener("click", () => {
 // Modal
 let cookieMenu = document.createElement("div");
 cookieMenu.style.cssText =
-  "position:fixed;top: 50%;left:50%;transform:translate(-50%,-50%); width: 90%;max-width: 800px; background-color: #ddd; border-radius: 20px; display: none; z-index: 10; flex-direction: column";
+  "position:fixed;top: 50%;left:50%;transform:translate(-50%,-50%); width: 100%;max-width: 800px; background-color: #ddd; border-radius: 20px; display: none; z-index: 10; flex-direction: column;";
 
 let cookieLayer = document.createElement("div");
 cookieLayer.style.cssText =
@@ -347,7 +349,7 @@ cookie1Title.style.cssText =
 let essentialMessage = document.createElement("p");
 
 essentialMessage.innerHTML = lang.c1Status;
-essentialMessage.style.cssText = "color: #25a3b9;";
+essentialMessage.style.cssText = `color: ${colorMain};`;
 
 langButton2.style.cssText =
   "cursor: pointer; position: absolute; height: auto; top: -2.3rem";
@@ -376,7 +378,7 @@ flagBr2.addEventListener("click", () => langPortuguese());
 flagUk2.addEventListener("click", () => langEnglish());
 
 langButton2.addEventListener("mouseenter", () => {
-  langSwitchArrow2.style.color = "#25a3b9";
+  langSwitchArrow2.style.color = colorMain;
 });
 langButton2.addEventListener("mouseleave", () => {
   langSwitchArrow2.style.color = "black";
@@ -409,12 +411,10 @@ let analyticsSwitcher = document.createElement("div");
 let switcherRound = document.createElement("div");
 let analyticsMessage = document.createElement("p");
 
-analyticsSwitcher.style.cssText =
-  "border-radius: 15px; width: 3rem; height: 1.5rem; background-color: #25a3b9; position: relative; cursor: pointer";
-switcherRound.style.cssText =
-  "border-radius: 50%; width: 1.5rem; height: 1.5rem; background-color: white; position: absolute; right: 0; transition: 0.5s; border: 0.5px solid #25a3b9";
+analyticsSwitcher.style.cssText = `border-radius: 15px; width: 3rem; height: 1.5rem; background-color: ${colorMain}; position: relative; cursor: pointer`;
+switcherRound.style.cssText = `border-radius: 50%; width: 1.5rem; height: 1.5rem; background-color: white; position: absolute; right: 0; transition: 0.5s; border: 0.5px solid ${colorMain}`;
 analyticsMessage.innerHTML = lang.c2StatusOn;
-analyticsMessage.style.cssText = `color: #25a3b9; position: relative; top: -1.5rem; right: -0.65rem;`;
+analyticsMessage.style.cssText = `color: ${colorMain}; position: relative; top: -1.5rem; right: -0.65rem;`;
 
 function toggleAnalytics() {
   if (gAnalytics) {
@@ -426,9 +426,9 @@ function toggleAnalytics() {
     gAnalytics = false;
   } else {
     switcherRound.style.transform = "translateX(0)";
-    switcherRound.style.borderColor = "#25a3b9";
-    analyticsSwitcher.style.backgroundColor = "#25a3b9";
-    analyticsMessage.style.color = "#25a3b9";
+    switcherRound.style.borderColor = colorMain;
+    analyticsSwitcher.style.backgroundColor = colorMain;
+    analyticsMessage.style.color = colorMain;
     analyticsMessage.innerHTML = lang.c2StatusOn;
     gAnalytics = true;
   }
@@ -451,7 +451,7 @@ let cookie2Link = document.createElement("a");
 cookie2Link.setAttribute("href", "https://policies.google.com/privacy");
 cookie2Link.setAttribute("target", "_blank");
 cookie2Link.setAttribute("class", "external-link");
-cookie2Link.style.cssText = "color: #25a3b9";
+cookie2Link.style.cssText = `color: ${colorMain}`;
 cookie2Link.innerHTML = lang.c2Link;
 
 cookie2Text.appendChild(cookie2Link);
@@ -461,17 +461,16 @@ cookie2.appendChild(cookie2Text);
 // Accepting buttons
 let cookie3 = document.createElement("div");
 cookie3.style.cssText =
-  "padding: 20px; position: relative; width: 100%; display: flex; justify-content: space-between; align-content: center";
+  "padding: 10px 20px; position: relative; width: 100%; display: flex; justify-content: space-between; align-content: center";
 
 let saveChanges = document.createElement("div");
 saveChanges.innerHTML = lang.save;
-saveChanges.style.cssText =
-  "display:inline-block; cursor:pointer; padding: 10px; background-color: #25a3b9; color: white;font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s;font-family: 'Fira Sans', sans-serif";
+saveChanges.style.cssText = `display:inline-block; cursor:pointer; padding: 10px; background-color: ${colorMain}; color: white;font-family: Fira-sans, sans-serif; border-radius: 5px;margin: 10px 10px 10px 0;transition:0.3s;font-family: 'Fira Sans', sans-serif`;
 saveChanges.addEventListener("mouseenter", () => {
-  saveChanges.style.backgroundColor = "#186B79";
+  saveChanges.style.backgroundColor = colorDark;
 });
 saveChanges.addEventListener("mouseleave", () => {
-  saveChanges.style.backgroundColor = "#25a3b9";
+  saveChanges.style.backgroundColor = colorMain;
 });
 saveChanges.addEventListener("click", () => {
   dismissCookieElements();
@@ -480,8 +479,7 @@ saveChanges.addEventListener("click", () => {
 
 let policyLink2 = document.createElement("div");
 policyLink2.innerHTML = lang.policy;
-policyLink2.style.cssText =
-  "color:#25a3b9; cursor: pointer; display: flex; flex-direction: column; justify-content: center; font-family: 'Fira Sans', sans-serif";
+policyLink2.style.cssText = `color: ${colorMain}; cursor: pointer; display: flex; flex-direction: column; justify-content: center; font-family: 'Fira Sans', sans-serif`;
 policyLink2.addEventListener("mouseenter", () => {
   policyLink2.style.textDecoration = "underline";
 });
