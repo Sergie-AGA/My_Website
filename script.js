@@ -9,8 +9,8 @@ const skillsSection = document.getElementById("skillsSection");
 const portfolioButton = document.getElementById("portfolioButton");
 const altPortfolioButton = document.getElementById("altPortfolioButton");
 const portfolioSection = document.getElementById("portfolioSection");
-const dataButton = document.getElementById("dataButton");
-const dataSection = document.getElementById("dataSection");
+const numbersButton = document.getElementById("numbersButton");
+const numbersSection = document.getElementById("numbersSection");
 const contactButton = document.getElementById("contactButton");
 const altContactButton = document.getElementById("altContactButton");
 const contactSection = document.getElementById("contactSection");
@@ -27,7 +27,7 @@ const sections = [
   { button: homeButton, section: homeSection },
   { button: skillsButton, section: skillsSection },
   { button: portfolioButton, section: portfolioSection },
-  { button: dataButton, section: dataSection },
+  { button: numbersButton, section: numbersSection },
   { button: contactButton, section: contactSection },
   { button: privacyButton, section: privacySection },
   // { button: easterEggButton, section: easterEggSection },
@@ -147,26 +147,26 @@ function altPrivacyButtons() {
   contactMode();
 }
 
-dismiss.addEventListener("click", () => {
-  dataSection.classList.add("dismiss");
+// dismiss.addEventListener("click", () => {
+//   numbersSection.classList.add("dismiss");
 
-  setTimeout(() => {
-    sectionSwitch.classList.add("section-switch");
-    switchText.innerHTML = "Nothing to see here";
-    rotateLogo();
-    deactivate();
-    homeButton.classList.add("active-item");
-    setTimeout(() => {
-      homeSection.classList.remove("invisible");
-    }, 500);
-    setTimeout(() => {
-      sectionSwitch.classList.remove("section-switch");
-    }, 1200);
-  }, 3600);
-  setTimeout(() => {
-    dataSection.classList.remove("dismiss");
-  }, 5000);
-});
+//   setTimeout(() => {
+//     sectionSwitch.classList.add("section-switch");
+//     switchText.innerHTML = "Nothing to see here";
+//     rotateLogo();
+//     deactivate();
+//     numbersButton.classList.add("active-item");
+//     setTimeout(() => {
+//       numbersSection.classList.remove("invisible");
+//     }, 500);
+//     setTimeout(() => {
+//       sectionSwitch.classList.remove("section-switch");
+//     }, 1200);
+//   }, 3600);
+//   setTimeout(() => {
+//     numbersSection.classList.remove("dismiss");
+//   }, 5000);
+// });
 
 // CLOSE SUPPORT TEXT
 const closeSupported = document.getElementById("closeSupported");
