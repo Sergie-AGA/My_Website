@@ -46,17 +46,11 @@ let lang = english;
 let languageIndex = 0;
 
 let flagUk = document.createElement("img");
-flagUk.setAttribute(
-  "src",
-  "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg"
-);
+flagUk.setAttribute("src", "assets/union-jack-1027898_640.jpg");
 flagUk.style.cssText = "width: 2rem; height: auto";
 
 let flagBr = document.createElement("img");
-flagBr.setAttribute(
-  "src",
-  "https://cdn.pixabay.com/photo/2014/04/02/11/12/brazil-305531_960_720.png"
-);
+flagBr.setAttribute("src", "assets/brazil-305531_640.png");
 flagBr.style.cssText = "width: 2rem; height: auto";
 
 let langButton = document.createElement("span");
@@ -64,10 +58,7 @@ langButton.style.cssText =
   "margin-left: 1rem; cursor: pointer; position: relative; height: auto; display: inline-block";
 
 let flagButton = document.createElement("img");
-flagButton.setAttribute(
-  "src",
-  "https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg"
-);
+flagButton.setAttribute("src", "assets/union-jack-1027898_640.jpg");
 flagButton.style.cssText =
   "width: 2rem; height: auto; position: relative; top: -0.3rem";
 
