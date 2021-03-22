@@ -19,7 +19,7 @@ let currentActivities = [
   },
   {
     title:
-      "Furthering my knowledge on Node JS and MongoDB to create a Full Stack application",
+      "Furthering knowledge on Node JS and MongoDB to create Full Stack applications",
     conclusion: 40,
     type: "personal",
   },
@@ -36,7 +36,21 @@ let currentActivities = [
 ];
 
 let activitiesArea = document.getElementById("activitiesArea");
-currentActivities.forEach((activity) => {});
+currentActivities.forEach((activity) => {
+  let activityChart = document.createElement("div");
+  activityChart.classList.add("activity__chart-area");
+
+  let activityTitle = document.createElement("h3");
+  activityTitle.classList.add("activity__title");
+  activityTitle.innerText = activity.title;
+
+  let currentActivity = document.createElement("div");
+  currentActivity.classList.add("activity");
+  currentActivity.appendChild(activityChart);
+  currentActivity.appendChild(activityTitle);
+
+  activitiesArea.appendChild(currentActivity);
+});
 
 // TESTIMONIALS
 let testimonialsData = [

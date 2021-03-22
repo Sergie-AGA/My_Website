@@ -51,8 +51,10 @@
       text-align: justify;
     }
     &__area {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+      grid-gap: 10px;
+      padding: 10px;
     }
     &__labels {
       display: flex;
@@ -70,13 +72,13 @@
         }
       }
       &--1 {
-        background-color: red;
+        background-color: rgb(207, 35, 5);
       }
       &--2 {
-        background-color: green;
+        background-color: rgb(5, 173, 61);
       }
       &--3 {
-        background-color: blue;
+        background-color: rgb(4, 135, 196);
       }
     }
   }
@@ -102,6 +104,25 @@
 // CHARTS
 
 // ACTIVITIES
+.activity {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 7rem;
+  border-radius: 20px;
+  background-color: color(dark-main);
+  padding: 10px;
+  transition: 0.3s;
+  &__chart-area {
+    flex: 1 0 30%;
+  }
+  &__title {
+    flex: 1 0 70%;
+    font-family: $font-secondary;
+    text-align: justify;
+    font-family: 1rem;
+  }
+}
 
 // TESTIMONIALS
 .testimonial {

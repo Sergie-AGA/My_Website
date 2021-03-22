@@ -1293,8 +1293,10 @@ a {
     padding: 10px;
     text-align: justify; }
   .numbers__activities__area {
-    display: flex;
-    flex-direction: column; }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-gap: 10px;
+    padding: 10px; }
   .numbers__activities__labels {
     display: flex;
     padding: 10px; }
@@ -1309,11 +1311,11 @@ a {
         display: inline-block;
         margin-right: 0.3rem; }
     .numbers__activities__labels--1 {
-      background-color: red; }
+      background-color: #cf2305; }
     .numbers__activities__labels--2 {
-      background-color: green; }
+      background-color: #05ad3d; }
     .numbers__activities__labels--3 {
-      background-color: blue; }
+      background-color: #0487c4; }
 
 .numbers__testimonials {
   transition: 0.3s;
@@ -1330,6 +1332,23 @@ a {
   .numbers__testimonials__area {
     display: flex;
     flex-direction: column; }
+
+.activity {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 7rem;
+  border-radius: 20px;
+  background-color: #0a0a0a;
+  padding: 10px;
+  transition: 0.3s; }
+  .activity__chart-area {
+    flex: 1 0 30%; }
+  .activity__title {
+    flex: 1 0 70%;
+    font-family: "Titillium Web", sans-serif;
+    text-align: justify;
+    font-family: 1rem; }
 
 .testimonial {
   margin: auto;
