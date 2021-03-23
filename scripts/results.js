@@ -40,6 +40,8 @@ currentActivities.forEach((activity) => {
   let activityChart = document.createElement("div");
   activityChart.classList.add("activity__chart-area");
 
+  // Generate chart
+
   let activityTitle = document.createElement("h3");
   activityTitle.classList.add("activity__title");
   activityTitle.innerText = activity.title;
