@@ -20,7 +20,7 @@ let currentActivities = [
   {
     title:
       "Furthering knowledge on Node JS and MongoDB to create Full Stack applications",
-    conclusion: 40,
+    conclusion: 70,
     type: "personal",
   },
   {
@@ -37,20 +37,69 @@ let currentActivities = [
 
 let activitiesArea = document.getElementById("activitiesArea");
 currentActivities.forEach((activity) => {
+  let activityColorR;
+  let activityColorG;
+  let activityColorB;
+  switch (activity.type) {
+    case "client":
+      activityColorR = 207;
+      activityColorG = 35;
+      activityColorB = 5;
+      break;
+    case "business":
+      activityColorR = 5;
+      activityColorG = 173;
+      activityColorB = 61;
+      break;
+    case "personal":
+      activityColorR = 4;
+      activityColorG = 135;
+      activityColorB = 196;
+      break;
+    default:
+      break;
+  }
+
   let activityChart = document.createElement("div");
   activityChart.classList.add("activity__chart-area");
+  let activityPercentage = document.createElement("div");
+  activityPercentage.innerHTML = `${activity.conclusion}%`;
+  activityPercentage.classList.add("activity__percentage");
+  activityPercentage.style.color = `rgb(${activityColorR},${activityColorG},${activityColorB})`;
 
-  // Generate chart
+  let activityProgress = document.createElement("div");
+  let activityProgressContainer = document.createElement("div");
+  activityProgressContainer.classList.add("activity__progress__container");
+  activityProgress.classList.add("activity__progress");
+  activityProgress.style.backgroundColor = `rgb(${activityColorR},${activityColorG},${activityColorB})`;
+  activityProgress.style.width = `${activity.conclusion}%`;
+
+  activityProgressContainer.appendChild(activityProgress);
+  activityChart.appendChild(activityPercentage);
+  activityChart.appendChild(activityProgressContainer);
 
   let activityTitle = document.createElement("h3");
   activityTitle.classList.add("activity__title");
   activityTitle.innerText = activity.title;
 
   let currentActivity = document.createElement("div");
-  currentActivity.classList.add("activity");
-  currentActivity.appendChild(activityChart);
+  currentActivity.classList.add("activity", `activity--${activity.type}`);
   currentActivity.appendChild(activityTitle);
+  currentActivity.appendChild(activityChart);
 
+  numbersButton.addEventListener("click", () => {
+    activityProgress.style.width = `0`;
+    activityPercentage.innerHTML = `0%`;
+    setTimeout(() => {
+      activityProgress.style.width = `${activity.conclusion}%`;
+      for (let index = 0; index < activity.conclusion; index++) {
+        setTimeout(() => {
+          index++;
+          activityPercentage.innerHTML = `${index}%`;
+        }, 2000 / activity.conclusion);
+      }
+    }, 2000);
+  });
   activitiesArea.appendChild(currentActivity);
 });
 

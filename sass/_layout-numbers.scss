@@ -52,7 +52,7 @@
     }
     &__area {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
       grid-gap: 10px;
       padding: 10px;
       width: 100%;
@@ -110,19 +110,39 @@
   flex-direction: column;
   justify-content: space-between;
   width: auto;
-  height: 7rem;
+  height: 10rem;
   border-radius: 20px;
   background-color: color(dark-main);
   padding: 10px;
   transition: 0.3s;
-  &__chart-area {
-    flex: 1 0 30%;
-  }
   &__title {
-    flex: 1 0 70%;
+    flex: 1 0 65%;
     font-family: $font-secondary;
-    text-align: justify;
+    text-align: center;
     font-family: 1rem;
+    font-weight: 400;
+  }
+  &__percentage {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  &__chart-area {
+    flex: 1 0 35%;
+  }
+  &__progress {
+    width: 90%;
+    height: 1rem;
+    border-radius: 20px;
+    transition: 2s;
+    &__container {
+      width: 90%;
+      height: 1rem;
+      margin: 0.3rem auto;
+      background-color: rgb(63, 63, 63);
+      border-radius: 20px;
+    }
   }
 }
 
