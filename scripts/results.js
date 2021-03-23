@@ -92,11 +92,41 @@ currentActivities.forEach((activity) => {
     activityPercentage.innerHTML = `0%`;
     setTimeout(() => {
       activityProgress.style.width = `${activity.conclusion}%`;
-      for (let index = 0; index < activity.conclusion; index++) {
+      let index = 0;
+
+      function countUp() {
+        index++;
+        activityPercentage.innerHTML = `${index}%`;
         setTimeout(() => {
-          index++;
-          activityPercentage.innerHTML = `${index}%`;
+          if (index < activity.conclusion) {
+            countUp();
+          }
         }, 2000 / activity.conclusion);
+      }
+      if (typeof activity.conclusion == "number") {
+        countUp();
+      } else {
+        let randomIndex = 0;
+
+        function randomBar() {
+          activityProgress.style.width = `${Math.floor(Math.random() * 100)}%`;
+          console.log("going");
+          if (randomIndex > 0) {
+            setTimeout(() => {
+              randomBar();
+            }, 1000);
+          }
+        }
+        activityPercentage.innerHTML = `??%`;
+        currentActivity.addEventListener("mouseenter", () => {
+          randomIndex++;
+          console.log("start");
+          randomBar();
+        });
+        currentActivity.addEventListener("mouseleave", () => {
+          console.log("stop");
+          randomIndex = 0;
+        });
       }
     }, 2000);
   });
