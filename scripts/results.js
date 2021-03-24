@@ -37,24 +37,21 @@ let currentActivities = [
 
 let activitiesArea = document.getElementById("activitiesArea");
 currentActivities.forEach((activity) => {
-  let activityColorR;
-  let activityColorG;
-  let activityColorB;
+  let activityColor1;
+  let activityColor2;
+
   switch (activity.type) {
     case "client":
-      activityColorR = 207;
-      activityColorG = 35;
-      activityColorB = 5;
+      activityColor1 = "#f12711";
+      activityColor2 = "#f5af19";
       break;
     case "business":
-      activityColorR = 5;
-      activityColorG = 173;
-      activityColorB = 61;
+      activityColor1 = "#11998e";
+      activityColor2 = "#38ef7d";
       break;
     case "personal":
-      activityColorR = 4;
-      activityColorG = 135;
-      activityColorB = 196;
+      activityColor1 = "#B2FEFA";
+      activityColor2 = "#0ED2F7";
       break;
     default:
       break;
@@ -65,13 +62,18 @@ currentActivities.forEach((activity) => {
   let activityPercentage = document.createElement("div");
   activityPercentage.innerHTML = `${activity.conclusion}%`;
   activityPercentage.classList.add("activity__percentage");
-  activityPercentage.style.color = `rgb(${activityColorR},${activityColorG},${activityColorB})`;
+  activityPercentage.style.color = activityColor1;
 
   let activityProgress = document.createElement("div");
   let activityProgressContainer = document.createElement("div");
   activityProgressContainer.classList.add("activity__progress__container");
   activityProgress.classList.add("activity__progress");
-  activityProgress.style.backgroundColor = `rgb(${activityColorR},${activityColorG},${activityColorB})`;
+  activityProgress.style.backgroundColor = activityColor1;
+
+  activityProgress.style.backgroundImage = `linear-gradient(to right, ${activityColor1}, ${activityColor2})`;
+
+  console.log(activityProgress);
+
   activityProgress.style.width = `${activity.conclusion}%`;
 
   activityProgressContainer.appendChild(activityProgress);
@@ -110,7 +112,6 @@ currentActivities.forEach((activity) => {
 
         function randomBar() {
           activityProgress.style.width = `${Math.floor(Math.random() * 100)}%`;
-          console.log("going");
           if (randomIndex > 0) {
             setTimeout(() => {
               randomBar();
@@ -120,11 +121,9 @@ currentActivities.forEach((activity) => {
         activityPercentage.innerHTML = `??%`;
         currentActivity.addEventListener("mouseenter", () => {
           randomIndex++;
-          console.log("start");
           randomBar();
         });
         currentActivity.addEventListener("mouseleave", () => {
-          console.log("stop");
           randomIndex = 0;
         });
       }
@@ -132,6 +131,90 @@ currentActivities.forEach((activity) => {
   });
   activitiesArea.appendChild(currentActivity);
 });
+
+let redActivity = Array.from(
+  document.getElementsByClassName("activity--client")
+);
+let greenActivity = Array.from(
+  document.getElementsByClassName("activity--business")
+);
+let blueActivity = Array.from(
+  document.getElementsByClassName("activity--personal")
+);
+
+redActivity.forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    highlightType("red");
+  });
+});
+redActivity.forEach((element) => {
+  element.addEventListener("mouseleave", () => {
+    cancelHighlight();
+  });
+});
+
+greenActivity.forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    highlightType("green");
+  });
+});
+greenActivity.forEach((element) => {
+  element.addEventListener("mouseleave", () => {
+    cancelHighlight();
+  });
+});
+
+blueActivity.forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    highlightType("blue");
+  });
+});
+blueActivity.forEach((element) => {
+  element.addEventListener("mouseleave", () => {
+    cancelHighlight();
+  });
+});
+
+function highlightType(color) {
+  if (color === "red") {
+    greenActivity.forEach((element) => {
+      element.style.opacity = "0.6";
+    });
+
+    blueActivity.forEach((element) => {
+      element.style.opacity = "0.6";
+    });
+  } else if (color === "green") {
+    redActivity.forEach((element) => {
+      element.style.opacity = "0.6";
+    });
+
+    blueActivity.forEach((element) => {
+      element.style.opacity = "0.6";
+    });
+  } else if (color === "blue") {
+    redActivity.forEach((element) => {
+      element.style.opacity = "0.6";
+    });
+
+    greenActivity.forEach((element) => {
+      element.style.opacity = "0.6";
+    });
+  }
+}
+
+function cancelHighlight() {
+  redActivity.forEach((element) => {
+    element.style.opacity = "1";
+  });
+  greenActivity.forEach((element) => {
+    element.style.opacity = "1";
+  });
+
+  blueActivity.forEach((element) => {
+    element.style.opacity = "1";
+  });
+}
 
 // TESTIMONIALS
 let testimonialsData = [
