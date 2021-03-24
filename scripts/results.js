@@ -178,27 +178,27 @@ blueActivity.forEach((element) => {
 function highlightType(color) {
   if (color === "red") {
     greenActivity.forEach((element) => {
-      element.style.opacity = "0.6";
+      element.style.opacity = "0.5";
     });
 
     blueActivity.forEach((element) => {
-      element.style.opacity = "0.6";
+      element.style.opacity = "0.5";
     });
   } else if (color === "green") {
     redActivity.forEach((element) => {
-      element.style.opacity = "0.6";
+      element.style.opacity = "0.5";
     });
 
     blueActivity.forEach((element) => {
-      element.style.opacity = "0.6";
+      element.style.opacity = "0.5";
     });
   } else if (color === "blue") {
     redActivity.forEach((element) => {
-      element.style.opacity = "0.6";
+      element.style.opacity = "0.5";
     });
 
     greenActivity.forEach((element) => {
-      element.style.opacity = "0.6";
+      element.style.opacity = "0.5";
     });
   }
 }
