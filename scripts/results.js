@@ -1,6 +1,10 @@
+// CHARTS
+
+// https://docs.github.com/en/rest/reference/repos#list-repository-languages
+// https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user
+
 // CURRENT ACTIVITIES
 
-//https://jsfiddle.net/kimmobrunfeldt/72tkyn40/
 let currentActivities = [
   {
     title: "Developing a personal website for a client",
