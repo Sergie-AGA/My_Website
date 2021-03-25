@@ -594,6 +594,30 @@ const project8 = new Project(
   ],
   false,
   true,
+  "black",
+  true
+);
+
+const project9 = new Project(
+  "Business Website",
+  "Partnering with a designer, we created a modern-looking website for a client's business. It has features to handle all the components desired by the client, such as SEO, security, cache and more",
+  "assets/portfolio/pita-website.jpg",
+  "https://edicopia.pt",
+  "https://github.com/Sergie-AGA/",
+  [
+    {
+      label: "Appearance",
+      text: "Astra Theme + Widgets | CSS3 + Javascript | Gutenberg + Addons",
+    },
+    {
+      label: "Major features",
+      text:
+        "Security plugin | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
+    },
+  ],
+  ["CSS", "Javascript", "Vanilla JS", "WordPress"],
+  false,
+  true,
   "darkblue",
   true
 );
