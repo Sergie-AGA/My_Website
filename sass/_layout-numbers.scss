@@ -34,6 +34,10 @@
     }
     width: 100%;
     height: 47%;
+    &__title {
+      padding: 10px;
+      text-align: justify;
+    }
   }
   &__activities {
     @include numbers-template;
@@ -79,7 +83,7 @@
         background-color: #11998e;
       }
       &--3 {
-        background-color: #B2FEFA;
+        background-color: #b2fefa;
       }
     }
   }
@@ -103,6 +107,43 @@
 }
 
 // CHARTS
+.charts {
+  display: flex;
+  &__buttons {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 20rem;
+    flex: 1 1 5%;
+    &__button {
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &--active {
+        background-color: #0a0a0a !important;
+        pointer-events: none;
+      }
+    }
+    &__icon {
+      font-size: 2rem;
+    }
+  }
+  &__chart {
+    flex: 1 1 80%;
+  }
+  &__data {
+    &__title {
+      color: white;
+      font-size: 1.2rem;
+      font-family: $font-secondary;
+      text-align: center;
+    }
+  }
+}
 
 // ACTIVITIES
 .activity {
@@ -182,7 +223,6 @@
   }
   &__header {
     width: 80%;
-
     &__container {
       display: flex;
     }

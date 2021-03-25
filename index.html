@@ -1,650 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="assets/Sieger Logo.svg"
-      type="image/x-icon"
-    />
-    <script
-      src="https://kit.fontawesome.com/549378180a.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Sergie</title>
-  </head>
-  <body>
-    <div id="container" class="container">
-      <div id="switch" class="switch">
-        <img class="switch-logo" src="assets/Sieger Logo.svg" alt="logo" />
-        <p id="switchText"></p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="assets/Sieger Logo.svg" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/549378180a.js" crossorigin="anonymous"></script>
+  <title>Sergie</title>
+</head>
+
+<body>
+  <div id="container" class="container">
+    <div id="switch" class="switch">
+      <img class="switch-logo" src="assets/Sieger Logo.svg" alt="logo" />
+      <p id="switchText"></p>
+    </div>
+    <nav id="navbar" class="navbar" style="position: fixed">
+      <div class="logo__container">
+        <img id="logo" class="logo" src="assets/Sieger Logo.svg" alt="logo" />
       </div>
-      <nav id="navbar" class="navbar" style="position: fixed">
-        <div class="logo__container">
-          <img id="logo" class="logo" src="assets/Sieger Logo.svg" alt="logo" />
+      <div class="navbar__options">
+        <div id="homeButton" class="navbar__options__item active-item">
+          <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-home"></use>
+          </svg>
+          <h2 class="navbar__options__item__label">HOME</h2>
         </div>
-        <div class="navbar__options">
-          <div id="homeButton" class="navbar__options__item active-item">
-            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
-              <use xlink:href="assets/symbol-defs.svg#icon-home"></use>
-            </svg>
-            <h2 class="navbar__options__item__label">HOME</h2>
-          </div>
-          <div id="skillsButton" class="navbar__options__item">
-            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
-              <use
-                xlink:href="assets/symbol-defs.svg#icon-playlist_add_check"
-              ></use>
-            </svg>
-            <h2 class="navbar__options__item__label">SKILLS</h2>
-          </div>
-          <div id="portfolioButton" class="navbar__options__item">
-            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
-              <use
-                xlink:href="assets/symbol-defs.svg#icon-business_center"
-              ></use>
-            </svg>
-            <h2 class="navbar__options__item__label">PORTFOLIO</h2>
-          </div>
-          <div id="numbersButton" class="navbar__options__item">
-            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
-              <use xlink:href="assets/symbol-defs.svg#icon-add_chart"></use>
-            </svg>
-            <h2 class="navbar__options__item__label">MY DATA</h2>
-          </div>
-          <div id="contactButton" class="navbar__options__item">
-            <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
-              <use xlink:href="assets/symbol-defs.svg#icon-contact_page"></use>
-            </svg>
-            <h2 class="navbar__options__item__label">CONTACT</h2>
-          </div>
+        <div id="skillsButton" class="navbar__options__item">
+          <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-playlist_add_check"></use>
+          </svg>
+          <h2 class="navbar__options__item__label">SKILLS</h2>
         </div>
+        <div id="portfolioButton" class="navbar__options__item">
+          <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-business_center"></use>
+          </svg>
+          <h2 class="navbar__options__item__label">PORTFOLIO</h2>
+        </div>
+        <div id="numbersButton" class="navbar__options__item">
+          <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-add_chart"></use>
+          </svg>
+          <h2 class="navbar__options__item__label">MY DATA</h2>
+        </div>
+        <div id="contactButton" class="navbar__options__item">
+          <svg viewBox="0 0 10 10" class="navbar__options__item__icon">
+            <use xlink:href="assets/symbol-defs.svg#icon-contact_page"></use>
+          </svg>
+          <h2 class="navbar__options__item__label">CONTACT</h2>
+        </div>
+      </div>
 
-        <div id="navbarSocial" class="navbar__social">
-          <div class="navbar__social__item">
-            <a href="mailto:sergiearruda@gmail.com" target="_blank">
-              <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
-                <use xlink:href="assets/symbol-defs.svg#icon-email"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="navbar__social__item">
-            <a
-              href="https://www.linkedin.com/in/sergie-gerrits/"
-              target="_blank"
-            >
-              <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
-                <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="navbar__social__item">
-            <a href="https://github.com/Sergie-AGA" target="_blank">
-              <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
-                <use xlink:href="assets/symbol-defs.svg#icon-github"></use>
-              </svg>
-            </a>
-          </div>
+      <div id="navbarSocial" class="navbar__social">
+        <div class="navbar__social__item">
+          <a href="mailto:sergiearruda@gmail.com" target="_blank">
+            <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+              <use xlink:href="assets/symbol-defs.svg#icon-email"></use>
+            </svg>
+          </a>
         </div>
-      </nav>
+        <div class="navbar__social__item">
+          <a href="https://www.linkedin.com/in/sergie-gerrits/" target="_blank">
+            <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+              <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="navbar__social__item">
+          <a href="https://github.com/Sergie-AGA" target="_blank">
+            <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+              <use xlink:href="assets/symbol-defs.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
 
-      <div class="main-area">
-        <section id="homeSection" class="active-section section">
-          <div class="home">
-            <div class="home__headline">
-              <h1 id="homeHeading" class="home__heading">
-                <div class="yeet-block">
-                  <span class="yeet">S</span><span class="yeet">E</span
-                  ><span class="yeet">R</span><span class="yeet">G</span
-                  ><span class="yeet">I</span><span class="yeet">E</span>
-                  <span class="space"> </span>
-                </div>
-                <div class="yeet-block">
-                  <span class="yeet">G</span><span class="yeet">E</span
-                  ><span class="yeet">R</span><span class="yeet">R</span
-                  ><span class="yeet">I</span><span class="yeet">T</span
-                  ><span class="yeet">S</span><span class="space"> </span>
-                </div>
-                <div class="yeet-block">
-                  <span class="yeet">A</span><span class="yeet">R</span
-                  ><span class="yeet">R</span><span class="yeet">U</span
-                  ><span class="yeet">D</span><span class="yeet">A</span>
-                </div>
-              </h1>
-              <hr />
-              <h2 id="homeSubHeading" class="home__subheading">
-                <span class="multiShade">W</span
-                ><span class="multiShade">e</span
-                ><span class="multiShade">b</span>
-                <span class="multiShade">D</span
-                ><span class="multiShade">e</span
-                ><span class="multiShade">v</span
-                ><span class="multiShade">e</span
-                ><span class="multiShade">l</span
-                ><span class="multiShade">o</span
-                ><span class="multiShade">p</span
-                ><span class="multiShade">e</span
-                ><span class="multiShade">r</span>
-              </h2>
+    <div class="main-area">
+      <section id="homeSection" class="active-section section">
+        <div class="home">
+          <div class="home__headline">
+            <h1 id="homeHeading" class="home__heading">
+              <div class="yeet-block">
+                <span class="yeet">S</span><span class="yeet">E</span><span class="yeet">R</span><span
+                  class="yeet">G</span><span class="yeet">I</span><span class="yeet">E</span>
+                <span class="space"> </span>
+              </div>
+              <div class="yeet-block">
+                <span class="yeet">G</span><span class="yeet">E</span><span class="yeet">R</span><span
+                  class="yeet">R</span><span class="yeet">I</span><span class="yeet">T</span><span
+                  class="yeet">S</span><span class="space"> </span>
+              </div>
+              <div class="yeet-block">
+                <span class="yeet">A</span><span class="yeet">R</span><span class="yeet">R</span><span
+                  class="yeet">U</span><span class="yeet">D</span><span class="yeet">A</span>
+              </div>
+            </h1>
+            <hr />
+            <h2 id="homeSubHeading" class="home__subheading">
+              <span class="multiShade">W</span><span class="multiShade">e</span><span class="multiShade">b</span>
+              <span class="multiShade">D</span><span class="multiShade">e</span><span class="multiShade">v</span><span
+                class="multiShade">e</span><span class="multiShade">l</span><span class="multiShade">o</span><span
+                class="multiShade">p</span><span class="multiShade">e</span><span class="multiShade">r</span>
+            </h2>
+          </div>
+          <div class="home__textarea">
+            <p id="homeText" class="home__text">
+              Hi, I am Sergie Andrei Gerrits Arruda, a web developer focused
+              on the MERN Stack.
+            </p>
+
+            <div class="buttongroup">
+              <div class="button button--small" id="altPortfolioButton">
+                See Portfolio
+              </div>
+              <div class="button button--small" id="altContactButton">
+                Contact me
+              </div>
             </div>
-            <div class="home__textarea">
-              <p id="homeText" class="home__text">
-                Hi, I am Sergie Andrei Gerrits Arruda, a web developer focused
-                on the MERN Stack.
+          </div>
+        </div>
+        <div class="privacy-link" id="privacyButton">
+          Cookie & Privacy Policy
+        </div>
+        <div id="supportText" class="not-supported">
+          It seems your browser does not support some of the features used
+          here and they may not function properly. For a better experience, it
+          is recommended to update your browser.
+          <div id="closeSupported">Close warning</div>
+        </div>
+      </section>
+
+      <section id="skillsSection" class="section invisible">
+        <h2 class="section__heading vanishable">My Skills</h2>
+        <div class="skills">
+          <div class="skills__nav">
+            <div id="aboutButton" class="skills__button skills__button--main active-skill extended-skill">
+              <svg viewBox="0 0 100 100" class="skills__button__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-info"></use>
+              </svg>
+              <h4 class="skills__button__text">About</h4>
+            </div>
+            <div id="programmingButton" class="skills__button skills__button--main extended-skill">
+              <svg viewBox="0 0 100 100" class="skills__button__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-code"></use>
+              </svg>
+              <h4 class="skills__button__text">Programming</h4>
+            </div>
+            <div id="designButton" class="skills__button skills__button--main extended-skill">
+              <svg viewBox="0 0 100 100" class="skills__button__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-design_services"></use>
+              </svg>
+              <h4 class="skills__button__text">Design</h4>
+            </div>
+
+            <div id="dataButton" class="skills__button hidden-skill">
+              <svg viewBox="0 0 100 100" class="skills__button__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-insert_chart"></use>
+              </svg>
+              <h4 class="skills__button__text">Data Analysis</h4>
+            </div>
+            <div id="businessButton" class="skills__button hidden-skill">
+              <svg viewBox="0 0 100 100" class="skills__button__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-work"></use>
+              </svg>
+              <h4 class="skills__button__text">Business</h4>
+            </div>
+            <div id="languageButton" class="skills__button hidden-skill">
+              <svg viewBox="0 0 100 100" class="skills__button__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-language"></use>
+              </svg>
+              <h4 class="skills__button__text">Languages</h4>
+            </div>
+            <div id="achievementButton" class="skills__button hidden-skill">
+              <svg viewBox="0 0 100 100" class="skills__button__icon">
+                <use xlink:href="assets/symbol-defs.svg#icon-award"></use>
+              </svg>
+              <h4 class="skills__button__text">Achievements</h4>
+            </div>
+            <div id="othersButton" class="skills__more">
+              <svg viewBox="0 0 100 100" class="skills__more__icon">
+                <use id="othersIcon" xlink:href="assets/symbol-defs.svg#icon-add_circle"></use>
+              </svg>
+              <p class="skills__more__text">
+                Other <br />
+                skills
               </p>
-
-              <div class="buttongroup">
-                <div class="button button--small" id="altPortfolioButton">
-                  See Portfolio
-                </div>
-                <div class="button button--small" id="altContactButton">
-                  Contact me
-                </div>
-              </div>
             </div>
           </div>
-          <div class="privacy-link" id="privacyButton">
-            Cookie & Privacy Policy
-          </div>
-          <div id="supportText" class="not-supported">
-            It seems your browser does not support some of the features used
-            here and they may not function properly. For a better experience, it
-            is recommended to update your browser.
-            <div id="closeSupported">Close warning</div>
-          </div>
-        </section>
 
-        <section id="skillsSection" class="section invisible">
-          <h2 class="section__heading vanishable">My Skills</h2>
-          <div class="skills">
-            <div class="skills__nav">
-              <div
-                id="aboutButton"
-                class="skills__button skills__button--main active-skill extended-skill"
-              >
-                <svg viewBox="0 0 100 100" class="skills__button__icon">
-                  <use xlink:href="assets/symbol-defs.svg#icon-info"></use>
+          <div class="skills__view">
+            <div id="aboutSkill" class="skills__view__about">
+              <div class="skills__view__column2">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-person"></use>
                 </svg>
-                <h4 class="skills__button__text">About</h4>
-              </div>
-              <div
-                id="programmingButton"
-                class="skills__button skills__button--main extended-skill"
-              >
-                <svg viewBox="0 0 100 100" class="skills__button__icon">
-                  <use xlink:href="assets/symbol-defs.svg#icon-code"></use>
-                </svg>
-                <h4 class="skills__button__text">Programming</h4>
-              </div>
-              <div
-                id="designButton"
-                class="skills__button skills__button--main extended-skill"
-              >
-                <svg viewBox="0 0 100 100" class="skills__button__icon">
-                  <use
-                    xlink:href="assets/symbol-defs.svg#icon-design_services"
-                  ></use>
-                </svg>
-                <h4 class="skills__button__text">Design</h4>
-              </div>
-
-              <div id="dataButton" class="skills__button hidden-skill">
-                <svg viewBox="0 0 100 100" class="skills__button__icon">
-                  <use
-                    xlink:href="assets/symbol-defs.svg#icon-insert_chart"
-                  ></use>
-                </svg>
-                <h4 class="skills__button__text">Data Analysis</h4>
-              </div>
-              <div id="businessButton" class="skills__button hidden-skill">
-                <svg viewBox="0 0 100 100" class="skills__button__icon">
-                  <use xlink:href="assets/symbol-defs.svg#icon-work"></use>
-                </svg>
-                <h4 class="skills__button__text">Business</h4>
-              </div>
-              <div id="languageButton" class="skills__button hidden-skill">
-                <svg viewBox="0 0 100 100" class="skills__button__icon">
-                  <use xlink:href="assets/symbol-defs.svg#icon-language"></use>
-                </svg>
-                <h4 class="skills__button__text">Languages</h4>
-              </div>
-              <div id="achievementButton" class="skills__button hidden-skill">
-                <svg viewBox="0 0 100 100" class="skills__button__icon">
-                  <use xlink:href="assets/symbol-defs.svg#icon-award"></use>
-                </svg>
-                <h4 class="skills__button__text">Achievements</h4>
-              </div>
-              <div id="othersButton" class="skills__more">
-                <svg viewBox="0 0 100 100" class="skills__more__icon">
-                  <use
-                    id="othersIcon"
-                    xlink:href="assets/symbol-defs.svg#icon-add_circle"
-                  ></use>
-                </svg>
-                <p class="skills__more__text">
-                  Other <br />
-                  skills
+                <p class="skills__view__text">
+                  Having a passion for technology, I became a web developer,
+                  currently focused on the front-end with React JS and other
+                  modern technologies. I am currently a freelancer, delivering
+                  bespoke performatic projects to clients using either React
+                  JS, vanilla programming or a CMS. You will usually find me
+                  diving deep into programming and business-related content,
+                  spending most of my hours learning new things.
+                </p>
+                <p class="skills__view__text">
+                  I first started to learn programming in 2018, but could not
+                  focus on it due to my Master's Degree. However, during this
+                  time I studied (by myself, choosing related subjects at
+                  University and also in some work experiences) and practiced
+                  topics such as SEO, SQL, Web Development and design, even
+                  applying some of these in the Junior Enterprise where I have
+                  worked. I then decided to focus on web development and make
+                  this the core of my future professional development. This is
+                  the one thing I am most committed to, where I place my
+                  unwavering dedication.
                 </p>
               </div>
             </div>
+            <div id="programmingSkill" class="skills__view__programming invisible">
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-css3"></use>
+                </svg>
+                <h5 class="skills__view__heading">Front-end styling</h5>
+                <ul>
+                  <li class="skills__view__item">HTML5</li>
+                  <li class="skills__view__item">
+                    CSS3 with all modern features, including animations,
+                    flexbox, grid, responsivity
+                  </li>
+                  <li class="skills__view__item">Bootstrap 4.5</li>
+                  <li class="skills__view__item">SASS</li>
+                  <li class="skills__view__item">BEM CSS</li>
+                  <li class="skills__view__item">7-1 CSS Architecture</li>
+                </ul>
+              </div>
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-javascript"></use>
+                </svg>
+                <h5 class="skills__view__heading">Programming</h5>
+                <ul>
+                  <li class="skills__view__item">Javascript</li>
+                  <li class="skills__view__item">jQuery</li>
+                  <li class="skills__view__item">React JS</li>
+                  <li class="skills__view__item">EcmaScript6+</li>
+                  <li class="skills__view__item">Using API's</li>
+                  <li class="skills__view__item">Data validation</li>
+                  <li class="skills__view__item">Client-side storage</li>
+                  <li class="skills__view__item">JSON</li>
+                  <li class="skills__view__item">Node JS</li>
+                  <li class="skills__view__item">Express JS</li>
+                  <li class="skills__view__item">NPM / Yarn</li>
+                </ul>
+              </div>
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-git"></use>
+                </svg>
+                <h5 class="skills__view__heading">Others</h5>
+                <ul>
+                  <li class="skills__view__item">Git</li>
+                  <li class="skills__view__item">Github</li>
+                  <li class="skills__view__item">SEO</li>
+                  <li class="skills__view__item">CMS (WordPress)</li>
+                  <li class="skills__view__item">Basic terminal commands</li>
+                  <li class="skills__view__item">Jira</li>
+                  <li class="skills__view__item">
+                    Deployment (Managed hosting, Heroku, Netlify & Github
+                    Pages)
+                  </li>
+                  <li class="skills__view__item">MongoDB with Mongoose</li>
+                  <li class="skills__view__item">MySQL</li>
+                  <li class="skills__view__item">Babel & Webpack</li>
+                </ul>
+              </div>
+            </div>
+            <div id="designSkill" class="skills__view__design invisible">
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-figma"></use>
+                </svg>
+                <h5 class="skills__view__heading">
+                  Wireframing & prototyping
+                </h5>
+                <ul>
+                  <li class="skills__view__item">UX/UI</li>
+                  <li class="skills__view__item">Figma</li>
+                  <li class="skills__view__item">Whimsical</li>
+                </ul>
+              </div>
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-adobephotoshop"></use>
+                </svg>
+                <h5 class="skills__view__heading">Image edition</h5>
+                <ul>
+                  <li class="skills__view__item">Adobe Photoshop</li>
+                  <li class="skills__view__item">Canvas</li>
+                  <li class="skills__view__item">
+                    Royalty-free icons and images platforms
+                  </li>
+                </ul>
+              </div>
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-adobepremiere"></use>
+                </svg>
+                <h5 class="skills__view__heading">Video edition</h5>
+                <ul>
+                  <li class="skills__view__item">Adobe Premiere Pro</li>
+                </ul>
+              </div>
+            </div>
+            <div id="dataSkill" class="skills__view__data invisible">
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-spreadsheet"></use>
+                </svg>
+                <h5 class="skills__view__heading">Spreadsheet</h5>
+                <ul>
+                  <li class="skills__view__item">Microsoft Excel</li>
+                  <li class="skills__view__item">
+                    Advanced spreadsheet functions
+                  </li>
+                  <li class="skills__view__item">Dynamic tables</li>
+                  <li class="skills__view__item">
+                    Some Visual Basic for Applications
+                  </li>
+                  <li class="skills__view__item">Google sheets</li>
+                </ul>
+              </div>
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-data_usage"></use>
+                </svg>
+                <h5 class="skills__view__heading">Statistics</h5>
+                <ul>
+                  <li class="skills__view__item">IBM SPSS</li>
+                  <li class="skills__view__item">Correlation analysis</li>
+                  <li class="skills__view__item">
+                    Linear and logistic regression analyses
+                  </li>
+                </ul>
+              </div>
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-database"></use>
+                </svg>
+                <h5 class="skills__view__heading">Database</h5>
+                <ul>
+                  <li class="skills__view__item">ER Diagrams</li>
+                  <li class="skills__view__item">Microsoft Access</li>
+                  <li class="skills__view__item">MySQL</li>
+                </ul>
+              </div>
+            </div>
+            <div id="businessSkill" class="skills__view__business invisible">
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-users"></use>
+                </svg>
+                <h5 class="skills__view__heading">Collaboration tools</h5>
+                <ul>
+                  <li class="skills__view__item">Slack</li>
+                  <li class="skills__view__item">Jira</li>
+                  <li class="skills__view__item">Whimsical</li>
+                  <li class="skills__view__item">Notion</li>
+                </ul>
+              </div>
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-article"></use>
+                </svg>
+                <h5 class="skills__view__heading">Documental</h5>
+                <ul>
+                  <li class="skills__view__item">Microsoft Word</li>
+                  <li class="skills__view__item">Microsoft Outlook</li>
+                </ul>
+              </div>
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-presentation"></use>
+                </svg>
+                <h5 class="skills__view__heading">Presentation</h5>
+                <ul>
+                  <li class="skills__view__item">Microsoft Power Point</li>
+                </ul>
+              </div>
+            </div>
+            <div id="languageSkill" class="skills__view__languages invisible">
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-language"></use>
+                </svg>
+                <h5 class="skills__view__heading">
+                  Languages and Certifications
+                </h5>
+                <ul>
+                  <li class="skills__view__item">
+                    English - Bilingual (TOEFL IBT 111 score 2018)
+                  </li>
+                  <li class="skills__view__item">Portuguese - Native</li>
+                  <li class="skills__view__item">
+                    Spanish - Advanced (DELE 2015 B2 certification)
+                  </li>
+                  <li class="skills__view__item">
+                    German - Intermediate (OnDAF 2016 B2 certification +
+                    hochschulwinterkurs B2 score)
+                  </li>
+                  <li class="skills__view__item">
+                    French - Intermediate (French B1 course completed)
+                  </li>
+                  <li class="skills__view__item">
+                    Italian - Beginner (A2 course completed)
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="achievementSkill" class="skills__view__achievements invisible">
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-bank"></use>
+                </svg>
+                <h5 class="skills__view__heading">Scholarships</h5>
+                <ul>
+                  <li class="skills__view__item">
+                    Universität Duisburg-Essen, Germany. Full Winter
+                    scholarship on German history, society and language -
+                    Hochschulwinterkurs 2017, awarded by the government of
+                    Germany, DAAD
+                  </li>
+                  <li class="skills__view__item">
+                    Beijing University, China. Full summer course scholarship
+                    on Chinese society - Top China 2015 programme by Santander
+                    Universities
+                  </li>
+                </ul>
+              </div>
 
-            <div class="skills__view">
-              <div id="aboutSkill" class="skills__view__about">
-                <div class="skills__view__column2">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-person"></use>
-                  </svg>
-                  <p class="skills__view__text">
-                    Having a passion for technology, I became a web developer,
-                    currently focused on the front-end with React JS and other
-                    modern technologies. I am currently a freelancer, delivering
-                    bespoke performatic projects to clients using either React
-                    JS, vanilla programming or a CMS. You will usually find me
-                    diving deep into programming and business-related content,
-                    spending most of my hours learning new things.
-                  </p>
-                  <p class="skills__view__text">
-                    I first started to learn programming in 2018, but could not
-                    focus on it due to my Master's Degree. However, during this
-                    time I studied (by myself, choosing related subjects at
-                    University and also in some work experiences) and practiced
-                    topics such as SEO, SQL, Web Development and design, even
-                    applying some of these in the Junior Enterprise where I have
-                    worked. I then decided to focus on web development and make
-                    this the core of my future professional development. This is
-                    the one thing I am most committed to, where I place my
-                    unwavering dedication.
-                  </p>
-                </div>
+              <div class="skills__view__column skills__view__column--large">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-line-chart"></use>
+                </svg>
+                <h5 class="skills__view__heading">Accomplishments</h5>
+                <ul>
+                  <li class="skills__view__item">
+                    Master's dissertation on Data Literacy with a final score
+                    graded Excellent - 2020
+                  </li>
+                  <li class="skills__view__item">
+                    Master's Degree in Management completed with final average
+                    score graded Excellent - University of Coimbra, Portugal.
+                    2018-2020
+                  </li>
+                  <li class="skills__view__item">
+                    Bachelor's Degree in Law completed with final score of 91%
+                    - Federal University of Pará, Brazil. 2013-2018
+                  </li>
+                  <li class="skills__view__item">
+                    Chosen as part of the board of directors of a students
+                    organization with over 80 members, spearheading several of
+                    its projects - LAJUPA - 2017-2018
+                  </li>
+                  <li class="skills__view__item">
+                    Elected class representative - 2014-2018
+                  </li>
+                  <li class="skills__view__item">
+                    Chosen part of the board of directors of the
+                    representative association of the law students in my
+                    University - 2014-2015
+                  </li>
+                  <li class="skills__view__item">
+                    During my internship inside the secretary of a Court of
+                    Justice, I suggested and implemented a design/management
+                    practice that sped up 3-6 times the speed which lawsuit
+                    documents in the shelves were located - 2015
+                  </li>
+                  <li class="skills__view__item">
+                    Organized 14 academic events
+                  </li>
+                  <li class="skills__view__item">
+                    Coordinated over 10 study groups over 4 years
+                  </li>
+                  <li class="skills__view__item">
+                    Over 10 presentations speaking at conferences or
+                    presenting academic articles
+                  </li>
+                </ul>
               </div>
-              <div
-                id="programmingSkill"
-                class="skills__view__programming invisible"
-              >
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-css3"></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Front-end styling</h5>
-                  <ul>
-                    <li class="skills__view__item">HTML5</li>
-                    <li class="skills__view__item">
-                      CSS3 with all modern features, including animations,
-                      flexbox, grid, responsivity
-                    </li>
-                    <li class="skills__view__item">Bootstrap 4.5</li>
-                    <li class="skills__view__item">SASS</li>
-                    <li class="skills__view__item">BEM CSS</li>
-                    <li class="skills__view__item">7-1 CSS Architecture</li>
-                  </ul>
-                </div>
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-javascript"
-                    ></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Programming</h5>
-                  <ul>
-                    <li class="skills__view__item">Javascript</li>
-                    <li class="skills__view__item">jQuery</li>
-                    <li class="skills__view__item">React JS</li>
-                    <li class="skills__view__item">EcmaScript6+</li>
-                    <li class="skills__view__item">Using API's</li>
-                    <li class="skills__view__item">Data validation</li>
-                    <li class="skills__view__item">Client-side storage</li>
-                    <li class="skills__view__item">JSON</li>
-                    <li class="skills__view__item">Node JS</li>
-                    <li class="skills__view__item">Express JS</li>
-                    <li class="skills__view__item">NPM / Yarn</li>
-                  </ul>
-                </div>
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-git"></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Others</h5>
-                  <ul>
-                    <li class="skills__view__item">Git</li>
-                    <li class="skills__view__item">Github</li>
-                    <li class="skills__view__item">SEO</li>
-                    <li class="skills__view__item">CMS (WordPress)</li>
-                    <li class="skills__view__item">Basic terminal commands</li>
-                    <li class="skills__view__item">Jira</li>
-                    <li class="skills__view__item">
-                      Deployment (Managed hosting, Heroku, Netlify & Github
-                      Pages)
-                    </li>
-                    <li class="skills__view__item">MongoDB with Mongoose</li>
-                    <li class="skills__view__item">MySQL</li>
-                    <li class="skills__view__item">Babel & Webpack</li>
-                  </ul>
-                </div>
-              </div>
-              <div id="designSkill" class="skills__view__design invisible">
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-figma"></use>
-                  </svg>
-                  <h5 class="skills__view__heading">
-                    Wireframing & prototyping
-                  </h5>
-                  <ul>
-                    <li class="skills__view__item">UX/UI</li>
-                    <li class="skills__view__item">Figma</li>
-                    <li class="skills__view__item">Whimsical</li>
-                  </ul>
-                </div>
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-adobephotoshop"
-                    ></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Image edition</h5>
-                  <ul>
-                    <li class="skills__view__item">Adobe Photoshop</li>
-                    <li class="skills__view__item">Canvas</li>
-                    <li class="skills__view__item">
-                      Royalty-free icons and images platforms
-                    </li>
-                  </ul>
-                </div>
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-adobepremiere"
-                    ></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Video edition</h5>
-                  <ul>
-                    <li class="skills__view__item">Adobe Premiere Pro</li>
-                  </ul>
-                </div>
-              </div>
-              <div id="dataSkill" class="skills__view__data invisible">
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-spreadsheet"
-                    ></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Spreadsheet</h5>
-                  <ul>
-                    <li class="skills__view__item">Microsoft Excel</li>
-                    <li class="skills__view__item">
-                      Advanced spreadsheet functions
-                    </li>
-                    <li class="skills__view__item">Dynamic tables</li>
-                    <li class="skills__view__item">
-                      Some Visual Basic for Applications
-                    </li>
-                    <li class="skills__view__item">Google sheets</li>
-                  </ul>
-                </div>
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-data_usage"
-                    ></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Statistics</h5>
-                  <ul>
-                    <li class="skills__view__item">IBM SPSS</li>
-                    <li class="skills__view__item">Correlation analysis</li>
-                    <li class="skills__view__item">
-                      Linear and logistic regression analyses
-                    </li>
-                  </ul>
-                </div>
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-database"
-                    ></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Database</h5>
-                  <ul>
-                    <li class="skills__view__item">ER Diagrams</li>
-                    <li class="skills__view__item">Microsoft Access</li>
-                    <li class="skills__view__item">MySQL</li>
-                  </ul>
-                </div>
-              </div>
-              <div id="businessSkill" class="skills__view__business invisible">
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-users"></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Collaboration tools</h5>
-                  <ul>
-                    <li class="skills__view__item">Slack</li>
-                    <li class="skills__view__item">Jira</li>
-                    <li class="skills__view__item">Whimsical</li>
-                    <li class="skills__view__item">Notion</li>
-                  </ul>
-                </div>
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-article"></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Documental</h5>
-                  <ul>
-                    <li class="skills__view__item">Microsoft Word</li>
-                    <li class="skills__view__item">Microsoft Outlook</li>
-                  </ul>
-                </div>
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-presentation"
-                    ></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Presentation</h5>
-                  <ul>
-                    <li class="skills__view__item">Microsoft Power Point</li>
-                  </ul>
-                </div>
-              </div>
-              <div id="languageSkill" class="skills__view__languages invisible">
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-language"
-                    ></use>
-                  </svg>
-                  <h5 class="skills__view__heading">
-                    Languages and Certifications
-                  </h5>
-                  <ul>
-                    <li class="skills__view__item">
-                      English - Bilingual (TOEFL IBT 111 score 2018)
-                    </li>
-                    <li class="skills__view__item">Portuguese - Native</li>
-                    <li class="skills__view__item">
-                      Spanish - Advanced (DELE 2015 B2 certification)
-                    </li>
-                    <li class="skills__view__item">
-                      German - Intermediate (OnDAF 2016 B2 certification +
-                      hochschulwinterkurs B2 score)
-                    </li>
-                    <li class="skills__view__item">
-                      French - Intermediate (French B1 course completed)
-                    </li>
-                    <li class="skills__view__item">
-                      Italian - Beginner (A2 course completed)
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                id="achievementSkill"
-                class="skills__view__achievements invisible"
-              >
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-bank"></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Scholarships</h5>
-                  <ul>
-                    <li class="skills__view__item">
-                      Universität Duisburg-Essen, Germany. Full Winter
-                      scholarship on German history, society and language -
-                      Hochschulwinterkurs 2017, awarded by the government of
-                      Germany, DAAD
-                    </li>
-                    <li class="skills__view__item">
-                      Beijing University, China. Full summer course scholarship
-                      on Chinese society - Top China 2015 programme by Santander
-                      Universities
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="skills__view__column skills__view__column--large">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-line-chart"
-                    ></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Accomplishments</h5>
-                  <ul>
-                    <li class="skills__view__item">
-                      Master's dissertation on Data Literacy with a final score
-                      graded Excellent - 2020
-                    </li>
-                    <li class="skills__view__item">
-                      Master's Degree in Management completed with final average
-                      score graded Excellent - University of Coimbra, Portugal.
-                      2018-2020
-                    </li>
-                    <li class="skills__view__item">
-                      Bachelor's Degree in Law completed with final score of 91%
-                      - Federal University of Pará, Brazil. 2013-2018
-                    </li>
-                    <li class="skills__view__item">
-                      Chosen as part of the board of directors of a students
-                      organization with over 80 members, spearheading several of
-                      its projects - LAJUPA - 2017-2018
-                    </li>
-                    <li class="skills__view__item">
-                      Elected class representative - 2014-2018
-                    </li>
-                    <li class="skills__view__item">
-                      Chosen part of the board of directors of the
-                      representative association of the law students in my
-                      University - 2014-2015
-                    </li>
-                    <li class="skills__view__item">
-                      During my internship inside the secretary of a Court of
-                      Justice, I suggested and implemented a design/management
-                      practice that sped up 3-6 times the speed which lawsuit
-                      documents in the shelves were located - 2015
-                    </li>
-                    <li class="skills__view__item">
-                      Organized 14 academic events
-                    </li>
-                    <li class="skills__view__item">
-                      Coordinated over 10 study groups over 4 years
-                    </li>
-                    <li class="skills__view__item">
-                      Over 10 presentations speaking at conferences or
-                      presenting academic articles
-                    </li>
-                  </ul>
-                </div>
-                <div class="skills__view__column">
-                  <svg viewBox="0 0 100 100" class="skills__view__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-award1"></use>
-                  </svg>
-                  <h5 class="skills__view__heading">Awards</h5>
-                  <ul>
-                    <li class="skills__view__item">
-                      Revelation Award - Junior Enterprise of the Students of
-                      the Faculty of Economics of the University of Coimbra -
-                      2019
-                    </li>
-                    <li class="skills__view__item">
-                      Academic Merit and Excellency Award - Law Students
-                      Academic Centre - 2016
-                    </li>
-                    <li class="skills__view__item">
-                      Chosen among best final group presentations at the Top
-                      China programme - 2015
-                    </li>
-                  </ul>
-                </div>
+              <div class="skills__view__column">
+                <svg viewBox="0 0 100 100" class="skills__view__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-award1"></use>
+                </svg>
+                <h5 class="skills__view__heading">Awards</h5>
+                <ul>
+                  <li class="skills__view__item">
+                    Revelation Award - Junior Enterprise of the Students of
+                    the Faculty of Economics of the University of Coimbra -
+                    2019
+                  </li>
+                  <li class="skills__view__item">
+                    Academic Merit and Excellency Award - Law Students
+                    Academic Centre - 2016
+                  </li>
+                  <li class="skills__view__item">
+                    Chosen among best final group presentations at the Top
+                    China programme - 2015
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="portfolioSection" class="section invisible">
-          <h2 id="portfolioTitle" class="section__heading">Portfolio</h2>
+      <section id="portfolioSection" class="section invisible">
+        <h2 id="portfolioTitle" class="section__heading">Portfolio</h2>
 
-          <svg viewBox="0 0 100 100" id="portInfoButton" class="info__button">
-            <use xlink:href="assets/symbol-defs.svg#icon-info"></use>
-          </svg>
+        <svg viewBox="0 0 100 100" id="portInfoButton" class="info__button">
+          <use xlink:href="assets/symbol-defs.svg#icon-info"></use>
+        </svg>
 
-          <div id="portInfoText" class="info__text">
-            All projects here were either created for clients or are personal
-            projects created from scratch. For a bigger list that includes
-            advanced course projects, please refer to my
-            <a
-              class="info__link"
-              href="https://github.com/Sergie-AGA"
-              target="_blank"
-              >Github account</a
-            >
+        <div id="portInfoText" class="info__text">
+          All projects here were either created for clients or are personal
+          projects created from scratch. For a bigger list that includes
+          advanced course projects, please refer to my
+          <a class="info__link" href="https://github.com/Sergie-AGA" target="_blank">Github account</a>
+        </div>
+
+        <div id="filterButton" class="filter__button button">Filters</div>
+        <div id="filterWindow" class="filter__window">
+          <div class="filter__section">
+            <div class="filter__layer"></div>
+            <h3 class="filter__header">Styling</h3>
+            <span class="filter__element">CSS</span>
+            <span class="filter__element">Bootstrap</span>
+            <span class="filter__element">Animations</span>
+            <span class="filter__element">SASS</span>
           </div>
-
-          <div id="filterButton" class="filter__button button">Filters</div>
-          <div id="filterWindow" class="filter__window">
-            <div class="filter__section">
-              <div class="filter__layer"></div>
-              <h3 class="filter__header">Styling</h3>
-              <span class="filter__element">CSS</span>
-              <span class="filter__element">Bootstrap</span>
-              <span class="filter__element">Animations</span>
-              <span class="filter__element">SASS</span>
-            </div>
-            <div class="filter__section">
-              <div class="filter__layer"></div>
-              <h3 class="filter__header">Front End Programming</h3>
-              <span class="filter__element">Javascript</span>
-              <span class="filter__element">Vanilla JS</span>
-              <span class="filter__element">ES6+</span>
-              <span class="filter__element">jQuery</span>
-              <span class="filter__element">React JS</span>
-              <span class="filter__element">RegEx</span>
-            </div>
-            <div class="filter__section">
-              <div class="filter__layer"></div>
-              <h3 class="filter__header">Back End Programming</h3>
-              <span class="filter__element">Node JS</span>
-              <span class="filter__element">Express JS</span>
-              <span class="filter__element">NPM / Yarn</span>
-              <span class="filter__element">API's</span>
-            </div>
-            <div class="filter__section">
-              <div class="filter__layer"></div>
-              <h3 class="filter__header">Design assets</h3>
-              <span class="filter__element">Photoshop</span>
-              <!-- <span  class="filter__element">Figma</span> -->
-            </div>
-            <div class="filter__section">
-              <div class="filter__layer"></div>
-              <h3 class="filter__header">Others</h3>
-              <span class="filter__element">WordPress</span>
-              <span class="filter__element">Royalty-free resources</span>
-              <span class="filter__element">Netlify</span>
-              <span class="filter__element">Heroku</span>
-            </div>
+          <div class="filter__section">
+            <div class="filter__layer"></div>
+            <h3 class="filter__header">Front End Programming</h3>
+            <span class="filter__element">Javascript</span>
+            <span class="filter__element">Vanilla JS</span>
+            <span class="filter__element">ES6+</span>
+            <span class="filter__element">jQuery</span>
+            <span class="filter__element">React JS</span>
+            <span class="filter__element">RegEx</span>
           </div>
-          <div id="portfolioArea" class="portfolio-area">
-            <!-- <div class="card card--purple">
+          <div class="filter__section">
+            <div class="filter__layer"></div>
+            <h3 class="filter__header">Back End Programming</h3>
+            <span class="filter__element">Node JS</span>
+            <span class="filter__element">Express JS</span>
+            <span class="filter__element">NPM / Yarn</span>
+            <span class="filter__element">API's</span>
+          </div>
+          <div class="filter__section">
+            <div class="filter__layer"></div>
+            <h3 class="filter__header">Design assets</h3>
+            <span class="filter__element">Photoshop</span>
+            <!-- <span  class="filter__element">Figma</span> -->
+          </div>
+          <div class="filter__section">
+            <div class="filter__layer"></div>
+            <h3 class="filter__header">Others</h3>
+            <span class="filter__element">WordPress</span>
+            <span class="filter__element">Royalty-free resources</span>
+            <span class="filter__element">Netlify</span>
+            <span class="filter__element">Heroku</span>
+          </div>
+        </div>
+        <div id="portfolioArea" class="portfolio-area">
+          <!-- <div class="card card--purple">
               <div class="card__side card__side--front">
                 <div class="card__image">
                   <img src="assets/portfolio/manage-global.png" alt="" />
@@ -708,123 +640,114 @@
                 </div>
               </div>
             </div> -->
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="numbersSection" class="section invisible">
-          <div class="numbers__container">
-            <div class="numbers__group1">
+      <section id="numbersSection" class="section invisible">
+        <div class="numbers__container">
+          <div class="numbers__group1">
             <div class="numbers__charts">
               <h3 class="numbers__charts__title">MY NUMBERS</h3>
-<div class="number__charts__buttons">
-    <div class="button number__charts__buttons__button"><i class="fab fa-github"></i></div>
-    <div class="button number__charts__buttons__button"><i class="fas fa-code-branch"></i></div>
-    <div class="button number__charts__buttons__button"><i class="fas fa-book"></i></div>
-</div>
-<div class="number__charts__chart" id="chart1">
-  <div class="number__charts__chart"></div>
-  <div class="number__charts__data">
-    <h4 class="number__charts__data__title">Languages used in my Github repositories</h4>
-  </div>
-</div>
-<div class="number__charts__chart" id="chart2">
-  <div class="number__charts__chart"></div>
-  <div class="number__charts__data">
-    <h4 class="number__charts__data__title">Analysis of my portfolio</h4>
-  </div>
-</div>
-<div class="number__charts__chart" id="chart3">
-  <div class="number__charts__chart"></div>
-  <div class="number__charts__data">
-    <h4 class="number__charts__data__title">What I am learning most often</h4>
-  </div>
-</div>
-
-
+              <div class="charts">
+                <div class="charts__buttons">
+                  <div class="button charts__buttons__button charts__buttons__button--active" id="chartButton1"><i
+                      class="fab fa-github charts__buttons__icon"></i>Github</div>
+                  <div class="button charts__buttons__button" id="chartButton2"><i
+                      class="fas fa-code-branch charts__buttons__icon"></i>Portfolio</div>
+                  <div class="button charts__buttons__button" id="chartButton3"><i
+                      class="fas fa-book charts__buttons__icon"></i>Studies</div>
+                </div>
+                <div class="charts__chart" id="chart1">
+                  <div class="charts__chart"></div>
+                  <div class="charts__data">
+                    <h4 class="charts__data__title">Languages used in my Github repositories</h4>
+                  </div>
+                </div>
+                <div class="charts__chart invisible" id="chart2">
+                  <div class="charts__chart"></div>
+                  <div class="charts__data">
+                    <h4 class="charts__data__title">Analysis of my portfolio</h4>
+                  </div>
+                </div>
+                <div class="charts__chart invisible" id="chart3">
+                  <div class="charts__chart"></div>
+                  <div class="charts__data">
+                    <h4 class="charts__data__title">What I am learning most often</h4>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="numbers__activities">
-            <div class="numbers__activities__header">
-              <h3 class="numbers__activities__title">WHAT I AM WORKING ON</h3>
-              <ul class="numbers__activities__labels">
-                <li class="activity--client"><span class="numbers__activities__labels--1"></span>Client projects</li>
-                <li class="activity--business"><span class="numbers__activities__labels--2"></span>Business projects</li>
-                <li class="activity--personal"><span class="numbers__activities__labels--3"></span>Personal projects</li>
-              </ul>
-            </div>
+              <div class="numbers__activities__header">
+                <h3 class="numbers__activities__title">WHAT I AM WORKING ON</h3>
+                <ul class="numbers__activities__labels">
+                  <li class="activity--client"><span class="numbers__activities__labels--1"></span>Client projects</li>
+                  <li class="activity--business"><span class="numbers__activities__labels--2"></span>Business projects
+                  </li>
+                  <li class="activity--personal"><span class="numbers__activities__labels--3"></span>Personal projects
+                  </li>
+                </ul>
+              </div>
               <div class="numbers__activities__area" id="activitiesArea"></div>
             </div>
           </div>
-            <div class="numbers__testimonials" >
-              <h3 class="numbers__testimonials__header">TESTIMONIALS</h3>
-              <div class="numbers__testimonials__area" id="testimonialsArea"></div>
-            </div>
+          <div class="numbers__testimonials">
+            <h3 class="numbers__testimonials__header">TESTIMONIALS</h3>
+            <div class="numbers__testimonials__area" id="testimonialsArea"></div>
           </div>
-          <!-- <h2 class="">Coming soon...</h2>
+        </div>
+        <!-- <h2 class="">Coming soon...</h2>
           <p class="">The creative process takes time</p>
           <svg viewBox="0 0 100 100" id="dismiss" class="close-icon">
             <use xlink:href="assets/symbol-defs.svg#icon-x-altx-alt"></use>
           </svg>
           <div id="libraryImage" class="library-image"></div> -->
-        </section>
+      </section>
 
-        <section id="contactSection" class="section invisible">
-          <div class="contact-info">
-            <h2 class="section__heading2">Contact me</h2>
-            <p class="section__text2">
-              E-mail: <br />
-              sergiearruda@gmail.com
+      <section id="contactSection" class="section invisible">
+        <div class="contact-info">
+          <h2 class="section__heading2">Contact me</h2>
+          <p class="section__text2">
+            E-mail: <br />
+            sergiearruda@gmail.com
+          </p>
+          <div id="contactIcons" class="contact-icons invisible2">
+            <div class="navbar__social__item">
+              <a href="mailto:sergiearruda@gmail.com" target="_blank">
+                <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-email"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="navbar__social__item">
+              <a href="https://www.linkedin.com/in/sergie-gerrits/" target="_blank">
+                <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="navbar__social__item">
+              <a href="https://github.com/Sergie-AGA" target="_blank">
+                <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
+                  <use xlink:href="assets/symbol-defs.svg#icon-github"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="touchArea" class="iphone-container" onmouseover="unfloat()" onmouseout="float()">
+          <img id="iphoneFloating" src="assets/IPhone_X.png" alt="Iphone image" class="iphone" />
+          <div id="iphoneDisplay" class="iphone-display">
+            <p class="dark-text">
+              Open to job offers, business inquiries and collaborations
             </p>
-            <div id="contactIcons" class="contact-icons invisible2">
-              <div class="navbar__social__item">
-                <a href="mailto:sergiearruda@gmail.com" target="_blank">
-                  <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-email"></use>
-                  </svg>
-                </a>
-              </div>
-              <div class="navbar__social__item">
-                <a
-                  href="https://www.linkedin.com/in/sergie-gerrits/"
-                  target="_blank"
-                >
-                  <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
-                    <use
-                      xlink:href="assets/symbol-defs.svg#icon-linkedin"
-                    ></use>
-                  </svg>
-                </a>
-              </div>
-              <div class="navbar__social__item">
-                <a href="https://github.com/Sergie-AGA" target="_blank">
-                  <svg viewBox="0 0 100 100" class="navbar__social__item__icon">
-                    <use xlink:href="assets/symbol-defs.svg#icon-github"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
           </div>
-          <div
-            id="touchArea"
-            class="iphone-container"
-            onmouseover="unfloat()"
-            onmouseout="float()"
-          >
-            <img
-              id="iphoneFloating"
-              src="assets/IPhone_X.png"
-              alt="Iphone image"
-              class="iphone"
-            />
-            <div id="iphoneDisplay" class="iphone-display">
-              <p class="dark-text">
-                Open to job offers, business inquiries and collaborations
-              </p>
-            </div>
-            <div id="shadowFloating" class="iphone-shadow"></div>
-          </div>
-        </section>
-        <section id="privacySection" class="section invisible">
-          <div class="privacy__container">
+          <div id="shadowFloating" class="iphone-shadow"></div>
+        </div>
+      </section>
+      <section id="privacySection" class="section invisible">
+        <div class="privacy__container">
           <h2 class="privacy__title">Cookies & privacy policy</h2>
           <h3 class="privacy__header">What are cookies?</h3>
           <p class="privacy__text">
@@ -847,31 +770,28 @@
             visitors come from, so that the site and the user experience can be
             further improved. For more information on how Google handles the
             data, please refer to
-            <a
-              href="https://policies.google.com/privacy?hl=en-US"
-              target="_blank"
-              class="external-link"
-              >their policy.</a
-            >
+            <a href="https://policies.google.com/privacy?hl=en-US" target="_blank" class="external-link">their
+              policy.</a>
           </p>
           <h3 class="privacy__header">How can I manage my preferences?</h3>
           <p class="privacy__text">
             You can change your settings by clicking the following
             button:
-              <div class="privacy__button button button--small" id="managePreferences">
-                Manage your preferences
-              </div>
-            
+          <div class="privacy__button button button--small" id="managePreferences">
+            Manage your preferences
+          </div>
+
           </p>
         </div>
-        </section>
-        <section id="easterEggSection" class="section invisible"></section>
-      </div>
+      </section>
+      <section id="easterEggSection" class="section invisible"></section>
     </div>
+  </div>
 
-    <script src="scripts/script.js"></script>
-    <script src="scripts/results.js" type="module"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <script src="scripts/cookies.js"></script>
-  </body>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/results.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <script src="scripts/cookies.js"></script>
+</body>
+
 </html>

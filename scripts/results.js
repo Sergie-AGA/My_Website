@@ -1,5 +1,37 @@
 // CHARTS
 
+// Section switching
+let chart1 = document.getElementById("chart1");
+let chart2 = document.getElementById("chart2");
+let chart3 = document.getElementById("chart3");
+let chartButton1 = document.getElementById("chartButton1");
+let chartButton2 = document.getElementById("chartButton2");
+let chartButton3 = document.getElementById("chartButton3");
+
+let chartGroup = [
+  { chart: chart1, button: chartButton1 },
+  { chart: chart2, button: chartButton2 },
+  { chart: chart3, button: chartButton3 },
+];
+
+chartGroup.forEach((element) => {
+  element.button.addEventListener("click", () => {
+    switchChart(element.button, element.chart);
+  });
+});
+
+function switchChart(button, area) {
+  chart1.classList.add("invisible");
+  chart2.classList.add("invisible");
+  chart3.classList.add("invisible");
+  chartButton1.classList.remove("charts__buttons__button--active");
+  chartButton2.classList.remove("charts__buttons__button--active");
+  chartButton3.classList.remove("charts__buttons__button--active");
+
+  area.classList.remove("invisible");
+  button.classList.add("charts__buttons__button--active");
+}
+
 // https://docs.github.com/en/rest/reference/repos#list-repository-languages
 // https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user
 

@@ -1277,6 +1277,9 @@ a {
   height: 47%; }
   .numbers__charts:hover {
     background-color: #242424; }
+  .numbers__charts__title {
+    padding: 10px;
+    text-align: justify; }
 
 .numbers__activities {
   transition: 0.3s;
@@ -1316,7 +1319,7 @@ a {
     .numbers__activities__labels--2 {
       background-color: #11998e; }
     .numbers__activities__labels--3 {
-      background-color: #B2FEFA; }
+      background-color: #b2fefa; }
 
 .numbers__testimonials {
   transition: 0.3s;
@@ -1333,6 +1336,35 @@ a {
   .numbers__testimonials__area {
     display: flex;
     flex-direction: column; }
+
+.charts {
+  display: flex; }
+  .charts__buttons {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 20rem;
+    flex: 1 1 5%; }
+    .charts__buttons__button {
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .charts__buttons__button--active {
+        background-color: #0a0a0a !important;
+        pointer-events: none; }
+    .charts__buttons__icon {
+      font-size: 2rem; }
+  .charts__chart {
+    flex: 1 1 80%; }
+  .charts__data__title {
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Titillium Web", sans-serif;
+    text-align: center; }
 
 .activity {
   display: flex;
