@@ -1,4 +1,47 @@
 // CHARTS
+Chart.defaults.scale.ticks.beginAtZero = true;
+
+let radarChart = document.getElementById("radarChart");
+let myRadarChart = new Chart(radarChart, {
+  type: "radar",
+  data: {
+    labels: [
+      "CSS Frameworks/libraries",
+      "Javascript",
+      "React JS",
+      "Node JS",
+      "Databases",
+      "JS libraries and API's",
+    ],
+    datasets: [
+      {
+        data: [50, 90, 100, 70, 80, 30],
+      },
+    ],
+  },
+  // data: {
+  //   labels: [
+  //     "CSS Frameworks/libraries', 'Javascript', 'React JS', 'Node JS', 'Databases', 'JS libraries and API's",
+  //   ],
+  //   datasets: [
+  //     {
+  //       label: "Interest",
+  //       data: [50, 90, 100, 70, 80, 30],
+  //     },
+  //   ],
+  // },
+  // // options: {
+  //   scale: {
+  //     angleLines: {
+  //       display: false,
+  //     },
+  //     ticks: {
+  //       suggestedMin: 0,
+  //       suggestedMax: 100,
+  //     },
+  //   },
+  // },
+});
 
 // Section switching
 let chart1 = document.getElementById("chart1");
@@ -107,8 +150,6 @@ currentActivities.forEach((activity) => {
   activityProgress.style.backgroundColor = activityColor1;
 
   activityProgress.style.backgroundImage = `linear-gradient(to right, ${activityColor1}, ${activityColor2})`;
-
-  console.log(activityProgress);
 
   activityProgress.style.width = `${activity.conclusion}%`;
 
