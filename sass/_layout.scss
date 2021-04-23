@@ -381,10 +381,8 @@
     cursor: pointer;
   }
   @media screen and (max-width: $tablet) {
-    bottom: 4.5rem;
-  }
-  @media screen and (max-width: $mobile) {
-    bottom: 3.5rem;
+    top: 1rem;
+    bottom: auto;
   }
 }
 
@@ -415,7 +413,7 @@
     top: 8rem;
     @media screen and (max-width: $tablet) {
       top: 4rem;
-      padding: 10px 10px 5rem;
+      padding: 10px 10px 10rem;
     }
   }
   &__title {

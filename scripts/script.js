@@ -534,35 +534,35 @@ const project6 = new Project(
   false
 );
 
-const project7 = new Project(
-  "Marketing Website",
-  "A multilingual WordPress website for a client's business, expanding on his previous site. It uses major modern plugins for handling edition, SEO, custom styling, security, cache and more",
-  "assets/portfolio/pita-website.jpg",
-  "https://bernardompita.com",
-  "https://github.com/Sergie-AGA/",
-  [
-    {
-      label: "Appearance",
-      text: "Astra Theme + Widgets | CSS3 + Javascript | Gutenberg + Addons",
-    },
-    {
-      label: "Major features",
-      text:
-        "Security plugin | Multilingual | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
-    },
-  ],
-  ["CSS", "Javascript", "Vanilla JS", "WordPress"],
-  false,
-  true,
-  "red",
-  true
-);
+// const project7 = new Project(
+//   "Marketing Website",
+//   "A multilingual WordPress website for a client's business, expanding on his previous site. It uses major modern plugins for handling edition, SEO, custom styling, security, cache and more",
+//   "assets/portfolio/pita-website.jpg",
+//   "https://bernardompita.com",
+//   "https://github.com/Sergie-AGA/",
+//   [
+//     {
+//       label: "Appearance",
+//       text: "Astra Theme + Widgets | CSS3 + Javascript | Gutenberg + Addons",
+//     },
+//     {
+//       label: "Major features",
+//       text:
+//         "Security plugin | Multilingual | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
+//     },
+//   ],
+//   ["CSS", "Javascript", "Vanilla JS", "WordPress"],
+//   false,
+//   true,
+//   "red",
+//   true
+// );
 
 const project8 = new Project(
   "Marketing Interactive tools",
-  "Set of interactive marketing tools with multilingual support developed in React JS, based on the client's tools. Accessible with a code obtainable via newsletter subscription in the Mailchimp API",
+  "Set of interactive marketing tools with multilingual support developed in React JS, based on the client's tools.",
   "assets/portfolio/pita-marketing-tools.png",
-  "https://mini-apps-by-sieger.netlify.app/",
+  "https://marketing-tools.netlify.app/",
   "https://github.com/Sergie-AGA/",
   [
     {
@@ -571,7 +571,7 @@ const project8 = new Project(
     },
     {
       label: "Programming",
-      text: "React JS | Express JS | Node JS | NPM/Yarn",
+      text: "React JS | Express JS | Node JS",
     },
     {
       label: "Extra Assets",
@@ -598,29 +598,29 @@ const project8 = new Project(
   true
 );
 
-const project9 = new Project(
-  "Business Website",
-  "Partnering with a designer, we created a modern-looking website for a client's business. It has features to handle all the components desired by the client, such as SEO, security, cache and more",
-  "assets/portfolio/pita-website.jpg",
-  "https://edicopia.pt",
-  "https://github.com/Sergie-AGA/",
-  [
-    {
-      label: "Appearance",
-      text: "Astra Theme + Widgets | CSS3 + Javascript | Gutenberg + Addons",
-    },
-    {
-      label: "Major features",
-      text:
-        "Security plugin | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
-    },
-  ],
-  ["CSS", "Javascript", "Vanilla JS", "WordPress"],
-  false,
-  true,
-  "darkblue",
-  true
-);
+// const project9 = new Project(
+//   "Business Website",
+//   "Partnering with a designer, we created a modern-looking website for a client's business. It has features to handle all the components desired by the client, such as SEO, security, cache and more",
+//   "assets/portfolio/pita-website.jpg",
+//   "https://edicopia.pt",
+//   "https://github.com/Sergie-AGA/",
+//   [
+//     {
+//       label: "Appearance",
+//       text: "Astra Theme + Widgets | CSS3 + Javascript | Gutenberg + Addons",
+//     },
+//     {
+//       label: "Major features",
+//       text:
+//         "Security plugin | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
+//     },
+//   ],
+//   ["CSS", "Javascript", "Vanilla JS", "WordPress"],
+//   false,
+//   true,
+//   "darkblue",
+//   true
+// );
 
 let portfolio = projectsArray;
 

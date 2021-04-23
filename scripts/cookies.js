@@ -63,13 +63,13 @@ flagButton.style.cssText =
   "width: 2rem; height: auto; position: relative; top: -0.3rem";
 
 let langSwitchArrow = document.createElement("span");
-langSwitchArrow.innerHTML = "&#129171;";
+langSwitchArrow.innerHTML = '<i class="fas fa-caret-down"></i>';
 langSwitchArrow.style.cssText =
-  "font-size: 2.5rem; position: relative; top: 0.8rem; left: 0.4rem;";
+  "font-size: 1.5rem; position: relative; top: -0.25rem; left: 0.4rem;";
 
 let langOptions = document.createElement("div");
 langOptions.style.cssText =
-  "position: absolute; top: 3rem; left: -1rem; box-shadow: 0 0 4px 3px rgba(0,0,0,0.2); display: none; justify-content: center; width: 4rem; height: auto; background-color: #ddd; border-radius: 8px; overflow: hidden";
+  "position: absolute; top: 3rem; left: -1rem; box-shadow: 0 0 4px 3px rgba(0,0,0,0.2); display: none; justify-content: center; width: 4rem; height: 2rem; background-color: #ddd; border-radius: 8px; overflow: hidden";
 
 flagBr.addEventListener("click", () => langPortuguese());
 flagUk.addEventListener("click", () => langEnglish());
@@ -240,7 +240,9 @@ cookieAcceptButton.addEventListener("mouseleave", () => {
   cookieAcceptButton.style.backgroundColor = colorMain;
 });
 cookieAcceptButton.addEventListener("click", () => {
+  gAnalytics = true;
   dismissCookieElements();
+  toggleAnalytics(true);
   setPreference();
 });
 
@@ -248,11 +250,20 @@ function setPreference() {
   let expiryDate = new Date();
   expiryDate.setMonth(expiryDate.getMonth() + 24);
 
+  let compatibleDate = expiryDate;
+  compatibleDate = expiryDate.toGMTString();
+
+  compatibleDate = expiryDate.toUTCString();
+
+  expiryDate = compatibleDate;
+
   gaPreference = gAnalytics;
   document.cookie = `preferenceSet=true; expires=${expiryDate}`;
   document.cookie = `gaSet=${gaPreference}; expires=${expiryDate}`;
+  setGoogleAnalyticsScript();
+}
 
-  // Handle Google Analytics
+function setGoogleAnalyticsScript() {
   if (gAnalytics) {
     let GAScript = document.getElementById("GAScript");
 
@@ -284,16 +295,16 @@ function setPreference() {
 }
 
 function destroyAnalyticsCookies() {
-  let GAScript = document.getElementById("GAScript");
-  if (GAScript) {
-    GAScript.remove();
-  }
   document.cookie = "_ga_NKDTEYNGBP= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
   document.cookie = "_ga= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
   document.cookie = "__utma= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
   document.cookie = "__utmb= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
   document.cookie = "__utmc= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
   document.cookie = "__utmz= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+  let GAScript = document.getElementById("GAScript");
+  if (GAScript) {
+    GAScript.remove();
+  }
 }
 
 // Manage
@@ -343,7 +354,7 @@ essentialMessage.innerHTML = lang.c1Status;
 essentialMessage.style.cssText = `color: ${colorMain};`;
 
 langButton2.style.cssText =
-  "cursor: pointer; position: absolute; height: auto; top: -2.3rem";
+  "cursor: pointer; position: absolute; height: auto; top: -1.3rem";
 
 cookie1Header.appendChild(cookie1Title);
 cookie1Header.appendChild(langButton2);
@@ -386,7 +397,7 @@ langButton2.addEventListener("click", () => {
 // Analytics cookies
 let cookie2 = document.createElement("div");
 cookie2.style.cssText = "padding: 20px; border-bottom: 1px solid black;";
-let gAnalytics = true;
+let gAnalytics = false;
 let gaPreference = gAnalytics;
 
 let cookie2Header = document.createElement("div");
@@ -402,13 +413,20 @@ let analyticsSwitcher = document.createElement("div");
 let switcherRound = document.createElement("div");
 let analyticsMessage = document.createElement("p");
 
-analyticsSwitcher.style.cssText = `border-radius: 15px; width: 3rem; height: 1.5rem; background-color: ${colorMain}; position: relative; cursor: pointer`;
-switcherRound.style.cssText = `border-radius: 50%; width: 1.5rem; height: 1.5rem; background-color: white; position: absolute; right: 0; transition: 0.5s; border: 0.5px solid ${colorMain}`;
-analyticsMessage.innerHTML = lang.c2StatusOn;
-analyticsMessage.style.cssText = `color: ${colorMain}; position: relative; top: -1.5rem; right: -0.65rem;`;
+analyticsSwitcher.style.cssText = `border-radius: 15px; width: 3rem; height: 1.5rem; background-color: #777; position: relative; cursor: pointer`;
+switcherRound.style.cssText = `border-radius: 50%; width: 1.5rem; height: 1.5rem; background-color: white; position: absolute; right: 0; transition: 0.5s; border: 0.5px solid $777; transform: translate(-1.5rem)`;
+analyticsMessage.innerHTML = lang.c2StatusOff;
+analyticsMessage.style.cssText = `color: #777; position: relative; top: -1.5rem; right: -0.65rem;`;
 
-function toggleAnalytics() {
-  if (gAnalytics) {
+function toggleAnalytics(reference) {
+  if (reference) {
+    switcherRound.style.transform = "translateX(0)";
+    switcherRound.style.borderColor = colorMain;
+    analyticsSwitcher.style.backgroundColor = colorMain;
+    analyticsMessage.style.color = colorMain;
+    analyticsMessage.innerHTML = lang.c2StatusOn;
+    gAnalytics = true;
+  } else if (gAnalytics) {
     switcherRound.style.transform = "translateX(-1.5rem)";
     switcherRound.style.borderColor = "#777";
     analyticsSwitcher.style.backgroundColor = "#777";
@@ -507,7 +525,8 @@ if (manageButton) {
 
 // Read cookie and destroy if no consent on reload (cleans some remaining Google cookies) and sets gAnalytics variable
 let v = document.cookie.match("(^|;) ?" + "gaSet" + "=([^;]*)(;|$)");
-if (v && v[2] === "false") {
-  destroyAnalyticsCookies();
+if (v && v[2] === "true") {
   toggleAnalytics();
 }
+
+setGoogleAnalyticsScript();

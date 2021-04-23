@@ -554,10 +554,8 @@ a {
     cursor: pointer; }
   @media screen and (max-width: 1024px) {
     .privacy-link {
-      bottom: 4.5rem; } }
-  @media screen and (max-width: 768px) {
-    .privacy-link {
-      bottom: 3.5rem; } }
+      top: 1rem;
+      bottom: auto; } }
 
 .external-link {
   color: #25a3b9 !important;
@@ -583,7 +581,7 @@ a {
   @media screen and (max-width: 1024px) {
     .privacy__container {
       top: 4rem;
-      padding: 10px 10px 5rem; } }
+      padding: 10px 10px 10rem; } }
 
 .privacy__title {
   margin: 1rem; }
@@ -604,7 +602,11 @@ a {
 #skillsSection {
   width: calc(100vw-4rem);
   height: 100vh;
+  left: 4rem;
   position: relative; }
+  @media screen and (max-width: 1024px) {
+    #skillsSection {
+      left: auto; } }
 
 @media screen and (max-width: 1300px) {
   .vanishable {
@@ -612,8 +614,8 @@ a {
 
 .skills {
   position: absolute;
-  left: 50%;
   top: 3rem;
+  left: 48%;
   transform: translateX(-50%);
   height: 90%;
   width: 90%;
@@ -627,7 +629,9 @@ a {
     .skills {
       top: 0.5rem;
       width: 96%;
-      height: 86%; } }
+      height: 86%;
+      left: 50%;
+      transform: translateX(-50%); } }
   .skills__nav {
     width: 100%;
     display: flex;
@@ -652,7 +656,7 @@ a {
     @media screen and (max-width: 1024px) {
       .skills__button {
         height: 4.2rem; } }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 920px) {
       .skills__button {
         font-size: 3.8rem; } }
     .skills__button:hover {
@@ -675,7 +679,7 @@ a {
       @media screen and (max-width: 1024px) {
         .skills__button__text {
           font-size: 0.9rem; } }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 920px) {
         .skills__button__text {
           font-size: 0.6rem;
           line-height: 0.7rem; } }
@@ -692,7 +696,7 @@ a {
       @media screen and (max-width: 1024px) {
         .skills__button__icon {
           width: 2.5rem; } }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 920px) {
         .skills__button__icon {
           width: 1.5rem; } }
       @media screen and (max-width: 500px) {
@@ -718,7 +722,7 @@ a {
       @media screen and (max-width: 1024px) {
         .skills__more__icon {
           width: 1.5rem; } }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 920px) {
         .skills__more__icon {
           width: 1.2rem; } }
     .skills__more__text {
@@ -732,7 +736,7 @@ a {
       @media screen and (max-width: 1024px) {
         .skills__more__text {
           font-size: 0.7rem; } }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 920px) {
         .skills__more__text {
           font-size: 0.6rem;
           line-height: 0.7rem; } }
@@ -751,7 +755,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-content: center; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 920px) {
       .skills__view > * {
         flex-direction: column;
         justify-content: space-between; } }
@@ -771,7 +775,7 @@ a {
       @media screen and (max-width: 1300px) {
         .skills__view__column {
           width: 30%; } }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 920px) {
         .skills__view__column {
           height: auto;
           width: 90%;
@@ -780,8 +784,8 @@ a {
         width: 60%; }
         @media screen and (max-width: 1300px) {
           .skills__view__column--large {
-            width: 50%; } }
-        @media screen and (max-width: 768px) {
+            width: 40%; } }
+        @media screen and (max-width: 920px) {
           .skills__view__column--large {
             order: 1;
             width: 90%;
@@ -792,7 +796,7 @@ a {
           @media screen and (max-width: 1100px) {
             .skills__view__column--large li {
               font-size: 0.7rem; } }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 920px) {
             .skills__view__column--large li {
               font-size: 1rem; } }
     .skills__view__column2 {
@@ -807,15 +811,15 @@ a {
         .skills__view__column2 {
           width: 90%;
           max-width: auto; } }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 920px) {
         .skills__view__column2 {
           padding-bottom: 3rem; } }
     .skills__view__column:not(:last-of-type) {
       border-right: 2px solid #9d9d9d; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 920px) {
         .skills__view__column:not(:last-of-type) {
           border: none; } }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 920px) {
       .skills__view__column:last-of-type {
         padding-bottom: 3rem; } }
     .skills__view__text {
@@ -832,7 +836,7 @@ a {
       @media screen and (max-width: 1024px) {
         .skills__view__text {
           font-size: 0.7rem; } }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 920px) {
         .skills__view__text {
           font-size: 1rem; } }
     .skills__view__about, .skills__view__programming, .skills__view__design, .skills__view__data, .skills__view__business, .skills__view__languages, .skills__view__achievements {
@@ -882,13 +886,16 @@ a {
 #portfolioSection {
   width: calc(100vw-4rem);
   height: 100vh;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
   @media screen and (max-width: 1024px) {
     #portfolioSection {
-      overflow-y: auto; } }
+      overflow-y: auto;
+      width: 100vw;
+      padding: 0; } }
   @media screen and (max-width: 768px) {
     #portfolioSection {
-      padding-bottom: 5rem; } }
+      padding-bottom: 3rem; } }
 
 @media screen and (max-width: 768px) {
   #portfolioTitle {
@@ -910,11 +917,10 @@ a {
     .portfolio-area {
       grid-gap: 10px;
       padding-bottom: 5rem;
-      height: auto; } }
-  @media screen and (max-width: 768px) {
-    .portfolio-area {
-      padding: 20px 0;
-      left: 2%; } }
+      height: auto;
+      padding: 20px 0 90px;
+      left: 50%;
+      transform: translateX(-50%); } }
 
 .card {
   -webkit-perspective: 150rem;
@@ -1092,7 +1098,7 @@ a {
   cursor: pointer;
   position: absolute;
   right: 1rem;
-  top: 0;
+  top: 0.8rem;
   font-size: 1.5rem;
   padding: 2px 5px; }
   @media screen and (max-width: 1024px) {
@@ -1201,7 +1207,7 @@ a {
   text-align: center;
   fill: white;
   position: absolute;
-  top: 0.1rem;
+  top: 1.1rem;
   left: 6rem;
   cursor: pointer; }
   @media screen and (max-width: 1024px) {

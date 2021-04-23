@@ -3,11 +3,14 @@
   width: calc(100vw-4rem);
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
   @media screen and (max-width: $tablet) {
     overflow-y: auto;
+    width: 100vw;
+    padding: 0;
   }
   @media screen and (max-width: $mobile) {
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -33,10 +36,11 @@
     grid-gap: 10px;
     padding-bottom: 5rem;
     height: auto;
+    padding: 20px 0 90px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   @media screen and (max-width: $mobile) {
-    padding: 20px 0;
-    left: 2%;
   }
 }
 
@@ -264,7 +268,7 @@
     cursor: pointer;
     position: absolute;
     right: 1rem;
-    top: 0;
+    top: 0.8rem;
     font-size: 1.5rem;
     padding: 2px 5px;
     @media screen and (max-width: $tablet) {
@@ -389,7 +393,7 @@
     text-align: center;
     fill: white;
     position: absolute;
-    top: 0.1rem;
+    top: 1.1rem;
     left: 6rem;
     cursor: pointer;
     @media screen and (max-width: $tablet) {

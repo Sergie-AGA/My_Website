@@ -2,7 +2,11 @@
 #skillsSection {
   width: calc(100vw-4rem);
   height: 100vh;
+  left: 4rem;
   position: relative;
+  @media screen and (max-width: $tablet) {
+    left: auto;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -13,8 +17,8 @@
 
 .skills {
   position: absolute;
-  left: 50%;
   top: 3rem;
+  left: 48%;
   transform: translateX(-50%);
   height: 90%;
   width: 90%;
@@ -28,6 +32,8 @@
     top: 0.5rem;
     width: 96%;
     height: 86%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   &__nav {
     width: 100%;
@@ -54,7 +60,7 @@
     @media screen and (max-width: $tablet) {
       height: 4.2rem;
     }
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 920px) {
       font-size: 3.8rem;
     }
     &:hover {
@@ -80,7 +86,7 @@
       @media screen and (max-width: $tablet) {
         font-size: 0.9rem;
       }
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: 920px) {
         font-size: 0.6rem;
         line-height: 0.7rem;
       }
@@ -98,7 +104,7 @@
       @media screen and (max-width: $tablet) {
         width: 2.5rem;
       }
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: 920px) {
         width: 1.5rem;
       }
       @media screen and (max-width: 500px) {
@@ -127,7 +133,7 @@
       @media screen and (max-width: $tablet) {
         width: 1.5rem;
       }
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: 920px) {
         width: 1.2rem;
       }
     }
@@ -142,7 +148,7 @@
       @media screen and (max-width: $tablet) {
         font-size: 0.7rem;
       }
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: 920px) {
         font-size: 0.6rem;
         line-height: 0.7rem;
       }
@@ -167,7 +173,7 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 920px) {
       flex-direction: column;
       justify-content: space-between;
     }
@@ -188,7 +194,7 @@
       @media screen and (max-width: 1300px) {
         width: 30%;
       }
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: 920px) {
         height: auto;
         width: 90%;
         margin: auto;
@@ -197,9 +203,9 @@
       &--large {
         width: 60%;
         @media screen and (max-width: 1300px) {
-          width: 50%;
+          width: 40%;
         }
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: 920px) {
           order: 1;
           width: 90%;
           padding-bottom: 2rem;
@@ -210,7 +216,7 @@
           @media screen and (max-width: 1100px) {
             font-size: 0.7rem;
           }
-          @media screen and (max-width: $mobile) {
+          @media screen and (max-width: 920px) {
             font-size: 1rem;
           }
         }
@@ -228,18 +234,18 @@
         width: 90%;
         max-width: auto;
       }
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: 920px) {
         padding-bottom: 3rem;
       }
     }
     &__column:not(:last-of-type) {
       border-right: 2px solid color(grey-3);
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: 920px) {
         border: none;
       }
     }
     &__column:last-of-type {
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: 920px) {
         padding-bottom: 3rem;
       }
     }
@@ -257,7 +263,7 @@
       @media screen and (max-width: $tablet) {
         font-size: 0.7rem;
       }
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: 920px) {
         font-size: 1rem;
       }
     }
