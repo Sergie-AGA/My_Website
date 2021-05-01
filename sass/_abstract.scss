@@ -80,4 +80,5 @@ $vertical: 550px;
   transition: 0.3s;
   background-color: lighten(rgb(10, 10, 10), 20%);
   border-radius: 15px;
+  box-shadow: 0 0 3px 3px rgba($color: #000000, $alpha: 0.2);
 }

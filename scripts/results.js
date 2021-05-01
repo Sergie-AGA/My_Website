@@ -15,7 +15,14 @@ let myRadarChart = new Chart(radarChart, {
     ],
     datasets: [
       {
-        data: [50, 90, 100, 70, 80, 30],
+        label: "Currently learning",
+        data: [50, 90, 100, 60, 60, 50],
+        backgroundColor: "rgba(37,163,185, 0.2)",
+      },
+      {
+        label: "Upcoming schedule",
+        data: [60, 50, 100, 70, 80, 30],
+        backgroundColor: "rgba(25, 199, 25, 0.2)",
       },
     ],
   },

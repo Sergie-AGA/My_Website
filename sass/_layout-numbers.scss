@@ -139,9 +139,7 @@
   }
   &__data {
     flex: 1 0 0;
-    position: relative;
-    width: 50%;
-    height: 50%;
+    margin: auto;
     &__title {
       color: white;
       font-size: 1.2rem;
