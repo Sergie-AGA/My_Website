@@ -351,7 +351,7 @@ class Project {
 
 const project2 = new Project(
   "Manage Global",
-  "Mockup of a fictional business brochure of an app-based company that provides business solutions. It uses Bootstrap and jQuery",
+  "Mockup of a fictional business brochure of an app-based company that provides business solutions. It uses Bootstrap and jQuery.",
   "assets/portfolio/manage-global.png",
   "https://sergie-aga.github.io/vanilla-apps/manage_global/index.html",
   "https://github.com/Sergie-AGA/vanilla-apps/tree/main/manage_global",
@@ -424,7 +424,7 @@ const project3 = new Project(
 
 const project4 = new Project(
   "API Sea",
-  "Project that aggregates different API's and shows with examples what can be done with them (under continuous development)",
+  "Project that aggregates different API's and shows with examples what can be done with them (under continuous development).",
   "assets/portfolio/api-sea.png",
   "https://api-sea-by-sieger.herokuapp.com/",
   "https://github.com/Sergie-AGA/API-Sea-Github-version",
@@ -459,12 +459,12 @@ const project4 = new Project(
   true,
   true,
   "lightblue",
-  true
+  false
 );
 
 const project5 = new Project(
   "Custom Sticky Notes",
-  "Mini app that lets you create sticky notes with customizable fields. Changes are saved to local storage",
+  "Mini app that lets you create sticky notes with customizable fields. Changes are saved to local storage.",
   "assets/portfolio/custom-sticky-notes.png",
   "https://sergie-aga.github.io/vanilla-apps/custom-sticky-notes/index.html",
   "https://github.com/Sergie-AGA/vanilla-apps",
@@ -495,12 +495,12 @@ const project5 = new Project(
   true,
   true,
   "yellow",
-  true
+  false
 );
 
 const project6 = new Project(
   "Mini Apps",
-  "A React JS-based aggregator of small applications aimed at exploring different web development functionalities to inspire ideas (under continuous development)",
+  "A React JS-based aggregator of small applications aimed at exploring different web development functionalities to inspire ideas (under continuous development).",
   "assets/portfolio/mini-apps.png",
   "https://mini-apps-by-sieger.netlify.app/",
   "https://github.com/Sergie-AGA/Mini_Apps",
@@ -594,33 +594,73 @@ const project8 = new Project(
   ],
   false,
   true,
-  "black",
+  "green",
   true
 );
 
-// const project9 = new Project(
-//   "Business Website",
-//   "Partnering with a designer, we created a modern-looking website for a client's business. It has features to handle all the components desired by the client, such as SEO, security, cache and more",
-//   "assets/portfolio/pita-website.jpg",
-//   "https://edicopia.pt",
-//   "https://github.com/Sergie-AGA/",
-//   [
-//     {
-//       label: "Appearance",
-//       text: "Astra Theme + Widgets | CSS3 + Javascript | Gutenberg + Addons",
-//     },
-//     {
-//       label: "Major features",
-//       text:
-//         "Security plugin | Cache | SEO plugin | Cookie and privacy handling | Backups | Others ",
-//     },
-//   ],
-//   ["CSS", "Javascript", "Vanilla JS", "WordPress"],
-//   false,
-//   true,
-//   "darkblue",
-//   true
-// );
+const project9 = new Project(
+  "Business Website",
+  "Partnering with a designer, we created a modern-looking website for a client's business. It has features to handle all the components desired by the client, such as SEO, security, cache and more",
+  "assets/portfolio/pita-website.jpg",
+  "https://edicopia.pt",
+  "https://github.com/Sergie-AGA/",
+  [
+    {
+      label: "Appearance",
+      text: "Custom CSS3 + Javascript | Building plugins",
+    },
+    {
+      label: "Major features",
+      text:
+        "Functionalities for handling security, backups, cache, SEO, cookies and others",
+    },
+  ],
+  ["CSS", "Javascript", "Vanilla JS", "WordPress"],
+  false,
+  true,
+  "darkblue",
+  true
+);
+
+const project10 = new Project(
+  "Advanced CV (POC)",
+  'A Next JS tool that allows the creation of different visualizations of a Curriculum. This is a "proof of concept" version.',
+  "assets/portfolio/pita-marketing-tools.png",
+  "https://marketing-tools.netlify.app/",
+  "https://github.com/Sergie-AGA/",
+  [
+    {
+      label: "Visual",
+      text: "SASS | Materialize CSS | Figma",
+    },
+    {
+      label: "Programming",
+      text: "Next JS | React JS | TypeScript",
+    },
+    {
+      label: "Extra Assets",
+      text: "Vercel | Mock API | Google Ads",
+    },
+  ],
+  [
+    "CSS",
+    "SASS",
+    "Materialize CSS",
+    "React JS",
+    "Next JS",
+    "TypeScript",
+    "ES6+",
+    "API's",
+    "NPM / Yarn",
+    "Vercel",
+    "Google Ads",
+    "Figma",
+  ],
+  false,
+  true,
+  "lightblue",
+  true
+);
 
 let portfolio = projectsArray;
 

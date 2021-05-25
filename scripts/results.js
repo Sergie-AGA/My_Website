@@ -90,28 +90,27 @@ function switchChart(button, area) {
 let currentActivities = [
   {
     title: "Developing a personal website for a client",
-    conclusion: 60,
-    type: "client",
-  },
-  {
-    title: "Developing an interactive React JS tool for a client",
-    conclusion: 80,
-    type: "client",
-  },
-  {
-    title: "Developing a business website for a client",
-    conclusion: 5,
-    type: "client",
-  },
-  {
-    title:
-      "Furthering knowledge on Node JS and MongoDB to create Full Stack applications",
     conclusion: 70,
+    type: "client",
+  },
+  {
+    title: 'Developing the "Proof of concept" for a Next JS Web Application',
+    conclusion: 90,
+    type: "business",
+  },
+  {
+    title: "Designing and implementing an API for a Next JS project.",
+    conclusion: 20,
+    type: "business",
+  },
+  {
+    title: "Creating an API to automate this section of my site",
+    conclusion: 5,
     type: "personal",
   },
   {
-    title: "Migrating the API Sea project to React JS and adding new API's",
-    conclusion: 5,
+    title: "Merging the Mini-apps and API Sea projects",
+    conclusion: 15,
     type: "business",
   },
   {
