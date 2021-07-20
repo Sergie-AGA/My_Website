@@ -600,8 +600,8 @@ const project8 = new Project(
 
 const project9 = new Project(
   "Business Website",
-  "Partnering with a designer, we created a modern-looking website for a client's business. It has features to handle all the components desired by the client, such as SEO, security, cache and more",
-  "assets/portfolio/pita-website.jpg",
+  "Partnering with a designer, we created a modern-looking website for a client's business. It has features to handle all the components desired by the client, such as SEO, security, cache and more.",
+  "assets/portfolio/edicopia.jpg",
   "https://edicopia.pt",
   "https://github.com/Sergie-AGA/",
   [
@@ -611,8 +611,7 @@ const project9 = new Project(
     },
     {
       label: "Major features",
-      text:
-        "Functionalities for handling security, backups, cache, SEO, cookies and others",
+      text: "Functionalities to handle security, backups, cache, SEO, cookies and others",
     },
   ],
   ["CSS", "Javascript", "Vanilla JS", "WordPress"],
@@ -622,45 +621,45 @@ const project9 = new Project(
   true
 );
 
-const project10 = new Project(
-  "Advanced CV (POC)",
-  'A Next JS tool that allows the creation of different visualizations of a Curriculum. This is a "proof of concept" version.',
-  "assets/portfolio/pita-marketing-tools.png",
-  "https://marketing-tools.netlify.app/",
-  "https://github.com/Sergie-AGA/",
-  [
-    {
-      label: "Visual",
-      text: "SASS | Materialize CSS | Figma",
-    },
-    {
-      label: "Programming",
-      text: "Next JS | React JS | TypeScript",
-    },
-    {
-      label: "Extra Assets",
-      text: "Vercel | Mock API | Google Ads",
-    },
-  ],
-  [
-    "CSS",
-    "SASS",
-    "Materialize CSS",
-    "React JS",
-    "Next JS",
-    "TypeScript",
-    "ES6+",
-    "API's",
-    "NPM / Yarn",
-    "Vercel",
-    "Google Ads",
-    "Figma",
-  ],
-  false,
-  true,
-  "lightblue",
-  true
-);
+// const project10 = new Project(
+//   "Advanced CV (POC)",
+//   'A Next JS tool that allows the creation of different visualizations of a Curriculum. This is a "proof of concept" version.',
+//   "assets/portfolio/pita-marketing-tools.png",
+//   "https://marketing-tools.netlify.app/",
+//   "https://github.com/Sergie-AGA/",
+//   [
+//     {
+//       label: "Visual",
+//       text: "SASS | Materialize CSS | Figma",
+//     },
+//     {
+//       label: "Programming",
+//       text: "Next JS | React JS | TypeScript",
+//     },
+//     {
+//       label: "Extra Assets",
+//       text: "Vercel | Mock API | Google Ads",
+//     },
+//   ],
+//   [
+//     "CSS",
+//     "SASS",
+//     "Materialize CSS",
+//     "React JS",
+//     "Next JS",
+//     "TypeScript",
+//     "ES6+",
+//     "API's",
+//     "NPM / Yarn",
+//     "Vercel",
+//     "Google Ads",
+//     "Figma",
+//   ],
+//   false,
+//   true,
+//   "lightblue",
+//   true
+// );
 
 let portfolio = projectsArray;
 
