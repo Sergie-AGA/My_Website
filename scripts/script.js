@@ -402,7 +402,7 @@ const project3 = new Project(
     },
     {
       label: "Extra Assets",
-      text: "Photoshop | BEM CSS",
+      text: "Photoshop | BEM CSS | NPM / Yarn",
     },
   ],
   [
@@ -415,6 +415,7 @@ const project3 = new Project(
     "ES6+",
     "Royalty-free",
     "Photoshop",
+    "NPM / Yarn"
   ],
   false,
   false,
@@ -498,41 +499,41 @@ const project5 = new Project(
   false
 );
 
-const project6 = new Project(
-  "Mini Apps",
-  "A React JS-based aggregator of small applications aimed at exploring different web development functionalities to inspire ideas (under continuous development).",
-  "assets/portfolio/mini-apps.png",
-  "https://mini-apps-by-sieger.netlify.app/",
-  "https://github.com/Sergie-AGA/Mini_Apps",
-  [
-    {
-      label: "Visual",
-      text: "React JS + Hooks | CSS3 | SASS",
-    },
-    {
-      label: "Programming",
-      text: "Javascript with React JS | OOP | ES6+",
-    },
-    {
-      label: "Extra Assets",
-      text: "Netlify | BEM CSS",
-    },
-  ],
-  [
-    "CSS",
-    "React JS",
-    "SASS",
-    "Animations",
-    "Javascript",
-    "OOP",
-    "ES6+",
-    "Netlify",
-  ],
-  true,
-  true,
-  "green",
-  false
-);
+// const project6 = new Project(
+//   "Mini Apps",
+//   "A React JS-based aggregator of small applications aimed at exploring different web development functionalities to inspire ideas (under continuous development).",
+//   "assets/portfolio/mini-apps.png",
+//   "https://mini-apps-by-sieger.netlify.app/",
+//   "https://github.com/Sergie-AGA/Mini_Apps",
+//   [
+//     {
+//       label: "Visual",
+//       text: "React JS + Hooks | CSS3 | SASS",
+//     },
+//     {
+//       label: "Programming",
+//       text: "Javascript with React JS | OOP | ES6+",
+//     },
+//     {
+//       label: "Extra Assets",
+//       text: "Netlify | BEM CSS",
+//     },
+//   ],
+//   [
+//     "CSS",
+//     "React JS",
+//     "SASS",
+//     "Animations",
+//     "Javascript",
+//     "OOP",
+//     "ES6+",
+//     "Netlify",
+//   ],
+//   true,
+//   true,
+//   "green",
+//   false
+// );
 
 // const project7 = new Project(
 //   "Marketing Website",
@@ -575,7 +576,7 @@ const project8 = new Project(
     },
     {
       label: "Extra Assets",
-      text: "Netlify | BEM CSS | API's",
+      text: "Netlify | BEM CSS",
     },
   ],
   [
@@ -587,7 +588,6 @@ const project8 = new Project(
     "ES6+",
     "Node JS",
     "Express JS",
-    "API's",
     "NPM / Yarn",
     "Netlify",
     "RegEx",
@@ -621,7 +621,57 @@ const project9 = new Project(
   true
 );
 
-// const project10 = new Project(
+const project10 = new Project(
+  "Business Tools",
+  "A set of tools made for a client where the user inputs some data and receives back more details on a desired service. Details are confidential.",
+  "assets/portfolio/question1.jpg",
+  "https://google.com",
+  "https://github.com/Sergie-AGA/",
+  [
+    {
+      label: "Appearance",
+      text: "Custom CSS3 + Javascript | WordPress",
+    },
+    {
+      label: "Major features",
+      text: "Data is stored into JavaScript objects and serves the necessary assets matching the requirements provided by the user",
+    },
+  ],
+  ["CSS", "Javascript", "Vanilla JS", "WordPress"],
+  false,
+  false,
+  "orange",
+  false
+);
+
+const project11 = new Project(
+  "Advertising Tools",
+  "Tools designed for a company to speed up the creation of ads in Google Ads and Microsoft Ads by over 2 times, based on their strategy. Details are confidential.",
+  "assets/portfolio/question2.jpg",
+  "https://google.com",
+  "https://github.com/Sergie-AGA/",
+  [
+    {
+      label: "Visual",
+      text: "Custom CSS3 | SASS",
+    },
+    {
+      label: "Programming",
+      text: "JavaScript | jQuery | ES6+",
+    },
+    {
+      label: "Extra Assets",
+      text: "BEM CSS | NPM / Yarn",
+    },
+  ],
+  ["CSS", "Javascript", "jQuery", "ES6+", "NPM / Yarn"],
+  false,
+  false,
+  "red",
+  false
+);
+
+// const project14 = new Project(
 //   "Advanced CV (POC)",
 //   'A Next JS tool that allows the creation of different visualizations of a Curriculum. This is a "proof of concept" version.',
 //   "assets/portfolio/pita-marketing-tools.png",
