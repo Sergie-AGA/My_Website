@@ -135,7 +135,7 @@
   left: 50%;
   transform: translateX(-50%);
   transition: 0.5s;
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1700px) {
     top: 20%;
     height: 60%;
   }
@@ -148,8 +148,8 @@
     height: 60%;
   }
   @media screen and (max-height: 600px) {
-    top: 10%;
-    height: 75%;
+    top: 8%;
+    height: 80%;
   }
   &:hover {
     transform: translateX(-50%) scale(1.03);
@@ -362,7 +362,7 @@
 }
 
 .buttongroup {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   min-width: 15rem;

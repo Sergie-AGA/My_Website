@@ -671,6 +671,30 @@ const project11 = new Project(
   false
 );
 
+const project12 = new Project(
+  "X-Pence",
+  "Application that simulates a finance app using Axios and MirageJS to mock an API. It uses React JS, Styled Components and TypeScript, and was developed based on an app form a bootcamp.",
+  "assets/portfolio/x-pence.png",
+  "https://github.com/Sergie-AGA/",
+  "https://github.com/Sergie-AGA/X-Pens",
+  [
+    {
+      label: "Front End",
+      text: "React | Styled Components | ES6+ | TypeScript",
+    },
+    {
+      label: "API handling",
+      text: "Axios | Mirage JS | NPM / Yarn | API's",
+    },
+ 
+  ],
+  ["CSS", "Javascript", "ES6+", "NPM / Yarn", "Styled Components", "Axios", "API's", "React JS", "TypeScript"],
+  true,
+  false,
+  "green",
+  false
+);
+
 // const project14 = new Project(
 //   "Advanced CV (POC)",
 //   'A Next JS tool that allows the creation of different visualizations of a Curriculum. This is a "proof of concept" version.',

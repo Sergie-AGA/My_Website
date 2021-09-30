@@ -141,13 +141,16 @@
     position: absolute;
     top: 45%;
     text-align: justify;
-    padding: 10px;
+    padding: 8px;
     font-family: $font-secondary;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: color(dark-main);
     height: 10rem;
     overflow-wrap: break-word;
+    @media screen and (max-width: $mobile) {
+      line-height: 1.4rem;
+    }
   }
   &__featured {
     position: absolute;
