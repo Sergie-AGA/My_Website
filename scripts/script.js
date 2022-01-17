@@ -390,7 +390,7 @@ const project3 = new Project(
   "This very site you are looking at now. A personal site and portfolio to showcase my projects. It is all coded in Vanilla JS with SASS.",
   "assets/portfolio/portfolio-sergie.png",
   "#",
-  "#",
+  "https://github.com/Sergie-AGA/My_Website",
   [
     {
       label: "Visual",
@@ -415,9 +415,9 @@ const project3 = new Project(
     "ES6+",
     "Royalty-free",
     "Photoshop",
-    "NPM / Yarn"
+    "NPM / Yarn",
   ],
-  false,
+  true,
   false,
   "black",
   false
@@ -686,9 +686,18 @@ const project12 = new Project(
       label: "API handling",
       text: "Axios | Mirage JS | NPM / Yarn | API's",
     },
- 
   ],
-  ["CSS", "Javascript", "ES6+", "NPM / Yarn", "Styled Components", "Axios", "API's", "React JS", "TypeScript"],
+  [
+    "CSS",
+    "Javascript",
+    "ES6+",
+    "NPM / Yarn",
+    "Styled Components",
+    "Axios",
+    "API's",
+    "React JS",
+    "TypeScript",
+  ],
   true,
   false,
   "green",
@@ -699,7 +708,7 @@ const project12 = new Project(
 //   "Advanced CV (POC)",
 //   'A Next JS tool that allows the creation of different visualizations of a Curriculum. This is a "proof of concept" version.',
 //   "assets/portfolio/pita-marketing-tools.png",
-//   "https://marketing-tools.netlify.app/",
+//   "",
 //   "https://github.com/Sergie-AGA/",
 //   [
 //     {
