@@ -674,7 +674,7 @@ const project11 = new Project(
 const project12 = new Project(
   "X-Pence",
   "Application that simulates a finance app using Axios and MirageJS to mock an API. It uses React JS, Styled Components and TypeScript, and was developed based on an app form a bootcamp.",
-  "assets/portfolio/x-pence.png",
+  "assets/portfolio/xpence.png",
   "https://github.com/Sergie-AGA/",
   "https://github.com/Sergie-AGA/X-Pens",
   [
