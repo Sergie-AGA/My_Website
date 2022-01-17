@@ -380,7 +380,7 @@ const project2 = new Project(
     "RegEx",
   ],
   true,
-  true,
+  false,
   "purple",
   false
 );
